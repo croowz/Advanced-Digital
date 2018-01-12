@@ -1,0 +1,94 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux8sch.vf
+// /___/   /\     Timestamp : 01/05/2018 14:29:21
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor/mux8sch.vf -w F:/Digital2/ToyProcessor/mux8sch.sch
+//Design Name: mux8sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux_MUSER_mux8sch(IN0, 
+                         IN1, 
+                         SEL, 
+                         MUX_OUT);
+
+    input IN0;
+    input IN1;
+    input SEL;
+   output MUX_OUT;
+   
+   wire XLXN_2;
+   wire XLXN_7;
+   wire XLXN_13;
+   
+   AND2  XLXI_1 (.I0(XLXN_2), 
+                .I1(IN0), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(IN1), 
+                .I1(SEL), 
+                .O(XLXN_13));
+   OR2  XLXI_3 (.I0(XLXN_13), 
+               .I1(XLXN_7), 
+               .O(MUX_OUT));
+   INV  XLXI_4 (.I(SEL), 
+               .O(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module mux8sch(IN0, 
+               IN1, 
+               SEL, 
+               MUX_OUT);
+
+    input [7:0] IN0;
+    input [7:0] IN1;
+    input SEL;
+   output [7:0] MUX_OUT;
+   
+   
+   mux_MUSER_mux8sch  XLXI_1 (.IN0(IN0[0]), 
+                             .IN1(IN1[0]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[0]));
+   mux_MUSER_mux8sch  XLXI_2 (.IN0(IN0[1]), 
+                             .IN1(IN1[1]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[1]));
+   mux_MUSER_mux8sch  XLXI_3 (.IN0(IN0[2]), 
+                             .IN1(IN1[2]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[2]));
+   mux_MUSER_mux8sch  XLXI_4 (.IN0(IN0[3]), 
+                             .IN1(IN1[3]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[3]));
+   mux_MUSER_mux8sch  XLXI_5 (.IN0(IN0[4]), 
+                             .IN1(IN1[4]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[4]));
+   mux_MUSER_mux8sch  XLXI_6 (.IN0(IN0[5]), 
+                             .IN1(IN1[5]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[5]));
+   mux_MUSER_mux8sch  XLXI_7 (.IN0(IN0[6]), 
+                             .IN1(IN1[6]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[6]));
+   mux_MUSER_mux8sch  XLXI_8 (.IN0(IN0[7]), 
+                             .IN1(IN1[7]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[7]));
+endmodule

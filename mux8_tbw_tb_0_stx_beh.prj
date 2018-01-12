@@ -1,0 +1,4 @@
+verilog isim_temp "mux.vf"
+verilog isim_temp "mux8sch.vf"
+verilog isim_temp "mux_tb2.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"
