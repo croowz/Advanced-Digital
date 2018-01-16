@@ -1,22 +1,24 @@
-Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o F:/Digital2/ToyProcessor/fa_tbw_tb_0_isim_beh.exe -prj F:/Digital2/ToyProcessor/fa_tbw_tb_0_beh.prj work.fa_tbw_tb_0 work.glbl 
+Running: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o F:/Digital2/ToyProcessor/alu_tbw_tb_isim_beh.exe -prj F:/Digital2/ToyProcessor/alu_tbw_tb_beh.prj work.alu_tbw_tb work.glbl 
 ISim P.28xd (signature 0xa0883be4)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Analyzing Verilog file "F:/Digital2/ToyProcessor/fa_sch.vf" into library work
-Analyzing Verilog file "F:/Digital2/ToyProcessor/fa_tb.v" into library work
+Analyzing Verilog file "F:/Digital2/ToyProcessor/alu_sch.vf" into library work
+Analyzing Verilog file "F:/Digital2/ToyProcessor/alu_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module XOR2
 Compiling module OR2
 Compiling module AND2
-Compiling module fa_sch
-Compiling module fa_tbw_tb_0
+Compiling module fa_sch_MUSER_alu_sch
+Compiling module alu_sch
+Compiling module alu_tbw_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 6 Verilog Units
-Built simulation executable F:/Digital2/ToyProcessor/fa_tbw_tb_0_isim_beh.exe
-Fuse Memory Usage: 27136 KB
-Fuse CPU Usage: 389 ms
+Compiled 7 Verilog Units
+Built simulation executable F:/Digital2/ToyProcessor/alu_tbw_tb_isim_beh.exe
+Fuse Memory Usage: 27280 KB
+Fuse CPU Usage: 452 ms

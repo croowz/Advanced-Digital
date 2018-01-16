@@ -1,5 +1,5 @@
 ISim log file
-Running: F:\Digital2\ToyProcessor\fa_tbw_tb_0_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/Digital2/ToyProcessor/fa_tbw_tb_0_isim_beh.wdb 
+Running: F:\Digital2\ToyProcessor\alu_tbw_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb F:/Digital2/ToyProcessor/alu_tbw_tb_isim_beh.wdb 
 ISim P.28xd (signature 0xa0883be4)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

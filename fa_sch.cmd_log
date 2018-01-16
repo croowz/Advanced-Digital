@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym fa_sch F:/Digital2/ToyProcessor/fa_sch.sch F:/Digital2/ToyProcessor/fa_sch.sym 
