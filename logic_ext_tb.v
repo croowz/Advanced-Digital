@@ -5,8 +5,8 @@ module logic_ext_tbw_tb_0;
 // Inputs
    reg ai;
    reg bi;
-   reg s0;
-   reg s1;
+   reg S0;
+   reg S1;
    reg M;
 
 // Output
@@ -21,15 +21,15 @@ module logic_ext_tbw_tb_0;
 		.xi(xi), 
 		.ai(ai), 
 		.bi(bi), 
-		.s0(s0), 
-		.s1(s1), 
+		.S0(S0), 
+		.S1(S1), 
 		.M(M)
    );
 // Initialize Inputs
        initial begin
 #100;
  for (i=0; i<max_count; i=i+1)
-	begin {M,s1,s0,ai,bi} = i; 
+	begin {M,S1,S0,ai,bi} = i; 
 	#100; 
 	end
 end

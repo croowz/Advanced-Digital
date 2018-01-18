@@ -2,12 +2,12 @@ Command line:
    logic_ext_tbw_tb_0_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  23880
+     -socket  24085
 
-Thu Jan 18 16:26:27 2018
+Thu Jan 18 17:31:54 2018
 
 
- Elaboration Time: 0.078 sec
+ Elaboration Time: 0.0468 sec
 
  Current Memory Usage: 507.343 Meg
 
@@ -21,9 +21,9 @@ Thu Jan 18 16:26:27 2018
  Total Scalar Nets and Variables : 209
 Total Line Count : 19
 
- Total Simulation Time: 0.124801 sec
+ Total Simulation Time: 0.0936 sec
 
  Current Memory Usage: 507.343 Meg
 
-Thu Jan 18 16:26:46 2018
+Thu Jan 18 17:32:07 2018
 

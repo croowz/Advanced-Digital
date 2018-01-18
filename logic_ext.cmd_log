@@ -1,1 +1,4 @@
 sch2sym -intstyle ise -family spartan3e -refsym logic_ext C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sch C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sym 
+sch2sym -intstyle ise -family spartan3e -refsym logic_ext C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sch C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sym 
+sch2hdl -intstyle ise -family spartan3e -verilog logic_ext_drc.vf -w C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym logic_ext C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sch C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sym 

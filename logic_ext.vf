@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : logic_ext.vf
-// /___/   /\     Timestamp : 01/18/2018 16:26:14
+// /___/   /\     Timestamp : 01/18/2018 17:18:40
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -23,15 +23,15 @@
 module logic_ext(ai, 
                  bi, 
                  M, 
-                 s0, 
-                 s1, 
+                 S0, 
+                 S1, 
                  xi);
 
     input ai;
     input bi;
     input M;
-    input s0;
-    input s1;
+    input S0;
+    input S1;
    output xi;
    
    wire XLXN_1;
@@ -51,18 +51,18 @@ module logic_ext(ai,
                .I4(XLXN_5), 
                .O(xi));
    AND2  XLXI_4 (.I0(ai), 
-                .I1(s1), 
+                .I1(S1), 
                 .O(XLXN_4));
    AND2  XLXI_5 (.I0(ai), 
                 .I1(M), 
                 .O(XLXN_5));
-   AND3  XLXI_8 (.I0(s0), 
+   AND3  XLXI_8 (.I0(S0), 
                 .I1(ai), 
                 .I2(bi), 
                 .O(XLXN_3));
    AND4  XLXI_9 (.I0(XLXN_26), 
-                .I1(s1), 
-                .I2(s0), 
+                .I1(S1), 
+                .I2(S0), 
                 .I3(bi), 
                 .O(XLXN_2));
    AND4  XLXI_10 (.I0(XLXN_26), 
@@ -72,9 +72,9 @@ module logic_ext(ai,
                  .O(XLXN_1));
    INV  XLXI_11 (.I(ai), 
                 .O(XLXN_9));
-   INV  XLXI_12 (.I(s0), 
+   INV  XLXI_12 (.I(S0), 
                 .O(XLXN_15));
-   INV  XLXI_13 (.I(s1), 
+   INV  XLXI_13 (.I(S1), 
                 .O(XLXN_18));
    INV  XLXI_14 (.I(M), 
                 .O(XLXN_26));
