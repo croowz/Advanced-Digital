@@ -1,5 +1,3 @@
-// Verilog test fixture created from schematic C:\Users\rac71636\Downloads\ToyProcessor\logic_ext.sch - Wed Jan 17 21:50:08 2018
-
 `timescale 1ns / 1ps
 
 module logic_ext_tbw_tb_0;
@@ -13,8 +11,10 @@ module logic_ext_tbw_tb_0;
 
 // Output
    wire xi;
-
-// Bidirs
+	
+	integer i = 0; 
+	parameter num_inputs = 5; 
+	parameter max_count = (1<<num_inputs);
 
 // Instantiate the UUT
    logic_ext UUT (
@@ -26,12 +26,11 @@ module logic_ext_tbw_tb_0;
 		.M(M)
    );
 // Initialize Inputs
-   `ifdef auto_init
        initial begin
-		ai = 0;
-		bi = 0;
-		s0 = 0;
-		s1 = 0;
-		M = 0;
-   `endif
+#100;
+ for (i=0; i<max_count; i=i+1)
+	begin {M,s1,s0,ai,bi} = i; 
+	#100; 
+	end
+end
 endmodule
