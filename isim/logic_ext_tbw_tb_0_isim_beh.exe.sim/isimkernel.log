@@ -1,0 +1,29 @@
+Command line:
+   logic_ext_tbw_tb_0_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  23880
+
+Thu Jan 18 16:26:27 2018
+
+
+ Elaboration Time: 0.078 sec
+
+ Current Memory Usage: 507.343 Meg
+
+ Total Signals          : 63
+ Total Nets             : 28
+ Total Signal Drivers   : 20
+ Total Blocks           : 13
+ Total Primitive Blocks : 11
+ Total Processes        : 22
+ Total Traceable Variables  : 26
+ Total Scalar Nets and Variables : 209
+Total Line Count : 19
+
+ Total Simulation Time: 0.124801 sec
+
+ Current Memory Usage: 507.343 Meg
+
+Thu Jan 18 16:26:46 2018
+

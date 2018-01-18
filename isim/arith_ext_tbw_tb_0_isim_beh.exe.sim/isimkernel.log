@@ -1,0 +1,29 @@
+Command line:
+   arith_ext_tbw_tb_0_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  23915
+
+Thu Jan 18 16:37:37 2018
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 507.343 Meg
+
+ Total Signals          : 41
+ Total Nets             : 23
+ Total Signal Drivers   : 15
+ Total Blocks           : 9
+ Total Primitive Blocks : 7
+ Total Processes        : 17
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 203
+Total Line Count : 20
+
+ Total Simulation Time: 0.265202 sec
+
+ Current Memory Usage: 507.343 Meg
+
+Thu Jan 18 16:40:11 2018
+

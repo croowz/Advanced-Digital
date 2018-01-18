@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "F:/Digital2/ToyProcessor/alu_tbw_tb_isim_beh.exe" -prj "F:/Digital2/ToyProcessor/alu_tbw_tb_beh.prj" "work.alu_tbw_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/rac71636/Desktop/ToyProcessor/arith_ext_tbw_tb_0_isim_beh.exe" -prj "C:/Users/rac71636/Desktop/ToyProcessor/arith_ext_tbw_tb_0_beh.prj" "work.arith_ext_tbw_tb_0" "work.glbl" 
