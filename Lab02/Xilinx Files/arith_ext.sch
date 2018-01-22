@@ -13,7 +13,6 @@
         <signal name="S0" />
         <signal name="S1" />
         <signal name="XLXN_7" />
-        <signal name="XLXN_8" />
         <signal name="bi" />
         <signal name="M" />
         <signal name="XLXN_12" />

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : logic_ext.vf
-// /___/   /\     Timestamp : 01/18/2018 17:18:40
+// /___/   /\     Timestamp : 01/19/2018 15:25:02
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.vf -w C:/Users/rac71636/Desktop/ToyProcessor/logic_ext.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor2/logic_ext.vf -w F:/Digital2/ToyProcessor2/logic_ext.sch
 //Design Name: logic_ext
 //Device: spartan3e
 //Purpose:

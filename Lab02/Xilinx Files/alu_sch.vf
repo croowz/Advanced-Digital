@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : alu_sch.vf
-// /___/   /\     Timestamp : 01/12/2018 15:05:25
+// /___/   /\     Timestamp : 01/19/2018 15:25:04
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor/alu_sch.vf -w F:/Digital2/ToyProcessor/alu_sch.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor2/alu_sch.vf -w F:/Digital2/ToyProcessor2/alu_sch.sch
 //Design Name: alu_sch
 //Device: spartan3e
 //Purpose:

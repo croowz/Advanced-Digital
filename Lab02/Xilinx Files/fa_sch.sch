@@ -12,7 +12,6 @@
         <signal name="X" />
         <signal name="XLXN_6" />
         <signal name="XLXN_7" />
-        <signal name="XLXN_8" />
         <signal name="RES" />
         <signal name="Cnext" />
         <port polarity="Input" name="Cprev" />

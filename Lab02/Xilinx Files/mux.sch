@@ -7,10 +7,8 @@
     </attr>
     <netlist>
         <signal name="XLXN_2" />
-        <signal name="XLXN_3" />
         <signal name="SEL" />
         <signal name="XLXN_7" />
-        <signal name="XLXN_12" />
         <signal name="XLXN_13" />
         <signal name="MUX_OUT" />
         <signal name="IN1" />

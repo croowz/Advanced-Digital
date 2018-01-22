@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : alu4bit_sch.vf
-// /___/   /\     Timestamp : 01/18/2018 17:29:57
+// /___/   /\     Timestamp : 01/19/2018 15:25:04
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/rac71636/Desktop/ToyProcessor/alu4bit_sch.vf -w C:/Users/rac71636/Desktop/ToyProcessor/alu4bit_sch.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor2/alu4bit_sch.vf -w F:/Digital2/ToyProcessor2/alu4bit_sch.sch
 //Design Name: alu4bit_sch
 //Device: spartan3e
 //Purpose:

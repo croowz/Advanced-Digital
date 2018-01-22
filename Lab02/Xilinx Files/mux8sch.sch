@@ -17,7 +17,6 @@
         <signal name="MUX_OUT(5)" />
         <signal name="MUX_OUT(6)" />
         <signal name="MUX_OUT(7)" />
-        <signal name="XLXN_22" />
         <signal name="IN1(0)" />
         <signal name="IN0(7:0)" />
         <signal name="IN0(0)" />
@@ -35,9 +34,6 @@
         <signal name="IN0(6)" />
         <signal name="IN1(7)" />
         <signal name="IN0(7)" />
-        <signal name="XLXN_50" />
-        <signal name="XLXN_51" />
-        <signal name="XLXN_52" />
         <port polarity="Output" name="MUX_OUT(7:0)" />
         <port polarity="Input" name="SEL" />
         <port polarity="Input" name="IN1(7:0)" />

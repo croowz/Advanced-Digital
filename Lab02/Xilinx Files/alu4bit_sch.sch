@@ -8,11 +8,8 @@
     <netlist>
         <signal name="A(3:0)" />
         <signal name="B(3:0)" />
-        <signal name="XLXN_7" />
         <signal name="XLXN_8" />
         <signal name="S0" />
-        <signal name="XLXN_14" />
-        <signal name="XLXN_15" />
         <signal name="A(3)" />
         <signal name="A(2)" />
         <signal name="A(1)" />
@@ -23,14 +20,6 @@
         <signal name="B(3)" />
         <signal name="S1" />
         <signal name="M" />
-        <signal name="XLXN_26" />
-        <signal name="XLXN_27" />
-        <signal name="XLXN_28" />
-        <signal name="XLXN_29" />
-        <signal name="XLXN_30" />
-        <signal name="XLXN_31" />
-        <signal name="XLXN_32" />
-        <signal name="XLXN_33" />
         <signal name="XLXN_34" />
         <signal name="XLXN_35" />
         <signal name="XLXN_36" />
@@ -316,8 +305,7 @@
         <branch name="S1">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="224" y="704" type="branch" />
             <wire x2="48" y1="704" y2="720" x1="48" />
-            <wire x2="184" y1="704" y2="704" x1="48" />
-            <wire x2="192" y1="704" y2="704" x1="184" />
+            <wire x2="192" y1="704" y2="704" x1="48" />
             <wire x2="224" y1="704" y2="704" x1="192" />
             <wire x2="672" y1="704" y2="704" x1="224" />
             <wire x2="672" y1="704" y2="1040" x1="672" />
@@ -341,8 +329,7 @@
         <branch name="M">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="224" y="752" type="branch" />
             <wire x2="96" y1="752" y2="768" x1="96" />
-            <wire x2="136" y1="752" y2="752" x1="96" />
-            <wire x2="144" y1="752" y2="752" x1="136" />
+            <wire x2="144" y1="752" y2="752" x1="96" />
             <wire x2="224" y1="752" y2="752" x1="144" />
             <wire x2="544" y1="752" y2="752" x1="224" />
             <wire x2="544" y1="752" y2="1040" x1="544" />
