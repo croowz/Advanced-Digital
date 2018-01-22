@@ -37,7 +37,245 @@ Lab Report Writing 				  & 50 & 50\\
 	\paragraph{} The purpose of this lab is to create a 4-bit ALU using the schematic method in Xilinx. This will be our first full project that involves creating multiple schematic modules that will eventually be used to create a top module that can be implemented on the board as well. 
 			
 \section{Implementation Details} \vspace{-.7cm} \line(1,0){470}
+	\subsection{Part 0}
+		Began by building a full adder, a basic component of the ALU.
+		
+%		\begin{center}
+%			\includegraphics{Adder_sch.png}
+%		\end{center}
+		
+		\begin{Verbatim}[frame=single, fontsize=\small]
+`timescale 1ns/1ps
 
+module fa_tbw_tb_0;
+    reg Cprev = 1'b0;
+    reg X = 1'b0;
+    reg Y = 1'b0;
+    wire Cnext;
+    wire RES;
+
+fa_sch UUT(
+.Cprev(Cprev),
+.X(X),
+.Y(Y),
+.Cnext(Cnext),
+.RES(RES));
+
+initial begin
+#100;
+
+//CASE 1
+X=0;
+Y=0;
+Cprev=0;
+#100;
+
+//CASE 2
+X=0;
+Y=0;
+Cprev=1;
+#100;
+
+//CASE 3
+X=0;
+Y=1;
+Cprev=0;
+#100;
+
+//CASE 4
+X=0;
+Y=1;
+Cprev=1;
+#100;
+
+//CASE 5
+X=1;
+Y=0;
+Cprev=0;
+#100;
+
+//CASE 6
+X=1;
+Y=0;
+Cprev=1;
+#100;
+
+//CASE 7
+X=1;
+Y=1;
+Cprev=0;
+#100;
+
+//CASE 8
+X=1;
+Y=1;
+Cprev=1;
+#100;
+
+end
+	
+endmodule
+		\end{Verbatim}
+		
+	\subsection{Part 1}
+		Next, we built a logic extender so that we can output logic operations to the full adder.
+%		\begin{center}
+%			\includegraphics{Logic_ext_sch.png}
+%		\end{center}
+	
+		\begin{Verbatim}[frame=single, fontsize= \small]
+`timescale 1ns / 1ps
+
+module logic_ext_tbw_tb_0;
+
+// Inputs
+   reg ai;
+   reg bi;
+   reg S0;
+   reg S1;
+   reg M;
+
+// Output
+   wire xi;
+	
+	integer i = 0; 
+	parameter num_inputs = 5; 
+	parameter max_count = (1<<num_inputs);
+
+// Instantiate the UUT
+   logic_ext UUT (
+		.xi(xi), 
+		.ai(ai), 
+		.bi(bi), 
+		.S0(S0), 
+		.S1(S1), 
+		.M(M)
+   );
+// Initialize Inputs
+       initial begin
+#100;
+ for (i=0; i<max_count; i=i+1)
+	begin {M,S1,S0,ai,bi} = i; 
+	#100; 
+	end
+end
+endmodule			
+		\end{Verbatim}
+
+	
+	\subsection{Part 2}
+		Similar to the Logic Extender, we will build an Arithmetic extender, which forwards arithmetic operations to the full adder rather than logic ones.
+		
+%		\begin{center}
+%			\includegraphics{arith_ext_tb.png}
+%		\end{center}
+
+		\begin{Verbatim}[frame=single, fontsize=\small]
+`timescale 1ns/1ps 
+module arith_ext_tbw_tb_0;     
+reg bi = 1'b0;     
+reg M = 1'b0;     
+reg S0 = 1'b0;     
+reg S1 = 1'b0;     
+wire yi;     
+integer i = 0;    
+parameter num_inputs = 4;     
+parameter max_count = (1<<num_inputs); 
+ 
+arith_ext UUT (     
+.bi(bi),     
+.M(M),     
+.S0(S0),     
+.S1(S1),     
+.yi(yi)); 
+  
+initial begin     
+#100;   //Wait 100ns for initial inputs to settle.      
+for (i=0; i<max_count; i=i+1)           
+	begin             
+		{M,S1,S0,bi} = i;  //Cycle through all 4 input combinations.             
+		#100;   //Wait 100ns between new inputs.         
+	end 
+end 
+ 
+endmodule 
+			
+		\end{Verbatim}
+
+	\subsection{Part 3}
+		Now we can combine the previous parts into a working 4-bit ALU. In essence, we stack the Logic Extender and the Arithmetic Extender onto the Full Adder
+%		\begin{center}
+%			\includegraphics{alu4bit_tb.png}
+%		\end{center}
+
+		\begin{Verbatim}[frame=single, fontsize=\small]
+`timescale 1ns / 1ps
+
+module  alu4bit_tbw_tb_0;
+
+// Inputs
+   reg [3:0] A;
+   reg [3:0] B;
+   reg S0;
+   reg S1;
+   reg M;
+
+// Output
+   wire CiOut;
+   wire F3;
+   wire F2;
+   wire F1;
+   wire F0;
+
+integer i =0;
+parameter num_inputs =3;
+parameter max_count = (1<<num_inputs);
+
+// Instantiate the UUT
+   alu4bit_sch UUT (
+		.A(A), 
+		.B(B), 
+		.S0(S0), 
+		.S1(S1), 
+		.M(M), 
+		.CiOut(CiOut), 
+		.F3(F3), 
+		.F2(F2), 
+		.F1(F1), 
+		.F0(F0)
+   );
+// Initialize Inputs
+
+initial begin
+#100;
+for(i=0; i<max_count;i=i+1)
+		begin
+			{M,S1,S0}=i;
+			A=4'b0101;
+			B=4'b0100;
+			#100;
+		end
+	#100;
+	for(i=0; i<max_count;i=i+1)
+		begin
+			{M,S1,S0}=i;
+			A=4'b1010;
+			B=4'b0101;
+			#100;
+		end
+	end
+endmodule
+			
+		\end{Verbatim}
+
+	
+	\subsection{Part 4}
+	
+	\subsection{Part 5}
+	
+	\subsection{Part 6}
+	
+	\subsection{Part 7}
 
 			
 \section{Experimental Results}\vspace{-.7cm} \line(1,0){470}
