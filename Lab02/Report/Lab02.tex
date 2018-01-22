@@ -40,9 +40,9 @@ Lab Report Writing 				  & 50 & 50\\
 	\subsection{Part 0}
 		Began by building a full adder, a basic component of the ALU.
 		
-%		\begin{center}
-%			\includegraphics{Adder_sch.png}
-%		\end{center}
+		\begin{center}
+			\includegraphics[scale=.3]{fa_sch.png}
+		\end{center}
 		
 		\begin{Verbatim}[frame=single, fontsize=\small]
 `timescale 1ns/1ps
@@ -117,11 +117,52 @@ end
 endmodule
 		\end{Verbatim}
 		
+		We then can add onto this by adding the ability to subtract and making it 8-bit, thus creating an 8-bit adder/subtractor
+		
+		\begin{center}
+			\includegraphics[scale=.5]{alu_sch.png}
+		\end{center}
+		
+		\begin{Verbatim}[frame=single, fontsize= \small]
+`timescale 1ns / 1ps
+//alu_sch_alu_sch_sch_tb
+module alu_tbw_tb();
+
+// Inputs
+   reg [7:0] X = 8'b00000000;
+   reg [7:0] Y = 8'b00000000;
+   reg SEL = 1'b0;
+
+// Output
+   wire [7:0] DATA_OUT;
+   wire Cnext;
+
+// Instantiate the UUT
+   alu_sch UUT (
+		.X(X), 
+		.DATA_OUT(DATA_OUT), 
+		.Cnext(Cnext), 
+		.Y(Y), 
+		.SEL(SEL)
+   );
+// Initialize Inputs
+      initial begin
+		X = 0;
+		Y = 0;
+		SEL = 0;
+		#100;
+
+	end
+endmodule
+			
+		\end{Verbatim}
+
+		
 	\subsection{Part 1}
 		Next, we built a logic extender so that we can output logic operations to the full adder.
-%		\begin{center}
-%			\includegraphics{Logic_ext_sch.png}
-%		\end{center}
+		\begin{center}
+			\includegraphics[scale=.5]{logic_ext_sch.png}
+		\end{center}
 	
 		\begin{Verbatim}[frame=single, fontsize= \small]
 `timescale 1ns / 1ps
@@ -166,9 +207,9 @@ endmodule
 	\subsection{Part 2}
 		Similar to the Logic Extender, we will build an Arithmetic extender, which forwards arithmetic operations to the full adder rather than logic ones.
 		
-%		\begin{center}
-%			\includegraphics{arith_ext_tb.png}
-%		\end{center}
+		\begin{center}
+			\includegraphics[scale=.5]{arith_ext_sch.png}
+		\end{center}
 
 		\begin{Verbatim}[frame=single, fontsize=\small]
 `timescale 1ns/1ps 
@@ -204,9 +245,9 @@ endmodule
 
 	\subsection{Part 3}
 		Now we can combine the previous parts into a working 4-bit ALU. In essence, we stack the Logic Extender and the Arithmetic Extender onto the Full Adder
-%		\begin{center}
-%			\includegraphics{alu4bit_tb.png}
-%		\end{center}
+		\begin{center}
+			\includegraphics[scale=.3]{alu4bit_sch.png}
+		\end{center}
 
 		\begin{Verbatim}[frame=single, fontsize=\small]
 `timescale 1ns / 1ps

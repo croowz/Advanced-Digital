@@ -22,17 +22,12 @@ module alu_tbw_tb();
 		.SEL(SEL)
    );
 // Initialize Inputs
-      initial begin
-		X = 0;
-		Y = 0;
-		SEL = 0;
-		#100;
-		
-		
-		//CASE 0
-		X=8'b00000001;
-		Y=8'b00000001;
-		SEL=1;
-		#100;
-	end
+initial begin     
+#100;   //Wait 100ns for initial inputs to settle.      
+for (i=0; i<max_count; i=i+1)           
+	begin             
+		{X,Y,SEL} = i;  //Cycle through all input combinations.             
+		#100;   //Wait 100ns between new inputs.         
+	end 
+end 
 endmodule
