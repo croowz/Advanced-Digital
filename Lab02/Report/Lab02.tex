@@ -34,11 +34,11 @@ Lab Report Writing 				  & 50 & 50\\
 \newpage
 
 \section{Lab Purpose} \vspace{-.7cm} \line(1,0){470}
-	\paragraph{} The purpose of this lab is to create a 4-bit ALU using the schematic method in Xilinx. This will be our first full project that involves creating multiple schematic modules that will eventually be used to create a top module that can be implemented on the board as well. 
-			
+	\paragraph{} The purpose of this lab is to create a 4-bit ALU using the schematic method in Xilinx. This will be our first full project that involves creating multiple schematic modules that will eventually be compiled to create a top module that can be implemented on the board. We will design the basic parts of an ALU, including an adder/subtractor, a logic extender, an arithmetic extender, and eventually piece it all together with a UCF and seven segment display driver that will allow us to use this on the board.
+				
 \section{Implementation Details} \vspace{-.7cm} \line(1,0){470}
 	\subsection{Part 0}
-		Began by building a full adder, a basic component of the ALU.
+		We began by building a full adder, the first basic component of the ALU.
 		
 		\begin{center}
 			\includegraphics[scale=.3]{fa_sch.png}
@@ -361,23 +361,39 @@ NET "EN_R"  LOC = "F12";
 			
 \section{Experimental Results}\vspace{-.7cm} \line(1,0){470}
 
-\begin{center}
+\begin{figure}[h]
+    \centering
 	\includegraphics[scale=.7]{fa_tb_wave.png}
-\end{center}
+	\caption{Waveform for the full adder schematic test bench. All test cases present for each value of X, Y, and Cprev, showing successful binary addition and carrying.}
+\end{figure}
 
-\begin{center}
+%\begin{figure}
+%	\includegraphics[scale=.7]{alu_tb_wave.png}
+%\end{figure}
+
+\begin{figure}[h]
+    \centering
 	\includegraphics[scale=.33]{logic_ext_tb_wave}
-\end{center}
+	\caption{Waveform for the logic extender schematic test bench. All test cases match that of the table given, successfully performing all required logic operations}
+\end{figure}
 
-\begin{center}
+\begin{figure}[h]
+    \centering
 	\includegraphics[scale=.33]{arith_ext_tb_wave.png}
-\end{center}
+	\caption{Waveform for the arithmetic extender schematic test bench. All test cases match that of the table given, successfully performing all required arithmetic operations}
+\end{figure}
 
-\begin{center}
+\begin{figure}[h]
+    \centering
+	\includegraphics[scale=.2]{seven_segment_tb_wave.png}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
 	\includegraphics[scale=.33]{alu4bit_tb_wave.png}
-\end{center}
+\end{figure}
 
-			
+	\newpage		
 \section{Significance} \vspace{-.7cm} \line(1,0){470}
 	\paragraph{}
 		
