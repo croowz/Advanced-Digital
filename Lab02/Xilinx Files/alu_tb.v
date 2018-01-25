@@ -26,7 +26,9 @@ initial begin
 #100;   //Wait 100ns for initial inputs to settle.      
 for (i=0; i<max_count; i=i+1)           
 	begin             
-		{X,Y,SEL} = i;  //Cycle through all input combinations.             
+		X = i;  //Cycle through all input combinations.             
+		Y = i+1;
+		SEL = i;
 		#100;   //Wait 100ns between new inputs.         
 	end 
 end 
