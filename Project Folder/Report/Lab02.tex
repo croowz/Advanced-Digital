@@ -578,48 +578,52 @@ NET "EN_R"  LOC = "F12";
 			
 \section{Experimental Results}\vspace{-.7cm} \line(1,0){470}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
 	\includegraphics[scale=.7]{fa_tb_wave.png}
 	\caption{Waveform for the full adder schematic test bench. All test cases present for each value of X, Y, and Cprev, showing successful binary addition and carrying.}
 \end{figure}
 
-%\begin{figure}
-%	\includegraphics[scale=.7]{alu_tb_wave.png}
-%\end{figure}
-
-\begin{figure}[h]
-    \centering
-	\includegraphics[scale=.33]{logic_ext_tb_wave}
-	\caption{Waveform for the logic extender schematic test bench. All test cases match that of the table given, successfully performing all required logic operations}
+\begin{figure}[h!]
+\centering
+	\includegraphics[scale=.3]{alu_tb_wave1.jpeg}
+	\includegraphics[scale=.3]{alu_tb_wave2.jpeg}
+	\caption{Waveform for the adder/subtractor. Used a loop to increment X,Y, and SEL in a manner that would cover all input cases.}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
+    \centering
+	\includegraphics[scale=.33]{logic_ext_tb_wave}
+	\caption{Waveform for the logic extender schematic test bench. All test cases match that of the table given, successfully performing all required logic operations. Used another loop to cycle through the input combinations.}
+\end{figure}
+
+\begin{figure}[h!]
     \centering
 	\includegraphics[scale=.33]{arith_ext_tb_wave.png}
 	\caption{Waveform for the arithmetic extender schematic test bench. All test cases match that of the table given, successfully performing all required arithmetic operations}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
 	\includegraphics[scale=.2]{seven_segment_tb_wave.png}
 	\caption{Waveform for the seven segment display driver, showing all possible combinations for the 4-bit binary input, and corresponding outputs.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[h!]
     \centering
 	\includegraphics[scale=.33]{alu4bit_tb_wave.png}
 	\caption{Waveform for the 4-bit ALU, testing again each possible input combination of S0, S1, and M.}
 \end{figure}
 
-	\newpage
+	
+	\vspace{10cm}
 \section{Significance} \vspace{-.7cm} \line(1,0){470}
 	\paragraph{}
 		This lab was the first comprehensive use of the Xilinx GUI schematic creator, and using it to create several modules that would eventually create a full project, and eventually exist on the board. While this did feel like a full, independent project of its own, in reality it is just the first piece of a much bigger puzzle that is a usable CPU. With the knowledge gained in this lab, piecing the parts together makes much more sense now. 
 
  \section{Comments/Suggestions}\vspace{-.7cm} \line(1,0){470}
  	\paragraph{}
-		Everything was rather straightforward, although it was relatively quite a bit of work. In the future, it may be best to assign a portion of the lab as prelab, so that it could be more spread out.
+		Everything was rather straightforward, although, relatively, it was quite a bit of work. I know it was recommended to start out of class, but in the future, it may be best to assign a portion of the lab as prelab, so that it could be more spread out.
 		
 \end{document}
 
