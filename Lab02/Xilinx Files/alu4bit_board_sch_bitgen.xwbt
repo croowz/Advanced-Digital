@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=F:\Digital2\ToyProcessor2\alu4bit_board_sch.ncd
-OUTFILE=F:\Digital2\ToyProcessor2\alu4bit_board_sch.bit
-FAMILY=Spartan3E
-PART=xc3s250e-4cp132
-WORKINGDIR=F:\Digital2\ToyProcessor2
-LICENSE=WebPack
-USER_INFO=206971330_0_0_375

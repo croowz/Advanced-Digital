@@ -1,3 +1,0 @@
-verilog isim_temp "logic_ext.vf"
-verilog isim_temp "logic_ext_tb.v"
-verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

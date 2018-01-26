@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "F:/Digital2/ToyProcessor/mux8sch.xst" -ofn "F:/Digital2/ToyProcessor/mux8sch.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 mux8sch.ngc mux8sch.ngd  
-map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o mux8sch_map.ncd mux8sch.ngd mux8sch.pcf 
-par -w -intstyle ise -ol high -t 1 mux8sch_map.ncd mux8sch.ncd mux8sch.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux8sch.twx mux8sch.ncd -o mux8sch.twr mux8sch.pcf 
-sch2sym -intstyle ise -family spartan3e -w -refsym mux8sch F:/Digital2/ToyProcessor2/mux8sch.sch F:/Digital2/ToyProcessor2/mux8sch.sym 
