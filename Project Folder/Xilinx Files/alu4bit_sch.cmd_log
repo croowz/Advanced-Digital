@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym alu4bit_sch F:/Digital2/ToyProcessor2/alu4bit_sch.sch F:/Digital2/ToyProcessor2/alu4bit_sch.sym 

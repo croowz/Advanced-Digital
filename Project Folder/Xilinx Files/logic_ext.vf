@@ -1,0 +1,81 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : logic_ext.vf
+// /___/   /\     Timestamp : 01/19/2018 15:25:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor2/logic_ext.vf -w F:/Digital2/ToyProcessor2/logic_ext.sch
+//Design Name: logic_ext
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module logic_ext(ai, 
+                 bi, 
+                 M, 
+                 S0, 
+                 S1, 
+                 xi);
+
+    input ai;
+    input bi;
+    input M;
+    input S0;
+    input S1;
+   output xi;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_9;
+   wire XLXN_15;
+   wire XLXN_18;
+   wire XLXN_26;
+   
+   OR5  XLXI_2 (.I0(XLXN_1), 
+               .I1(XLXN_2), 
+               .I2(XLXN_3), 
+               .I3(XLXN_4), 
+               .I4(XLXN_5), 
+               .O(xi));
+   AND2  XLXI_4 (.I0(ai), 
+                .I1(S1), 
+                .O(XLXN_4));
+   AND2  XLXI_5 (.I0(ai), 
+                .I1(M), 
+                .O(XLXN_5));
+   AND3  XLXI_8 (.I0(S0), 
+                .I1(ai), 
+                .I2(bi), 
+                .O(XLXN_3));
+   AND4  XLXI_9 (.I0(XLXN_26), 
+                .I1(S1), 
+                .I2(S0), 
+                .I3(bi), 
+                .O(XLXN_2));
+   AND4  XLXI_10 (.I0(XLXN_26), 
+                 .I1(XLXN_18), 
+                 .I2(XLXN_15), 
+                 .I3(XLXN_9), 
+                 .O(XLXN_1));
+   INV  XLXI_11 (.I(ai), 
+                .O(XLXN_9));
+   INV  XLXI_12 (.I(S0), 
+                .O(XLXN_15));
+   INV  XLXI_13 (.I(S1), 
+                .O(XLXN_18));
+   INV  XLXI_14 (.I(M), 
+                .O(XLXN_26));
+endmodule

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym seven_seg_control_sch F:/Digital2/ToyProcessor2/seven_seg_controller/seven_seg_control_sch.sch F:/Digital2/ToyProcessor2/seven_seg_control_sch.sym 

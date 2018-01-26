@@ -1,0 +1,86 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ha8_sch.vf
+// /___/   /\     Timestamp : 01/26/2018 00:22:38
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/ha8_sch.vf" -w "C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/ha8_sch.sch"
+//Design Name: ha8_sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ha_sch_MUSER_ha8_sch(Ci, 
+                            Xi, 
+                            Cout, 
+                            S);
+
+    input Ci;
+    input Xi;
+   output Cout;
+   output S;
+   
+   
+   AND2  XLXI_1 (.I0(Xi), 
+                .I1(Ci), 
+                .O(Cout));
+   XOR2  XLXI_2 (.I0(Xi), 
+                .I1(Ci), 
+                .O(S));
+endmodule
+`timescale 1ns / 1ps
+
+module ha8_sch(HA_IN, 
+               HA_OUT);
+
+    input [7:0] HA_IN;
+   output [7:0] HA_OUT;
+   
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   
+   ha_sch_MUSER_ha8_sch  XLXI_1 (.Ci(HA_IN[7]), 
+                                .Xi(XLXN_28), 
+                                .Cout(HA_OUT[7]), 
+                                .S());
+   ha_sch_MUSER_ha8_sch  XLXI_2 (.Ci(HA_IN[6]), 
+                                .Xi(XLXN_29), 
+                                .Cout(HA_OUT[6]), 
+                                .S(XLXN_28));
+   ha_sch_MUSER_ha8_sch  XLXI_3 (.Ci(HA_IN[5]), 
+                                .Xi(XLXN_30), 
+                                .Cout(HA_OUT[5]), 
+                                .S(XLXN_29));
+   ha_sch_MUSER_ha8_sch  XLXI_4 (.Ci(HA_IN[4]), 
+                                .Xi(XLXN_31), 
+                                .Cout(HA_OUT[4]), 
+                                .S(XLXN_30));
+   ha_sch_MUSER_ha8_sch  XLXI_5 (.Ci(HA_IN[3]), 
+                                .Xi(XLXN_32), 
+                                .Cout(HA_OUT[3]), 
+                                .S(XLXN_31));
+   ha_sch_MUSER_ha8_sch  XLXI_6 (.Ci(HA_IN[2]), 
+                                .Xi(XLXN_33), 
+                                .Cout(HA_OUT[2]), 
+                                .S(XLXN_32));
+   ha_sch_MUSER_ha8_sch  XLXI_7 (.Ci(HA_IN[1]), 
+                                .Xi(HA_IN[0]), 
+                                .Cout(HA_OUT[1]), 
+                                .S(XLXN_33));
+   INV  XLXI_22 (.I(HA_IN[0]), 
+                .O(HA_OUT[0]));
+endmodule

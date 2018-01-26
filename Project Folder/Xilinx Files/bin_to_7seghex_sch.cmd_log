@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym bin_to_7seghex_sch F:/Digital2/ToyProcessor2/bin_to_7seghex_sch.sch F:/Digital2/ToyProcessor2/bin_to_7seghex_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym bin_to_7seghex_sch F:/Digital2/ToyProcessor2/bin_to_7seghex_sch.sch F:/Digital2/ToyProcessor2/bin_to_7seghex_sch.sym 

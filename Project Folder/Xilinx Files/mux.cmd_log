@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym mux F:/Digital2/ToyProcessor/mux.sch F:/Digital2/ToyProcessor/mux.sym 

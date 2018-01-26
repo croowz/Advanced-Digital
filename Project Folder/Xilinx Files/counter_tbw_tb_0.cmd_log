@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/counter_tb.v} -lang verilog -prj ToyProcessor -o counter_tbw_tb_0.spl -module counter_tbw_tb_0 -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w counter_tbw_tb_0.spl {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/counter_tbw_tb_0.sym} 

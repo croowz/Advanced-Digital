@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym reg_sch {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/reg_sch.sch} {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/reg_sch.sym} 
