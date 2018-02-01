@@ -37,33 +37,225 @@ Lab Report Writing 				  & 50 & 50\\
 	\paragraph{} The purpose of this lab is to create/design the necessary components for our Toy Processor Datapath. This includes building an 8-bit register for Instruction and Data Registers, a counter for the program counter, and a design for putting it all together. 				
 \section{Implementation Details} \vspace{-.7cm} \line(1,0){470}
 		\subsection{Part 1}
-		First, we built an 8-bit register that will be used for the intruction and data registers. 
-%		\begin{center}
-%			\includegraphics[scale=.5]{logic_ext_sch.png}
-%		\end{center}
+		First, we built an 8-bit register that will be used for the instruction and data registers. 
+		\begin{center}
+			\includegraphics[scale=.5]{reg_sch.png}
+		\end{center}
 	
 		\begin{Verbatim}[frame=single, fontsize= \small]
-			
+`timescale 1ns/1ps
+	
+	module reg_tbw_tb_0;
+		reg CLK = 1'b0;
+		reg LOAD = 1'b0;
+		reg [7:0] REG_IN = 8'b00000000; 
+		reg RST = 1'b0;
+		
+		wire [7:0] REG_OUT;
+	
+		parameter PERIOD = 200; 
+		parameter real DUTY_CYCLE = 0.5; 
+		parameter OFFSET = 100;
+		
+		initial // Clock process for CLK 
+			begin
+				#OFFSET; 
+				forever 
+					begin
+						CLK = 1'b0; 
+						#(PERIOD-(PERIOD*DUTY_CYCLE)) 
+							CLK = 1'b1; 
+						#(PERIOD*DUTY_CYCLE);
+					end 
+			end
+	
+		reg_sch UUT (
+			.CLK(CLK), 
+			.LOAD(LOAD), 
+			.REG_IN(REG_IN), 
+			.RST(RST), 
+			.REG_OUT(REG_OUT));
+	
+		initial 
+			begin
+	
+				// ------------- Current Time: 185ns 
+				#185;
+				LOAD = 1'b1;
+	
+				// -------------------------------------
+				// ------------- Current Time: 385ns 
+				#200;
+				REG_IN = 8'b00000001;
+	
+				// -------------------------------------
+				// ------------- Current Time: 585ns
+				#200;
+				LOAD = 1'b0;
+				REG_IN = 8'b00000010;
+		
+				// -------------------------------------
+				// ------------- Current Time: 785ns 
+				#200;
+				REG_IN = 8'b00000011;
+	
+				// -------------------------------------
+				// ------------- Current Time: 985ns 
+				#200;
+				LOAD = 1'b1;
+				RST = 1'b1;
+				REG_IN = 8'b00000100;
+	
+				// -------------------------------------
+				// ------------- Current Time: 1185ns 
+				#200;
+				RST = 1'b0;
+				REG_IN = 8'b00000101;
+	
+				// -------------------------------------
+				// ------------- Current Time: 1385ns 
+				#200;
+				REG_IN = 8'b00000110;
+	
+				// -------------------------------------
+				// ------------- Current Time: 1585ns 
+				#200;
+				REG_IN = 8'b00000111;
+			end 
+	endmodule			
 		\end{Verbatim}
 
 	\newpage
 	\subsection{Part 2}
-		Similar to the Logic Extender, we will build an Arithmetic extender, which forwards arithmetic operations to the full adder rather than logic ones.
 		
-%		\begin{center}
-%			\includegraphics[scale=.5]{arith_ext_sch.png}
-%		\end{center}
+		\begin{center}
+			\includegraphics[scale=.31]{counter_sch.png}
+		\end{center}
 
 		\begin{Verbatim}[frame=single, fontsize=\small]
+`timescale 1ns/1ps
+
+	module counter_tbw_tb_0;
+		reg CLK = 1'b0;
+		reg COUNT = 1'b0;
+		reg [7:0] COUNT_IN = 8'b00000000; 
+		reg LOAD = 1'b0;
+		reg RST = 1'b0;
+		
+		wire [7:0] COUNT_OUT;
+		
+		parameter PERIOD = 200; 
+		parameter real DUTY_CYCLE = 0.5; 
+		parameter OFFSET = 100;
+
+		initial // Clock process for CLK 
+			begin
+				#OFFSET; 
+				forever 
+					begin
+						CLK = 1'b0; 
+						#(PERIOD-(PERIOD*DUTY_CYCLE)) 
+							CLK = 1'b1; 
+						#(PERIOD*DUTY_CYCLE);
+					end 
+			end
+		
+		counter_sch UUT ( 
+			.CLK(CLK), 
+			.COUNT(COUNT), 
+			.COUNT_IN(COUNT_IN),
+			.LOAD(LOAD),
+			.RST(RST), 
+			.COUNT_OUT(COUNT_OUT));
+			
+		initial 
+			begin
+				// ------------- Current Time: 185ns 
+				#185;
+				RST = 1'b1;
+				
+				// -------------------------------------
+				// ------------- Current Time: 585ns 
+				#400;
+				COUNT_IN = 8'b00000001;
+				
+				// -------------------------------------
+				// ------------- Current Time: 785ns 
+				#200;
+				RST = 1'b0;
+				COUNT_IN = 8'b00000010;
+				
+				// -------------------------------------
+				// ------------- Current Time: 985ns 
+				#200;
+				COUNT_IN = 8'b00000011;
+				
+				// -------------------------------------
+				// ------------- Current Time: 1185ns 
+				#200;
+				LOAD = 1'b1;
+				COUNT_IN = 8'b00000100;
+				
+				// -------------------------------------
+				// ------------- Current Time: 1385ns 
+				#200;
+				COUNT = 1'b1;
+				COUNT_IN = 8'b00000101;
+				
+				// -------------------------------------
+				// ------------- Current Time: 1585ns 
+				#200;
+				COUNT = 1'b0;
+				LOAD = 1'b0;
+				COUNT_IN = 8'b00000110;
+				
+				// -------------------------------------
+				// ------------- Current Time: 1785ns 
+				#200;
+				COUNT_IN = 8'b00000111;
+				
+				// -------------------------------------
+				// ------------- Current Time: 1985ns 
+				#200;
+				COUNT = 1'b1;
+				COUNT_IN = 8'b00001000;
+				
+				// -------------------------------------
+				// ------------- Current Time: 2185ns 
+				#200;
+				COUNT_IN = 8'b00001001;
+				
+				// -------------------------------------
+				// ------------- Current Time: 2385ns 
+				#200;
+				COUNT = 1'b0;
+				COUNT_IN = 8'b00001010;
+				
+				// -------------------------------------
+				// ------------- Current Time: 2585ns 
+				#200;
+				COUNT_IN = 8'b00001011;
+				
+				// -------------------------------------
+				// ------------- Current Time: 2785ns 
+				#200;
+				COUNT_IN = 8'b00001100;
+				
+				// -------------------------------------
+				// ------------- Current Time: 2985ns 
+				#200;
+				COUNT_IN = 8'b00001101;
+			end 
+	endmodule
 
 			
 		\end{Verbatim}
-
+\newpage
 	\subsection{Part 3}
 		Now we can combine the previous parts into a working 4-bit ALU. In essence, we stack the Logic Extender and the Arithmetic Extender onto the Full Adder
-%		\begin{center}
-%			\includegraphics[scale=.3]{alu4bit_sch.png}
-%		\end{center}
+		\begin{center}
+			\includegraphics[scale=.3]{datapath.png}
+		\end{center}
 \newpage
 		\begin{Verbatim}[frame=single, fontsize=\small]
 
