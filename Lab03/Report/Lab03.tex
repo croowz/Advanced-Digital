@@ -34,7 +34,8 @@ Lab Report Writing 				  & 50 & 50\\
 \newpage
 
 \section{Lab Purpose} \vspace{-.7cm} \line(1,0){470}
-	\paragraph{} The purpose of this lab is to create/design the necessary components for our Toy Processor Datapath. This includes building an 8-bit register for Instruction and Data Registers, a counter for the program counter, and a design for putting it all together. 				
+	\paragraph{} The purpose of this lab is to create/design the necessary components for our Toy Processor Datapath. This includes building an 8-bit register for Instruction and Data Registers, a counter for the program counter, and a design for putting it all together. 			
+		
 \section{Implementation Details} \vspace{-.7cm} \line(1,0){470}
 		\subsection{Part 1}
 		First, we built an 8-bit register that will be used for the instruction and data registers. 
@@ -252,16 +253,10 @@ Lab Report Writing 				  & 50 & 50\\
 		\end{Verbatim}
 \newpage
 	\subsection{Part 3}
-		Now we can combine the previous parts into a working 4-bit ALU. In essence, we stack the Logic Extender and the Arithmetic Extender onto the Full Adder
+		
 		\begin{center}
 			\includegraphics[scale=.32]{datapath.png}
 		\end{center}
-\newpage
-		\begin{Verbatim}[frame=single, fontsize=\small]
-
-			
-		\end{Verbatim}
-		
 		
 		
 			
@@ -270,26 +265,23 @@ Lab Report Writing 				  & 50 & 50\\
 \begin{figure}[h]
     \centering
 	\includegraphics[scale=.34]{reg_tb_wave.png}
-	\caption{Waveform for the full adder schematic test bench. All test cases present for each value of X, Y, and Cprev, showing successful binary addition and carrying.}
+	\caption{}
 \end{figure}
 
 \begin{figure}[h]
     \centering
 	\includegraphics[scale=.34]{counter_tb_wave.png}
-	\caption{Waveform for the logic extender schematic test bench. All test cases match that of the table given, successfully performing all required logic operations}
+	\caption{}
 \end{figure}
-
-
 
 
 	\newpage
 \section{Significance} \vspace{-.7cm} \line(1,0){470}
 	\paragraph{}
-		This lab was the first comprehensive use of the Xilinx GUI schematic creator, and using it to create several modules that would eventually create a full project, and eventually exist on the board. While this did feel like a full, independent project of its own, in reality it is just the first piece of a much bigger puzzle that is a usable CPU. With the knowledge gained in this lab, piecing the parts together makes much more sense now. 
+
 
  \section{Comments/Suggestions}\vspace{-.7cm} \line(1,0){470}
  	\paragraph{}
-		Everything was rather straightforward, although it was relatively quite a bit of work. In the future, it may be best to assign a portion of the lab as prelab, so that it could be more spread out.
 		
 \end{document}
 
