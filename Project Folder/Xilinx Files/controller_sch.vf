@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : controller_sch.vf
-// /___/   /\     Timestamp : 02/02/2018 10:26:50
+// /___/   /\     Timestamp : 02/02/2018 13:44:12
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "Z:/Advanced-Digital-master/Advanced-Digital-master/Project Folder/Xilinx Files/controller_sch.vf" -w "Z:/Advanced-Digital-master/Advanced-Digital-master/Project Folder/Xilinx Files/controller_sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor(Main)/controller_sch.vf -w F:/Digital2/ToyProcessor(Main)/controller_sch.sch
 //Design Name: controller_sch
 //Device: spartan3e
 //Purpose:

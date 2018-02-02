@@ -30,18 +30,14 @@ module controller_tbw_tb_0;
 	wire S4; 
 	wire S5;
 
-	parameter PERIOD = 200; 
-	parameter real DUTY_CYCLE = 0.5;
-	parameter OFFSET = 0;
-
 	initial // Clock process for CLK 
 		begin
-			#OFFSET; 
 			forever 
 			begin
 				CLK = 1'b0;
-				#(PERIOD-(PERIOD*DUTY_CYCLE)) CLK = 1'b1; 
-				#(PERIOD*DUTY_CYCLE);
+				#100;
+				CLK = 1'b1; 
+				#100;
 			end
 		end
 		

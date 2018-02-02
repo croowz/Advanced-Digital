@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//fileserver1/roaming/zad65674/Advanced-Digital-master/Advanced-Digital-master/Project Folder/Xilinx Files/control.v";
+static const char *ng0 = "F:/Digital2/ToyProcessor(Main)/control.v";
 static int ng1[] = {1, 0};
 static int ng2[] = {0, 0};
 
