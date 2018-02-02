@@ -94,13 +94,19 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="control.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="control.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="control_tbw_tb_0_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="controller_sch.vf"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="controller_sch_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controller_tbw_tb_0_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="controller_tbw_tb_0_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="controller_tbw_tb_0_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="counter_sch.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="counter_sch.vf"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="counter_tbw_tb_0.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="counter_tbw_tb_0.sym" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="counter_tbw_tb_0_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="counter_tbw_tb_0_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="counter_tbw_tb_0_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="counter_tbw_tb_0_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="fa_sch.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="fa_sch.vf">
@@ -193,7 +199,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1516944153" xil_pn:in_ck="7989922132413479873" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1516944153">
+    <transform xil_pn:end_ts="1517585876" xil_pn:in_ck="-4264069645105245027" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1517585876">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="alu4bit_tb.v"/>
@@ -201,6 +207,9 @@
       <outfile xil_pn:name="arith_ext_tb.v"/>
       <outfile xil_pn:name="bin_to_7seghex_sch.v"/>
       <outfile xil_pn:name="bin_to_7seghex_tb.v"/>
+      <outfile xil_pn:name="control.v"/>
+      <outfile xil_pn:name="control_tb.v"/>
+      <outfile xil_pn:name="controller_tb.v"/>
       <outfile xil_pn:name="counter_tb.v"/>
       <outfile xil_pn:name="fa_tb.v"/>
       <outfile xil_pn:name="logic_ext_tb.v"/>
@@ -212,16 +221,14 @@
       <outfile xil_pn:name="seven_seg_controller/seven_seg_control_sch.vf"/>
       <outfile xil_pn:name="toZero_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1516944157" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="1783906789278601863" xil_pn:start_ts="1516944157">
+    <transform xil_pn:end_ts="1517585876" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6338746582760739467" xil_pn:start_ts="1517585876">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1516944515" xil_pn:in_ck="5723010457384953620" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1797034683496015497" xil_pn:start_ts="1516944512">
+    <transform xil_pn:end_ts="1517585878" xil_pn:in_ck="4062915472488123153" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-2364297081397395571" xil_pn:start_ts="1517585876">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="controller_sch.vf"/>
       <outfile xil_pn:name="counter_sch.vf"/>
       <outfile xil_pn:name="ha8_sch.vf"/>
       <outfile xil_pn:name="ha_sch.vf"/>
@@ -233,10 +240,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1516944515" xil_pn:in_ck="-2273941951074538162" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1516944515">
+    <transform xil_pn:end_ts="1517585878" xil_pn:in_ck="-744826836661721283" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1517585878">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="alu4bit_sch.vf"/>
       <outfile xil_pn:name="alu4bit_tb.v"/>
       <outfile xil_pn:name="alu_sch.vf"/>
@@ -246,12 +252,17 @@
       <outfile xil_pn:name="bin_to_7seghex_sch.v"/>
       <outfile xil_pn:name="bin_to_7seghex_sch.vf"/>
       <outfile xil_pn:name="bin_to_7seghex_tb.v"/>
+      <outfile xil_pn:name="control.v"/>
+      <outfile xil_pn:name="control_tb.v"/>
+      <outfile xil_pn:name="controller_sch.vf"/>
+      <outfile xil_pn:name="controller_tb.v"/>
       <outfile xil_pn:name="counter_sch.vf"/>
       <outfile xil_pn:name="counter_tb.v"/>
       <outfile xil_pn:name="fa_sch.vf"/>
       <outfile xil_pn:name="fa_tb.v"/>
       <outfile xil_pn:name="ha8_sch.vf"/>
       <outfile xil_pn:name="ha_sch.vf"/>
+      <outfile xil_pn:name="logic_ext.vf"/>
       <outfile xil_pn:name="logic_ext_tb.v"/>
       <outfile xil_pn:name="mux.vf"/>
       <outfile xil_pn:name="mux8sch.vf"/>
@@ -265,26 +276,24 @@
       <outfile xil_pn:name="toZERO_sch.vf"/>
       <outfile xil_pn:name="toZero_tb.v"/>
     </transform>
-    <transform xil_pn:end_ts="1516944517" xil_pn:in_ck="-2273941951074538162" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7645473557850437231" xil_pn:start_ts="1516944515">
+    <transform xil_pn:end_ts="1517585881" xil_pn:in_ck="-744826836661721283" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6195929150483090359" xil_pn:start_ts="1517585878">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="counter_tbw_tb_0_beh.prj"/>
-      <outfile xil_pn:name="counter_tbw_tb_0_isim_beh.exe"/>
+      <outfile xil_pn:name="controller_tbw_tb_0_beh.prj"/>
+      <outfile xil_pn:name="controller_tbw_tb_0_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1516944517" xil_pn:in_ck="6423294103747360255" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1054351672340292532" xil_pn:start_ts="1516944517">
+    <transform xil_pn:end_ts="1517585882" xil_pn:in_ck="-5887810083016719889" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-388097987026090724" xil_pn:start_ts="1517585881">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="counter_tbw_tb_0_isim_beh.wdb"/>
+      <outfile xil_pn:name="controller_tbw_tb_0_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -382,7 +391,7 @@
     </transform>
     <transform xil_pn:end_ts="1516396416" xil_pn:in_ck="7781533269924627046" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1516396415">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputRemoved"/>

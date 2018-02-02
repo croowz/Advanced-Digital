@@ -1,0 +1,168 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : controller_sch.vf
+// /___/   /\     Timestamp : 02/02/2018 10:26:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "Z:/Advanced-Digital-master/Advanced-Digital-master/Project Folder/Xilinx Files/controller_sch.vf" -w "Z:/Advanced-Digital-master/Advanced-Digital-master/Project Folder/Xilinx Files/controller_sch.sch"
+//Design Name: controller_sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module controller_sch(ADD, 
+                      BNZ, 
+                      CLK, 
+                      CLR, 
+                      RESET, 
+                      STORE, 
+                      SUB, 
+                      ZERO, 
+                      ADDSUB, 
+                      CL, 
+                      CL_AC, 
+                      DORPC, 
+                      LD_AC, 
+                      LD_D, 
+                      LD_IR, 
+                      LD_PC, 
+                      MEM_EN, 
+                      PC_CNT, 
+                      RORW, 
+                      S0, 
+                      S1, 
+                      S2, 
+                      S3, 
+                      S4, 
+                      S5);
+
+    input ADD;
+    input BNZ;
+    input CLK;
+    input CLR;
+    input RESET;
+    input STORE;
+    input SUB;
+    input ZERO;
+   output ADDSUB;
+   output CL;
+   output CL_AC;
+   output DORPC;
+   output LD_AC;
+   output LD_D;
+   output LD_IR;
+   output LD_PC;
+   output MEM_EN;
+   output PC_CNT;
+   output RORW;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   output S4;
+   output S5;
+   
+   wire XLXN_9;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_14;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_33;
+   wire XLXN_50;
+   wire XLXN_54;
+   wire XLXN_66;
+   wire CL_DUMMY;
+   wire S1_DUMMY;
+   wire S2_DUMMY;
+   wire S4_DUMMY;
+   wire LD_D_DUMMY;
+   
+   assign CL = CL_DUMMY;
+   assign LD_D = LD_D_DUMMY;
+   assign S1 = S1_DUMMY;
+   assign S2 = S2_DUMMY;
+   assign S4 = S4_DUMMY;
+   control  XLXI_1 (.CLK(CLK), 
+                   .CLR(CLR), 
+                   .RESET(RESET), 
+                   .S0(S0), 
+                   .S1(S1_DUMMY), 
+                   .S2(S2_DUMMY), 
+                   .S3(LD_D_DUMMY), 
+                   .S4(S4_DUMMY), 
+                   .S5(S5));
+   OR2  XLXI_2 (.I0(SUB), 
+               .I1(ADD), 
+               .O(XLXN_50));
+   AND2  XLXI_3 (.I0(BNZ), 
+                .I1(XLXN_9), 
+                .O(XLXN_12));
+   INV  XLXI_4 (.I(RESET), 
+               .O(XLXN_11));
+   INV  XLXI_5 (.I(ZERO), 
+               .O(XLXN_9));
+   INV  XLXI_7 (.I(XLXN_11), 
+               .O(CL_DUMMY));
+   OR3  XLXI_8 (.I0(XLXN_12), 
+               .I1(STORE), 
+               .I2(XLXN_50), 
+               .O(XLXN_14));
+   AND2  XLXI_9 (.I0(S4_DUMMY), 
+                .I1(XLXN_14), 
+                .O(XLXN_21));
+   AND2  XLXI_10 (.I0(STORE), 
+                 .I1(S4_DUMMY), 
+                 .O(XLXN_22));
+   OR3  XLXI_11 (.I0(XLXN_22), 
+                .I1(LD_D_DUMMY), 
+                .I2(S1_DUMMY), 
+                .O(MEM_EN));
+   OR2  XLXI_12 (.I0(XLXN_21), 
+                .I1(S1_DUMMY), 
+                .O(PC_CNT));
+   AND2  XLXI_13 (.I0(S1_DUMMY), 
+                 .I1(S1_DUMMY), 
+                 .O(LD_IR));
+   OR2  XLXI_14 (.I0(XLXN_33), 
+                .I1(CL_DUMMY), 
+                .O(CL_AC));
+   AND2  XLXI_15 (.I0(CLR), 
+                 .I1(S2_DUMMY), 
+                 .O(XLXN_33));
+   AND2  XLXI_16 (.I0(LD_D_DUMMY), 
+                 .I1(LD_D_DUMMY), 
+                 .O(S3));
+   AND2  XLXI_17 (.I0(SUB), 
+                 .I1(S4_DUMMY), 
+                 .O(ADDSUB));
+   AND2  XLXI_18 (.I0(XLXN_50), 
+                 .I1(S4_DUMMY), 
+                 .O(LD_AC));
+   AND2  XLXI_19 (.I0(S4_DUMMY), 
+                 .I1(STORE), 
+                 .O(RORW));
+   AND3  XLXI_20 (.I0(BNZ), 
+                 .I1(ZERO), 
+                 .I2(S4_DUMMY), 
+                 .O(LD_PC));
+   NOR2  XLXI_22 (.I0(XLXN_54), 
+                 .I1(CL_DUMMY), 
+                 .O(DORPC));
+   AND2  XLXI_23 (.I0(XLXN_66), 
+                 .I1(S4_DUMMY), 
+                 .O(XLXN_54));
+   OR2  XLXI_24 (.I0(STORE), 
+                .I1(BNZ), 
+                .O(XLXN_66));
+endmodule

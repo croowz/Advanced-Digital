@@ -1,0 +1,3 @@
+MODULE controller_sch
+	SUBMODULE control
+		INSTANCE XLXI_1
