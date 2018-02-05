@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-02-02T13:41:08</DateModified>
+  <DateModified>2018-02-05T13:37:12</DateModified>
   <ModuleName>alu4bit_board_sch</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>F:/Digital2/ToyProcessor(Main)/iseconfig/alu4bit_board_sch.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>F:/Digital2/ToyProcessor(Main)\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/iseconfig/alu4bit_board_sch.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files\</ImplementationReportsDirectory>
   <DateInitialized>2018-01-25T22:40:06</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
