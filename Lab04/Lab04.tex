@@ -162,6 +162,18 @@ endmodule
 		Runs through every case assigning states for each possible transition using simple if/else statements. Named each state and transition using variables in verilog. 
 
 	\subsection{Part 2}
+		\paragraph*{1-Hot Encoding}
+			For this part of the lab we needed to determine how we were going to encode the instruction register and the lab report recommended 1-hot encoding. We have five instructions to encode and an eight bit instruction register so rather than count up by ones we count up in powers of two. This reduces the number of labels sufficently, but we only need five and with counting by powers of two there are eight combinations. This is far easier to construct in a schematic and far more human readible.\\
+
+			\begin{tabular}{c c c}
+			\textbf{Instruction} & \textbf{Encoded Value (Decimal)} & \textbf{Encoded Value (Binary)}\\
+			\hline
+			ADD & 1  & 00000001\\
+			SUB & 2  & 00000010\\
+			CLR & 4  & 00000100\\
+			BNZ & 8  & 00001000\\
+			STR & 16 & 00010000\\
+			\end{tabular}
 		
 	\subsection{Part 3}
 		
