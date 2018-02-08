@@ -34,19 +34,19 @@ Lab Report Writing 				  & 50 & 50\\
 \newpage
 
 \section{Lab Purpose} \vspace{-.7cm} \line(1,0){470}
-	\paragraph{} 			
+	\paragraph{} In this lab we design the controller for the CPU, covering all possible states and transitions layed out by the control signal table we completed for prelab (Figure 2.). Like always, all test cases will be tested with a test bench and corresponding waveforms, shown in the Expiremental Results section.			
 		
 \section{Implementation Details} \vspace{-.7cm} \line(1,0){470}
 		\subsection{Part 1}
-        	\paragraph{Prelab} .
+        	\paragraph{Prelab} There were 3 parts to the prelab: Designing the FSM for the controller, the full control signal table, and the corresponding boolean equations for those signals.
 
 		\begin{figure}[h]
 			\includegraphics[scale=.18]{Prelab1.jpg}
-			\caption{FSM for the controller of the CPU}
+			\caption{FSM for the controller of the CPU. Created using information from the lecture slides}
 		\end{figure}
 		\begin{figure}[h]
 			\includegraphics[scale=.15]{Prelab2.jpg}
-			\caption{Control Signals}
+			\caption{Control Signals. Filled in using states from the lecture slides using one-hot encoding, left any not-on state 0.}
 		\end{figure}
 		\newpage
 		\begin{figure}[h]
@@ -159,8 +159,8 @@ module control(CLK,CLR,RESET,S0,S1,S2,S3,S4,S5);
 	end
 endmodule
 		\end{Verbatim}
+		Runs through every case assigning states for each possible transition using simple if/else statements. Named each state and transition using variables in verilog. 
 
-	\newpage
 	\subsection{Part 2}
 		
 	\subsection{Part 3}
