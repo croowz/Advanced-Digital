@@ -2,10 +2,11 @@
 \contentsline {paragraph}{}{3}
 \contentsline {section}{\numberline {2}Implementation Details}{3}
 \contentsline {subsection}{\numberline {2.1}Part 1}{3}
-\contentsline {subsection}{\numberline {2.2}Part 2}{4}
-\contentsline {subsection}{\numberline {2.3}Part 3}{5}
-\contentsline {section}{\numberline {3}Experimental Results}{5}
-\contentsline {section}{\numberline {4}Significance}{6}
-\contentsline {paragraph}{}{6}
-\contentsline {section}{\numberline {5}Comments/Suggestions}{6}
-\contentsline {paragraph}{}{6}
+\contentsline {paragraph}{Prelab}{3}
+\contentsline {subsection}{\numberline {2.2}Part 2}{7}
+\contentsline {subsection}{\numberline {2.3}Part 3}{7}
+\contentsline {section}{\numberline {3}Experimental Results}{10}
+\contentsline {section}{\numberline {4}Significance}{11}
+\contentsline {paragraph}{}{11}
+\contentsline {section}{\numberline {5}Comments/Suggestions}{11}
+\contentsline {paragraph}{}{11}
