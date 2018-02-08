@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mux8sch.vf
-// /___/   /\     Timestamp : 01/26/2018 00:22:39
+// /___/   /\     Timestamp : 02/07/2018 22:13:49
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/mux8sch.vf" -w "C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/mux8sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux8sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux8sch.sch"
 //Design Name: mux8sch
 //Device: spartan3e
 //Purpose:

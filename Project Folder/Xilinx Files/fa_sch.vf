@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : fa_sch.vf
-// /___/   /\     Timestamp : 01/19/2018 15:25:02
+// /___/   /\     Timestamp : 02/07/2018 22:13:44
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor2/fa_sch.vf -w F:/Digital2/ToyProcessor2/fa_sch.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/fa_sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/fa_sch.sch"
 //Design Name: fa_sch
 //Device: spartan3e
 //Purpose:
