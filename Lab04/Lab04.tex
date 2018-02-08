@@ -50,10 +50,11 @@ Lab Report Writing 				  & 50 & 50\\
 		\end{figure}
 		\newpage
 		\begin{figure}[h]
-			\includegraphics[scale=.2]{Prelab3.jpg}
+			\includegraphics[scale=.13]{Prelab3.jpg}
 			\caption{Boolean Equations for figure 2. control signals}
-		\end{figure}
+		\end{figure} 
 
+\newpage
 		\begin{Verbatim}[frame=single, fontsize= \small]
 //control.v
 `timescale 1s/1s
@@ -175,10 +176,12 @@ endmodule
 			STR & 16 & 00010000\\
 			\end{tabular}
 		
+		\newpage
 	\subsection{Part 3}
 		
 		\begin{figure}[h]
 			\includegraphics[scale=.6]{controller_sch.png}
+			\caption{Shematic for the controller using a symbol for the control module we created in part 1.}
 		\end{figure}
 		
 		\begin{Verbatim}[frame=single, fontsize= \small]
@@ -314,26 +317,26 @@ endmodule
 			
 \section{Experimental Results}\vspace{-.7cm} \line(1,0){470}
 
-\begin{figure}[h][h]
+\begin{figure}[h]
     \centering
 	\includegraphics[scale=.48]{control_tb.png}
-	\caption{}
+	\caption{Test bench for the control module. The uniform cascading waves show the simple transitions from 0-5, and at the bottom you can see that when clear is active, S5 occurs, and when reset is active, S0 occurs.}
 \end{figure}
 
-\begin{figure}[h][h]
+\begin{figure}[h]
     \centering
-	\includegraphics[scale=.48]{controller_tb.png}
-	\caption{}
+	\includegraphics[scale=.33]{controller_tb.png}
+	\caption{Test bench for the controller schematic. Cycles clock every 100 ns and changes all states to cover all cases. The inputs line the bottom, and the outputs exist on top. The cascading S0-S5 waves  that look similar to the first test bench are exactly that, more direct state transitions. Then you can see things like CL\_A activating when CLR and S2 are 1, CL on RESET, RORW on STORE and S4, and the rest of the things that occur in the table.}
 \end{figure}
 
 
 	\newpage
 \section{Significance} \vspace{-.7cm} \line(1,0){470}
-	\paragraph{}
+	\paragraph{} Another piece of the full CPU puzzle, the controller allows us to take in any of the control signals and provide the correct instructions to the CPU. With this controller completed, we can move on to connect this portion to the datapath to complete and assemble the toy processor, which will be able to run a given program.
 
 
  \section{Comments/Suggestions}\vspace{-.7cm} \line(1,0){470}
- 	\paragraph{}
+ 	\paragraph{} 
 		
 \end{document}
 
