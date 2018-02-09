@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym ha8_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym ha8_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym ha8_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sym} 

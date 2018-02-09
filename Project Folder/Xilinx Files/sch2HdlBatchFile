@@ -1,1 +1,3 @@
 sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.vf,-w,C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.vf,-w,C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.sch
+sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.vf,-w,C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch

@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : toy_sch.vf
-// /___/   /\     Timestamp : 02/07/2018 22:14:55
+// /___/   /\     Timestamp : 02/09/2018 12:33:34
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -87,7 +87,7 @@ module toZERO_sch_MUSER_toy_sch(zero_in,
    output zero_out;
    
    
-   (* HU_SET = "XLXI_1_0" *) 
+   (* HU_SET = "XLXI_1_2" *) 
    NOR8_MXILINX_toy_sch  XLXI_1 (.I0(zero_in[0]), 
                                 .I1(zero_in[1]), 
                                 .I2(zero_in[2]), 
@@ -166,21 +166,21 @@ module mux_MUSER_toy_sch(IN0,
     input SEL;
    output MUX_OUT;
    
-   wire XLXN_2;
    wire XLXN_7;
    wire XLXN_13;
+   wire XLXN_14;
    
-   AND2  XLXI_1 (.I0(XLXN_2), 
+   AND2  XLXI_1 (.I0(SEL), 
                 .I1(IN0), 
                 .O(XLXN_7));
    AND2  XLXI_2 (.I0(IN1), 
-                .I1(SEL), 
+                .I1(XLXN_14), 
                 .O(XLXN_13));
    OR2  XLXI_3 (.I0(XLXN_13), 
                .I1(XLXN_7), 
                .O(MUX_OUT));
-   INV  XLXI_4 (.I(SEL), 
-               .O(XLXN_2));
+   INV  XLXI_5 (.I(SEL), 
+               .O(XLXN_14));
 endmodule
 `timescale 1ns / 1ps
 
@@ -392,34 +392,34 @@ module ha8_sch_MUSER_toy_sch(HA_IN,
    wire XLXN_32;
    wire XLXN_33;
    
-   ha_sch_MUSER_toy_sch  XLXI_1 (.Ci(HA_IN[7]), 
-                                .Xi(XLXN_28), 
-                                .Cout(HA_OUT[7]), 
-                                .S());
-   ha_sch_MUSER_toy_sch  XLXI_2 (.Ci(HA_IN[6]), 
-                                .Xi(XLXN_29), 
-                                .Cout(HA_OUT[6]), 
-                                .S(XLXN_28));
-   ha_sch_MUSER_toy_sch  XLXI_3 (.Ci(HA_IN[5]), 
-                                .Xi(XLXN_30), 
-                                .Cout(HA_OUT[5]), 
-                                .S(XLXN_29));
-   ha_sch_MUSER_toy_sch  XLXI_4 (.Ci(HA_IN[4]), 
-                                .Xi(XLXN_31), 
-                                .Cout(HA_OUT[4]), 
-                                .S(XLXN_30));
-   ha_sch_MUSER_toy_sch  XLXI_5 (.Ci(HA_IN[3]), 
-                                .Xi(XLXN_32), 
-                                .Cout(HA_OUT[3]), 
-                                .S(XLXN_31));
-   ha_sch_MUSER_toy_sch  XLXI_6 (.Ci(HA_IN[2]), 
-                                .Xi(XLXN_33), 
-                                .Cout(HA_OUT[2]), 
-                                .S(XLXN_32));
-   ha_sch_MUSER_toy_sch  XLXI_7 (.Ci(HA_IN[1]), 
-                                .Xi(HA_IN[0]), 
-                                .Cout(HA_OUT[1]), 
-                                .S(XLXN_33));
+   ha_sch_MUSER_toy_sch  XLXI_1 (.Ci(XLXN_28), 
+                                .Xi(HA_IN[7]), 
+                                .Cout(), 
+                                .S(HA_OUT[7]));
+   ha_sch_MUSER_toy_sch  XLXI_2 (.Ci(XLXN_29), 
+                                .Xi(HA_IN[6]), 
+                                .Cout(XLXN_28), 
+                                .S(HA_OUT[6]));
+   ha_sch_MUSER_toy_sch  XLXI_3 (.Ci(XLXN_30), 
+                                .Xi(HA_IN[5]), 
+                                .Cout(XLXN_29), 
+                                .S(HA_OUT[5]));
+   ha_sch_MUSER_toy_sch  XLXI_4 (.Ci(XLXN_31), 
+                                .Xi(HA_IN[4]), 
+                                .Cout(XLXN_30), 
+                                .S(HA_OUT[4]));
+   ha_sch_MUSER_toy_sch  XLXI_5 (.Ci(XLXN_32), 
+                                .Xi(HA_IN[3]), 
+                                .Cout(XLXN_31), 
+                                .S(HA_OUT[3]));
+   ha_sch_MUSER_toy_sch  XLXI_6 (.Ci(XLXN_33), 
+                                .Xi(HA_IN[2]), 
+                                .Cout(XLXN_32), 
+                                .S(HA_OUT[2]));
+   ha_sch_MUSER_toy_sch  XLXI_7 (.Ci(HA_IN[0]), 
+                                .Xi(HA_IN[1]), 
+                                .Cout(XLXN_33), 
+                                .S(HA_OUT[1]));
    INV  XLXI_22 (.I(HA_IN[0]), 
                 .O(HA_OUT[0]));
 endmodule
@@ -443,7 +443,7 @@ module counter_sch_MUSER_toy_sch(CLK,
    wire [7:0] XLXN_7;
    wire XLXN_8;
    wire XLXN_15;
-   wire [7:0] XLXN_51;
+   wire [7:0] XLXN_52;
    wire [7:0] COUNT_OUT_DUMMY;
    
    assign COUNT_OUT[7:0] = COUNT_OUT_DUMMY[7:0];
@@ -461,85 +461,85 @@ module counter_sch_MUSER_toy_sch(CLK,
                                  .RST(RST), 
                                  .REG_OUT(COUNT_OUT_DUMMY[7:0]));
    mux8sch_MUSER_toy_sch  XLXI_6 (.IN0(COUNT_IN[7:0]), 
-                                 .IN1(XLXN_51[7:0]), 
+                                 .IN1(XLXN_52[7:0]), 
                                  .SEL(XLXN_8), 
                                  .MUX_OUT(XLXN_7[7:0]));
    ha8_sch_MUSER_toy_sch  XLXI_10 (.HA_IN(COUNT_OUT_DUMMY[7:0]), 
-                                  .HA_OUT(XLXN_51[7:0]));
+                                  .HA_OUT(XLXN_52[7:0]));
 endmodule
 `timescale 1ns / 1ps
 
 module Datapath_sch_MUSER_toy_sch(ADDORSUB, 
-                                  A_CL, 
-                                  A_LD, 
                                   CLK, 
+                                  CL_AC, 
+                                  CL_D, 
+                                  CL_IR, 
+                                  CL_PC, 
                                   COUNT, 
-                                  D_CL, 
+                                  DORPC, 
                                   D_IN, 
-                                  D_LD, 
-                                  D_PC, 
-                                  IR_CL, 
-                                  IR_LD, 
-                                  PC_CL, 
-                                  PC_LD, 
+                                  LD_AC, 
+                                  LD_D, 
+                                  LD_IR, 
+                                  LD_PC, 
                                   A, 
                                   D_OUT, 
                                   IR, 
                                   ZERO);
 
     input ADDORSUB;
-    input A_CL;
-    input A_LD;
     input CLK;
+    input CL_AC;
+    input CL_D;
+    input CL_IR;
+    input CL_PC;
     input COUNT;
-    input D_CL;
+    input DORPC;
     input [7:0] D_IN;
-    input D_LD;
-    input D_PC;
-    input IR_CL;
-    input IR_LD;
-    input PC_CL;
-    input PC_LD;
+    input LD_AC;
+    input LD_D;
+    input LD_IR;
+    input LD_PC;
    output [7:0] A;
    output [7:0] D_OUT;
    output [7:0] IR;
    output ZERO;
    
-   wire [7:0] XLXN_18;
    wire [7:0] XLXN_19;
    wire [7:0] XLXN_27;
+   wire [7:0] XLXN_30;
    wire [7:0] D_OUT_DUMMY;
    
    assign D_OUT[7:0] = D_OUT_DUMMY[7:0];
    reg_sch_MUSER_toy_sch  XLXI_1 (.CLK(CLK), 
-                                 .LOAD(D_LD), 
+                                 .LOAD(LD_D), 
                                  .REG_IN(D_IN[7:0]), 
-                                 .RST(D_CL), 
-                                 .REG_OUT(XLXN_18[7:0]));
+                                 .RST(CL_D), 
+                                 .REG_OUT(XLXN_30[7:0]));
    reg_sch_MUSER_toy_sch  XLXI_2 (.CLK(CLK), 
-                                 .LOAD(IR_LD), 
+                                 .LOAD(LD_IR), 
                                  .REG_IN(D_IN[7:0]), 
-                                 .RST(IR_CL), 
+                                 .RST(CL_IR), 
                                  .REG_OUT(IR[7:0]));
    counter_sch_MUSER_toy_sch  XLXI_3 (.CLK(CLK), 
                                      .COUNT(COUNT), 
-                                     .COUNT_IN(XLXN_18[7:0]), 
-                                     .LOAD(PC_LD), 
-                                     .RST(PC_CL), 
+                                     .COUNT_IN(XLXN_30[7:0]), 
+                                     .LOAD(LD_PC), 
+                                     .RST(CL_PC), 
                                      .COUNT_OUT(XLXN_19[7:0]));
    alu_sch_MUSER_toy_sch  XLXI_5 (.SEL(ADDORSUB), 
-                                 .X(XLXN_18[7:0]), 
-                                 .Y(D_OUT_DUMMY[7:0]), 
+                                 .X(D_OUT_DUMMY[7:0]), 
+                                 .Y(XLXN_30[7:0]), 
                                  .Cnext(), 
                                  .DATA_OUT(XLXN_27[7:0]));
-   mux8sch_MUSER_toy_sch  XLXI_6 (.IN0(XLXN_18[7:0]), 
+   mux8sch_MUSER_toy_sch  XLXI_6 (.IN0(XLXN_30[7:0]), 
                                  .IN1(XLXN_19[7:0]), 
-                                 .SEL(D_PC), 
+                                 .SEL(DORPC), 
                                  .MUX_OUT(A[7:0]));
    reg_sch_MUSER_toy_sch  XLXI_7 (.CLK(CLK), 
-                                 .LOAD(A_LD), 
+                                 .LOAD(LD_AC), 
                                  .REG_IN(XLXN_27[7:0]), 
-                                 .RST(A_CL), 
+                                 .RST(CL_AC), 
                                  .REG_OUT(D_OUT_DUMMY[7:0]));
    toZERO_sch_MUSER_toy_sch  XLXI_8 (.zero_in(D_OUT_DUMMY[7:0]), 
                                     .zero_out(ZERO));
@@ -728,11 +728,11 @@ module toy_sch(CLK,
    wire XLXN_24;
    wire XLXN_26;
    wire XLXN_29;
-   wire XLXN_51;
    wire XLXN_53;
    wire XLXN_54;
    wire XLXN_55;
    wire XLXN_56;
+   wire XLXN_59;
    
    controller_sch_MUSER_toy_sch  XLXI_5 (.ADD(IR[0]), 
                                         .BNZ(IR[3]), 
@@ -741,7 +741,7 @@ module toy_sch(CLK,
                                         .RESET(RESET), 
                                         .STORE(IR[4]), 
                                         .SUB(IR[1]), 
-                                        .ZERO(XLXN_51), 
+                                        .ZERO(XLXN_59), 
                                         .ADDSUB(XLXN_55), 
                                         .CL(XLXN_56), 
                                         .CL_AC(XLXN_23), 
@@ -760,20 +760,20 @@ module toy_sch(CLK,
                                         .S4(S4), 
                                         .S5(S5));
    Datapath_sch_MUSER_toy_sch  XLXI_6 (.ADDORSUB(XLXN_55), 
-                                      .A_CL(XLXN_23), 
-                                      .A_LD(XLXN_24), 
                                       .CLK(CLK), 
+                                      .CL_AC(XLXN_23), 
+                                      .CL_D(XLXN_56), 
+                                      .CL_IR(XLXN_56), 
+                                      .CL_PC(XLXN_56), 
                                       .COUNT(XLXN_54), 
-                                      .D_CL(XLXN_56), 
+                                      .DORPC(XLXN_29), 
                                       .D_IN(D_IN[7:0]), 
-                                      .D_LD(XLXN_22), 
-                                      .D_PC(XLXN_29), 
-                                      .IR_CL(XLXN_56), 
-                                      .IR_LD(XLXN_26), 
-                                      .PC_CL(XLXN_56), 
-                                      .PC_LD(XLXN_53), 
+                                      .LD_AC(XLXN_24), 
+                                      .LD_D(XLXN_22), 
+                                      .LD_IR(XLXN_26), 
+                                      .LD_PC(XLXN_53), 
                                       .A(ADDR[7:0]), 
                                       .D_OUT(D_OUT[7:0]), 
                                       .IR(IR[7:0]), 
-                                      .ZERO(XLXN_51));
+                                      .ZERO(XLXN_59));
 endmodule

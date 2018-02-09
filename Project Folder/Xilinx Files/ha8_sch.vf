@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ha8_sch.vf
-// /___/   /\     Timestamp : 02/07/2018 22:13:47
+// /___/   /\     Timestamp : 02/09/2018 12:21:23
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -53,34 +53,34 @@ module ha8_sch(HA_IN,
    wire XLXN_32;
    wire XLXN_33;
    
-   ha_sch_MUSER_ha8_sch  XLXI_1 (.Ci(HA_IN[7]), 
-                                .Xi(XLXN_28), 
-                                .Cout(HA_OUT[7]), 
-                                .S());
-   ha_sch_MUSER_ha8_sch  XLXI_2 (.Ci(HA_IN[6]), 
-                                .Xi(XLXN_29), 
-                                .Cout(HA_OUT[6]), 
-                                .S(XLXN_28));
-   ha_sch_MUSER_ha8_sch  XLXI_3 (.Ci(HA_IN[5]), 
-                                .Xi(XLXN_30), 
-                                .Cout(HA_OUT[5]), 
-                                .S(XLXN_29));
-   ha_sch_MUSER_ha8_sch  XLXI_4 (.Ci(HA_IN[4]), 
-                                .Xi(XLXN_31), 
-                                .Cout(HA_OUT[4]), 
-                                .S(XLXN_30));
-   ha_sch_MUSER_ha8_sch  XLXI_5 (.Ci(HA_IN[3]), 
-                                .Xi(XLXN_32), 
-                                .Cout(HA_OUT[3]), 
-                                .S(XLXN_31));
-   ha_sch_MUSER_ha8_sch  XLXI_6 (.Ci(HA_IN[2]), 
-                                .Xi(XLXN_33), 
-                                .Cout(HA_OUT[2]), 
-                                .S(XLXN_32));
-   ha_sch_MUSER_ha8_sch  XLXI_7 (.Ci(HA_IN[1]), 
-                                .Xi(HA_IN[0]), 
-                                .Cout(HA_OUT[1]), 
-                                .S(XLXN_33));
+   ha_sch_MUSER_ha8_sch  XLXI_1 (.Ci(XLXN_28), 
+                                .Xi(HA_IN[7]), 
+                                .Cout(), 
+                                .S(HA_OUT[7]));
+   ha_sch_MUSER_ha8_sch  XLXI_2 (.Ci(XLXN_29), 
+                                .Xi(HA_IN[6]), 
+                                .Cout(XLXN_28), 
+                                .S(HA_OUT[6]));
+   ha_sch_MUSER_ha8_sch  XLXI_3 (.Ci(XLXN_30), 
+                                .Xi(HA_IN[5]), 
+                                .Cout(XLXN_29), 
+                                .S(HA_OUT[5]));
+   ha_sch_MUSER_ha8_sch  XLXI_4 (.Ci(XLXN_31), 
+                                .Xi(HA_IN[4]), 
+                                .Cout(XLXN_30), 
+                                .S(HA_OUT[4]));
+   ha_sch_MUSER_ha8_sch  XLXI_5 (.Ci(XLXN_32), 
+                                .Xi(HA_IN[3]), 
+                                .Cout(XLXN_31), 
+                                .S(HA_OUT[3]));
+   ha_sch_MUSER_ha8_sch  XLXI_6 (.Ci(XLXN_33), 
+                                .Xi(HA_IN[2]), 
+                                .Cout(XLXN_32), 
+                                .S(HA_OUT[2]));
+   ha_sch_MUSER_ha8_sch  XLXI_7 (.Ci(HA_IN[0]), 
+                                .Xi(HA_IN[1]), 
+                                .Cout(XLXN_33), 
+                                .S(HA_OUT[1]));
    INV  XLXI_22 (.I(HA_IN[0]), 
                 .O(HA_OUT[0]));
 endmodule

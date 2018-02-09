@@ -5,14 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="267" delta="unknown" >"C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_tbw.v" Line 32: Cannot find port <arg fmt="%s" index="1">Overflow</arg> on this module
-</msg>
-
-<msg type="error" file="HDLCompiler" num="25" delta="unknown" >"C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_tbw.v" Line 46: Module &lt;<arg fmt="%s" index="1">toy_sch</arg>&gt; does not have a port named &lt;<arg fmt="%s" index="2">Overflow</arg>&gt;.
-</msg>
-
-<msg type="error" file="Simulator" num="778" delta="unknown" >Static elaboration of top level Verilog design unit(s) in library <arg fmt="%s" index="1">work</arg> failed
-</msg>
-
 </messages>
 

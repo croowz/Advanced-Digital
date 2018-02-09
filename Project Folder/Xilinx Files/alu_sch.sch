@@ -56,7 +56,7 @@
         <port polarity="Input" name="Y(7:0)" />
         <port polarity="Input" name="SEL" />
         <blockdef name="fa_sch">
-            <timestamp>2018-1-12T19:10:30</timestamp>
+            <timestamp>2018-2-9T17:18:51</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
@@ -315,11 +315,11 @@
             <wire x2="1472" y1="2336" y2="2336" x1="1456" />
         </branch>
         <branch name="XLXN_32">
+            <wire x2="1456" y1="560" y2="560" x1="960" />
+            <wire x2="960" y1="560" y2="640" x1="960" />
             <wire x2="1024" y1="640" y2="640" x1="960" />
-            <wire x2="960" y1="640" y2="864" x1="960" />
-            <wire x2="1456" y1="864" y2="864" x1="960" />
             <wire x2="1456" y1="480" y2="480" x1="1408" />
-            <wire x2="1456" y1="480" y2="864" x1="1456" />
+            <wire x2="1456" y1="480" y2="560" x1="1456" />
         </branch>
         <branch name="XLXN_33">
             <wire x2="944" y1="832" y2="928" x1="944" />

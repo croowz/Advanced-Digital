@@ -39,7 +39,7 @@
         <port polarity="Input" name="IN1(7:0)" />
         <port polarity="Input" name="IN0(7:0)" />
         <blockdef name="mux">
-            <timestamp>2018-1-5T18:39:16</timestamp>
+            <timestamp>2018-2-9T17:17:51</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
@@ -47,51 +47,51 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <block symbolname="mux" name="XLXI_1">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(0)" name="IN1" />
             <blockpin signalname="IN0(0)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(0)" name="MUX_OUT" />
         </block>
         <block symbolname="mux" name="XLXI_2">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(1)" name="IN1" />
             <blockpin signalname="IN0(1)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(1)" name="MUX_OUT" />
         </block>
         <block symbolname="mux" name="XLXI_3">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(2)" name="IN1" />
             <blockpin signalname="IN0(2)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(2)" name="MUX_OUT" />
         </block>
         <block symbolname="mux" name="XLXI_4">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(3)" name="IN1" />
             <blockpin signalname="IN0(3)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(3)" name="MUX_OUT" />
         </block>
         <block symbolname="mux" name="XLXI_5">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(4)" name="IN1" />
             <blockpin signalname="IN0(4)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(4)" name="MUX_OUT" />
         </block>
         <block symbolname="mux" name="XLXI_6">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(5)" name="IN1" />
             <blockpin signalname="IN0(5)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(5)" name="MUX_OUT" />
         </block>
         <block symbolname="mux" name="XLXI_7">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(6)" name="IN1" />
             <blockpin signalname="IN0(6)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(6)" name="MUX_OUT" />
         </block>
         <block symbolname="mux" name="XLXI_8">
-            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="IN1(7)" name="IN1" />
             <blockpin signalname="IN0(7)" name="IN0" />
+            <blockpin signalname="SEL" name="SEL" />
             <blockpin signalname="MUX_OUT(7)" name="MUX_OUT" />
         </block>
     </netlist>

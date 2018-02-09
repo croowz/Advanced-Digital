@@ -15,9 +15,8 @@
         <signal name="COUNT_IN(7:0)" />
         <signal name="COUNT" />
         <signal name="LOAD" />
-        <signal name="XLXN_51(7:0)" />
         <signal name="COUNT_OUT(7:0)" />
-        <signal name="XLXN_53(7:0)" />
+        <signal name="XLXN_52(7:0)" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="COUNT_IN(7:0)" />
@@ -55,7 +54,7 @@
             <circle r="16" cx="144" cy="-32" />
         </blockdef>
         <blockdef name="reg_sch">
-            <timestamp>2018-1-26T5:6:28</timestamp>
+            <timestamp>2018-2-9T17:19:21</timestamp>
             <rect width="304" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
@@ -66,7 +65,7 @@
             <line x2="432" y1="-224" y2="-224" x1="368" />
         </blockdef>
         <blockdef name="mux8sch">
-            <timestamp>2018-1-26T3:38:42</timestamp>
+            <timestamp>2018-2-9T17:18:47</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <rect width="64" x="0" y="-108" height="24" />
@@ -77,12 +76,12 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <blockdef name="ha8_sch">
-            <timestamp>2018-1-26T4:57:34</timestamp>
-            <rect width="256" x="64" y="-112" height="64" />
+            <timestamp>2018-2-9T17:19:15</timestamp>
             <line x2="0" y1="-80" y2="-80" x1="64" />
             <rect width="64" x="0" y="-92" height="24" />
-            <line x2="384" y1="-80" y2="-80" x1="320" />
-            <rect width="64" x="320" y="-92" height="24" />
+            <line x2="464" y1="-80" y2="-80" x1="400" />
+            <rect width="64" x="400" y="-92" height="24" />
+            <rect width="336" x="64" y="-112" height="64" />
         </blockdef>
         <block symbolname="reg_sch" name="XLXI_5">
             <blockpin signalname="RST" name="RST" />
@@ -107,13 +106,13 @@
         </block>
         <block symbolname="mux8sch" name="XLXI_6">
             <blockpin signalname="XLXN_8" name="SEL" />
-            <blockpin signalname="XLXN_51(7:0)" name="IN1(7:0)" />
+            <blockpin signalname="XLXN_52(7:0)" name="IN1(7:0)" />
             <blockpin signalname="COUNT_IN(7:0)" name="IN0(7:0)" />
             <blockpin signalname="XLXN_7(7:0)" name="MUX_OUT(7:0)" />
         </block>
         <block symbolname="ha8_sch" name="XLXI_10">
             <blockpin signalname="COUNT_OUT(7:0)" name="HA_IN(7:0)" />
-            <blockpin signalname="XLXN_51(7:0)" name="HA_OUT(7:0)" />
+            <blockpin signalname="XLXN_52(7:0)" name="HA_OUT(7:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -162,23 +161,23 @@
         </branch>
         <branch name="LOAD">
             <wire x2="688" y1="1152" y2="1152" x1="624" />
-            <wire x2="696" y1="1152" y2="1152" x1="688" />
-            <wire x2="960" y1="1152" y2="1152" x1="696" />
+            <wire x2="704" y1="1152" y2="1152" x1="688" />
+            <wire x2="960" y1="1152" y2="1152" x1="704" />
             <wire x2="688" y1="1152" y2="1312" x1="688" />
             <wire x2="704" y1="1312" y2="1312" x1="688" />
         </branch>
         <instance x="2464" y="1488" name="XLXI_10" orien="R180">
         </instance>
-        <branch name="XLXN_51(7:0)">
-            <wire x2="1456" y1="1408" y2="1408" x1="1392" />
-            <wire x2="1392" y1="1408" y2="1568" x1="1392" />
-            <wire x2="2080" y1="1568" y2="1568" x1="1392" />
-        </branch>
         <branch name="COUNT_OUT(7:0)">
             <wire x2="2688" y1="1568" y2="1568" x1="2464" />
             <wire x2="2688" y1="1152" y2="1152" x1="2496" />
             <wire x2="2800" y1="1152" y2="1152" x1="2688" />
             <wire x2="2688" y1="1152" y2="1568" x1="2688" />
+        </branch>
+        <branch name="XLXN_52(7:0)">
+            <wire x2="1456" y1="1408" y2="1408" x1="1392" />
+            <wire x2="1392" y1="1408" y2="1568" x1="1392" />
+            <wire x2="2000" y1="1568" y2="1568" x1="1392" />
         </branch>
     </sheet>
 </drawing>

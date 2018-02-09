@@ -1,1 +1,2 @@
 sch2sym -intstyle ise -family spartan3e -w -refsym alu_sch {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/alu_sch.sch} {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/alu_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym alu_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/alu_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/alu_sch.sym} 

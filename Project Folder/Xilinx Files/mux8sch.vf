@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mux8sch.vf
-// /___/   /\     Timestamp : 02/07/2018 22:13:49
+// /___/   /\     Timestamp : 02/09/2018 12:21:26
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -30,21 +30,21 @@ module mux_MUSER_mux8sch(IN0,
     input SEL;
    output MUX_OUT;
    
-   wire XLXN_2;
    wire XLXN_7;
    wire XLXN_13;
+   wire XLXN_14;
    
-   AND2  XLXI_1 (.I0(XLXN_2), 
+   AND2  XLXI_1 (.I0(SEL), 
                 .I1(IN0), 
                 .O(XLXN_7));
    AND2  XLXI_2 (.I0(IN1), 
-                .I1(SEL), 
+                .I1(XLXN_14), 
                 .O(XLXN_13));
    OR2  XLXI_3 (.I0(XLXN_13), 
                .I1(XLXN_7), 
                .O(MUX_OUT));
-   INV  XLXI_4 (.I(SEL), 
-               .O(XLXN_2));
+   INV  XLXI_5 (.I(SEL), 
+               .O(XLXN_14));
 endmodule
 `timescale 1ns / 1ps
 

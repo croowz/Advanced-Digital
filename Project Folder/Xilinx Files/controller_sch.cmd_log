@@ -1,1 +1,2 @@
 sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.sym} 

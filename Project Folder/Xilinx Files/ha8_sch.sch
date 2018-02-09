@@ -8,9 +8,7 @@
     <netlist>
         <signal name="HA_IN(7:0)" />
         <signal name="HA_OUT(7:0)" />
-        <signal name="HA_IN(0)" />
         <signal name="HA_OUT(0)" />
-        <signal name="HA_IN(1)" />
         <signal name="HA_IN(2)" />
         <signal name="HA_IN(3)" />
         <signal name="HA_IN(4)" />
@@ -30,15 +28,17 @@
         <signal name="XLXN_31" />
         <signal name="XLXN_32" />
         <signal name="XLXN_33" />
+        <signal name="HA_IN(0)" />
+        <signal name="HA_IN(1)" />
         <port polarity="Input" name="HA_IN(7:0)" />
         <port polarity="Output" name="HA_OUT(7:0)" />
         <blockdef name="ha_sch">
-            <timestamp>2018-1-26T4:42:34</timestamp>
-            <rect width="256" x="64" y="-176" height="128" />
+            <timestamp>2018-2-9T17:19:11</timestamp>
             <line x2="0" y1="-144" y2="-144" x1="64" />
-            <line x2="384" y1="-80" y2="-80" x1="320" />
-            <line x2="384" y1="-144" y2="-144" x1="320" />
             <line x2="0" y1="-80" y2="-80" x1="64" />
+            <rect width="256" x="64" y="-176" height="128" />
+            <line x2="384" y1="-144" y2="-144" x1="320" />
+            <line x2="384" y1="-80" y2="-80" x1="320" />
         </blockdef>
         <blockdef name="inv">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -50,46 +50,46 @@
             <circle r="16" cx="144" cy="-32" />
         </blockdef>
         <block symbolname="ha_sch" name="XLXI_1">
-            <blockpin signalname="HA_IN(7)" name="Ci" />
-            <blockpin signalname="HA_OUT(7)" name="Cout" />
-            <blockpin name="S" />
-            <blockpin signalname="XLXN_28" name="Xi" />
+            <blockpin signalname="HA_IN(7)" name="Xi" />
+            <blockpin signalname="XLXN_28" name="Ci" />
+            <blockpin name="Cout" />
+            <blockpin signalname="HA_OUT(7)" name="S" />
         </block>
         <block symbolname="ha_sch" name="XLXI_2">
-            <blockpin signalname="HA_IN(6)" name="Ci" />
-            <blockpin signalname="HA_OUT(6)" name="Cout" />
-            <blockpin signalname="XLXN_28" name="S" />
-            <blockpin signalname="XLXN_29" name="Xi" />
+            <blockpin signalname="HA_IN(6)" name="Xi" />
+            <blockpin signalname="XLXN_29" name="Ci" />
+            <blockpin signalname="XLXN_28" name="Cout" />
+            <blockpin signalname="HA_OUT(6)" name="S" />
         </block>
         <block symbolname="ha_sch" name="XLXI_3">
-            <blockpin signalname="HA_IN(5)" name="Ci" />
-            <blockpin signalname="HA_OUT(5)" name="Cout" />
-            <blockpin signalname="XLXN_29" name="S" />
-            <blockpin signalname="XLXN_30" name="Xi" />
+            <blockpin signalname="HA_IN(5)" name="Xi" />
+            <blockpin signalname="XLXN_30" name="Ci" />
+            <blockpin signalname="XLXN_29" name="Cout" />
+            <blockpin signalname="HA_OUT(5)" name="S" />
         </block>
         <block symbolname="ha_sch" name="XLXI_4">
-            <blockpin signalname="HA_IN(4)" name="Ci" />
-            <blockpin signalname="HA_OUT(4)" name="Cout" />
-            <blockpin signalname="XLXN_30" name="S" />
-            <blockpin signalname="XLXN_31" name="Xi" />
+            <blockpin signalname="HA_IN(4)" name="Xi" />
+            <blockpin signalname="XLXN_31" name="Ci" />
+            <blockpin signalname="XLXN_30" name="Cout" />
+            <blockpin signalname="HA_OUT(4)" name="S" />
         </block>
         <block symbolname="ha_sch" name="XLXI_5">
-            <blockpin signalname="HA_IN(3)" name="Ci" />
-            <blockpin signalname="HA_OUT(3)" name="Cout" />
-            <blockpin signalname="XLXN_31" name="S" />
-            <blockpin signalname="XLXN_32" name="Xi" />
+            <blockpin signalname="HA_IN(3)" name="Xi" />
+            <blockpin signalname="XLXN_32" name="Ci" />
+            <blockpin signalname="XLXN_31" name="Cout" />
+            <blockpin signalname="HA_OUT(3)" name="S" />
         </block>
         <block symbolname="ha_sch" name="XLXI_6">
-            <blockpin signalname="HA_IN(2)" name="Ci" />
-            <blockpin signalname="HA_OUT(2)" name="Cout" />
-            <blockpin signalname="XLXN_32" name="S" />
-            <blockpin signalname="XLXN_33" name="Xi" />
+            <blockpin signalname="HA_IN(2)" name="Xi" />
+            <blockpin signalname="XLXN_33" name="Ci" />
+            <blockpin signalname="XLXN_32" name="Cout" />
+            <blockpin signalname="HA_OUT(2)" name="S" />
         </block>
         <block symbolname="ha_sch" name="XLXI_7">
-            <blockpin signalname="HA_IN(1)" name="Ci" />
-            <blockpin signalname="HA_OUT(1)" name="Cout" />
-            <blockpin signalname="XLXN_33" name="S" />
-            <blockpin signalname="HA_IN(0)" name="Xi" />
+            <blockpin signalname="HA_IN(1)" name="Xi" />
+            <blockpin signalname="HA_IN(0)" name="Ci" />
+            <blockpin signalname="XLXN_33" name="Cout" />
+            <blockpin signalname="HA_OUT(1)" name="S" />
         </block>
         <block symbolname="inv" name="XLXI_22">
             <blockpin signalname="HA_IN(0)" name="I" />
@@ -127,9 +127,7 @@
         </branch>
         <branch name="HA_OUT(7:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1856" y="2144" type="branch" />
-            <wire x2="1808" y1="2144" y2="2144" x1="1776" />
-            <wire x2="1824" y1="2144" y2="2144" x1="1808" />
-            <wire x2="1856" y1="2144" y2="2144" x1="1824" />
+            <wire x2="1856" y1="2144" y2="2144" x1="1776" />
             <wire x2="1888" y1="2144" y2="2144" x1="1856" />
             <wire x2="2064" y1="2144" y2="2144" x1="1888" />
             <wire x2="2320" y1="2144" y2="2144" x1="2064" />
@@ -141,7 +139,6 @@
             <wire x2="3856" y1="2144" y2="2144" x1="3584" />
         </branch>
         <bustap x2="1888" y1="1488" y2="1584" x1="1888" />
-        <bustap x2="2128" y1="1488" y2="1584" x1="2128" />
         <bustap x2="2384" y1="1488" y2="1584" x1="2384" />
         <bustap x2="2640" y1="1488" y2="1584" x1="2640" />
         <bustap x2="2896" y1="1488" y2="1584" x1="2896" />
@@ -156,23 +153,10 @@
         <bustap x2="3072" y1="2144" y2="2048" x1="3072" />
         <bustap x2="3328" y1="2144" y2="2048" x1="3328" />
         <bustap x2="3584" y1="2144" y2="2048" x1="3584" />
-        <branch name="HA_IN(0)">
-            <attrtext style="alignment:SOFT-BVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1888" y="1600" type="branch" />
-            <wire x2="1888" y1="1584" y2="1600" x1="1888" />
-            <wire x2="1888" y1="1600" y2="1608" x1="1888" />
-            <wire x2="1888" y1="1608" y2="1712" x1="1888" />
-            <wire x2="2064" y1="1600" y2="1600" x1="1888" />
-            <wire x2="2064" y1="1600" y2="1616" x1="2064" />
-        </branch>
         <branch name="HA_OUT(0)">
             <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1888" y="2000" type="branch" />
             <wire x2="1888" y1="1936" y2="2000" x1="1888" />
             <wire x2="1888" y1="2000" y2="2048" x1="1888" />
-        </branch>
-        <branch name="HA_IN(1)">
-            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2128" y="1600" type="branch" />
-            <wire x2="2128" y1="1584" y2="1600" x1="2128" />
-            <wire x2="2128" y1="1600" y2="1616" x1="2128" />
         </branch>
         <branch name="HA_IN(2)">
             <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2384" y="1600" type="branch" />
@@ -283,5 +267,18 @@
         </branch>
         <iomarker fontsize="28" x="1760" y="1488" name="HA_IN(7:0)" orien="R180" />
         <iomarker fontsize="28" x="1776" y="2144" name="HA_OUT(7:0)" orien="R180" />
+        <branch name="HA_IN(0)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1888" y="1600" type="branch" />
+            <wire x2="1888" y1="1584" y2="1600" x1="1888" />
+            <wire x2="1888" y1="1600" y2="1616" x1="1888" />
+            <wire x2="1888" y1="1616" y2="1712" x1="1888" />
+            <wire x2="2064" y1="1616" y2="1616" x1="1888" />
+        </branch>
+        <bustap x2="2128" y1="1488" y2="1584" x1="2128" />
+        <branch name="HA_IN(1)">
+            <attrtext style="alignment:SOFT-TVCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2128" y="1600" type="branch" />
+            <wire x2="2128" y1="1584" y2="1600" x1="2128" />
+            <wire x2="2128" y1="1600" y2="1616" x1="2128" />
+        </branch>
     </sheet>
 </drawing>
