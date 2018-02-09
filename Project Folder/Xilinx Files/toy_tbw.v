@@ -5,7 +5,6 @@ module toy_tbw_tb_0;
 	reg CLK = 1'b0;
 	reg [7:0] D_IN = 8'b00000000;
 	reg RESET = 1'b1; 
-	// reg Overflow = 1'b0; 
 
 	wire [7:0] ADDR; 	
 	wire [7:0] D_OUT; 
@@ -43,7 +42,6 @@ module toy_tbw_tb_0;
 	.S3(S3), 
 	.S4(S4), 
 	.S5(S5));
-	//.Overflow(Overflow);
 	
 	initial 
 		begin

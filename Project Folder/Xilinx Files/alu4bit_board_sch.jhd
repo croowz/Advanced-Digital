@@ -1,13 +1,13 @@
 MODULE alu4bit_board_sch
 	SUBMODULE seven_seg_control_sch
 		INSTANCE XLXI_2
-	SUBMODULE Seven_Segment_Display
-		INSTANCE XLXI_4
-	SUBMODULE Seven_Segment_Display
-		INSTANCE XLXI_6
-	SUBMODULE Seven_Segment_Display
-		INSTANCE XLXI_7
-	SUBMODULE Seven_Segment_Display
-		INSTANCE XLXI_8
 	SUBMODULE alu4bit_sch
 		INSTANCE XLXI_5
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_11
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_12
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_13
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_14
