@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Datapath_sch.vf
-// /___/   /\     Timestamp : 02/09/2018 12:33:32
+// /___/   /\     Timestamp : 02/12/2018 14:00:33
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.sch"
 //Design Name: Datapath_sch
 //Device: spartan3e
 //Purpose:
@@ -87,7 +87,7 @@ module toZERO_sch_MUSER_Datapath_sch(zero_in,
    output zero_out;
    
    
-   (* HU_SET = "XLXI_1_1" *) 
+   (* HU_SET = "XLXI_1_4" *) 
    NOR8_MXILINX_Datapath_sch  XLXI_1 (.I0(zero_in[0]), 
                                      .I1(zero_in[1]), 
                                      .I2(zero_in[2]), 

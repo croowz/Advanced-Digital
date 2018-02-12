@@ -12,6 +12,7 @@
          <ClosedNode>/Datapath_sch Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|Datapath_sch.sch</ClosedNode>
          <ClosedNode>/RAM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|RAM_array.sch</ClosedNode>
          <ClosedNode>/ROM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|ROM_array.sch</ClosedNode>
+         <ClosedNode>/alu4bit_board_sch C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch/XLXI_2 - seven_seg_control_sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch/XLXI_5 - alu4bit_sch</ClosedNode>
@@ -23,11 +24,13 @@
          <ClosedNode>/alu4bit_sch F:|Digital2|ToyProcessor2|alu4bit_sch.sch</ClosedNode>
          <ClosedNode>/alu_sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|alu_sch.sch</ClosedNode>
          <ClosedNode>/alu_sch F:|Digital2|ToyProcessor2|alu_sch.sch</ClosedNode>
+         <ClosedNode>/control_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|control_tb.v</ClosedNode>
          <ClosedNode>/control_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|control_tb.v</ClosedNode>
          <ClosedNode>/control_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|control_tb.v</ClosedNode>
          <ClosedNode>/control_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|control_tb.v</ClosedNode>
          <ClosedNode>/controller_sch Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|controller_sch.sch</ClosedNode>
          <ClosedNode>/counter_sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|counter_sch.sch</ClosedNode>
+         <ClosedNode>/counter_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v/UUT - counter_sch/XLXI_10 - ha8_sch</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v/UUT - counter_sch/XLXI_6 - mux8sch</ClosedNode>
@@ -42,6 +45,7 @@
          <ClosedNode>/mux8sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|mux8sch.sch</ClosedNode>
          <ClosedNode>/mux8sch F:|Digital2|ToyProcessor2|mux8sch.sch</ClosedNode>
          <ClosedNode>/mux8sch F:|Digital2|ToyProcessor|mux8sch.sch</ClosedNode>
+         <ClosedNode>/reg_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|reg_tb.v</ClosedNode>
          <ClosedNode>/reg_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|reg_tb.v</ClosedNode>
          <ClosedNode>/reg_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|reg_tb.v</ClosedNode>
          <ClosedNode>/reg_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|reg_tb.v</ClosedNode>
@@ -50,19 +54,20 @@
          <ClosedNode>/seven_seg_control_sch C:|Users|zad65674|Downloads|seven_seg_controller|seven_seg_control_sch.vf</ClosedNode>
          <ClosedNode>/seven_seg_control_sch F:|Digital2|ToyProcessor2|seven_seg_controller|seven_seg_control_sch.sch</ClosedNode>
          <ClosedNode>/seven_seg_control_sch F:|Digital2|ToyProcessor2|seven_seg_controller|seven_seg_control_sch.vf</ClosedNode>
+         <ClosedNode>/toy_sch C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_sch.sch</ClosedNode>
          <ClosedNode>/toy_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_sch.sch</ClosedNode>
          <ClosedNode>/toy_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_sch.sch/XLXI_5 - controller_sch</ClosedNode>
          <ClosedNode>/toy_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_sch.sch/XLXI_6 - Datapath_sch</ClosedNode>
          <ClosedNode>/toy_sch F:|Digital2|ToyProcessor(Main)|toy_sch.sch</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>toy_sch (F:/Digital2/ToyProcessor(Main)/toy_sch.sch)</SelectedItem>
+         <SelectedItem>toy_sch (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000122000000020000000000000000000000000200000064ffffffff000000810000000300000002000001220000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>toy_sch (F:/Digital2/ToyProcessor(Main)/toy_sch.sch)</CurrentItem>
+      <CurrentItem>toy_sch (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -101,7 +106,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000f8000000010001000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -111,34 +116,43 @@
          <ClosedNode>/Datapath_sch Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|Datapath_sch.sch</ClosedNode>
          <ClosedNode>/RAM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|RAM_array.sch</ClosedNode>
          <ClosedNode>/ROM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|ROM_array.sch</ClosedNode>
+         <ClosedNode>/ROM_array_ROM_array_sch_tb C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|ROM_array_tb.v/UUT - ROM_array</ClosedNode>
          <ClosedNode>/ROM_array_ROM_array_sch_tb F:|Digital2|ToyProcessor(Main)|ROM_array_tb.v</ClosedNode>
+         <ClosedNode>/alu4bit_board_sch C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch F:|Digital2|ToyProcessor(Main)|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
+         <ClosedNode>/alu4bit_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_tb.v</ClosedNode>
          <ClosedNode>/alu4bit_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_tb.v</ClosedNode>
          <ClosedNode>/alu4bit_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|alu4bit_tb.v</ClosedNode>
          <ClosedNode>/alu4bit_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|alu4bit_tb.v</ClosedNode>
          <ClosedNode>/alu4bit_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|alu4bit_tb.v</ClosedNode>
+         <ClosedNode>/alu_tbw_tb C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu_tb.v</ClosedNode>
          <ClosedNode>/alu_tbw_tb C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu_tb.v</ClosedNode>
          <ClosedNode>/alu_tbw_tb C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|alu_tb.v</ClosedNode>
          <ClosedNode>/alu_tbw_tb F:|Digital2|ToyProcessor(Main)|alu_tb.v</ClosedNode>
          <ClosedNode>/alu_tbw_tb Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|alu_tb.v</ClosedNode>
+         <ClosedNode>/arith_ext_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|arith_ext_tb.v</ClosedNode>
          <ClosedNode>/arith_ext_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|arith_ext_tb.v</ClosedNode>
          <ClosedNode>/arith_ext_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|arith_ext_tb.v</ClosedNode>
          <ClosedNode>/arith_ext_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|arith_ext_tb.v</ClosedNode>
          <ClosedNode>/arith_ext_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|arith_ext_tb.v</ClosedNode>
+         <ClosedNode>/bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|bin_to_7seghex_tb.v</ClosedNode>
          <ClosedNode>/bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|bin_to_7seghex_tb.v</ClosedNode>
          <ClosedNode>/bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|bin_to_7seghex_tb.v</ClosedNode>
          <ClosedNode>/bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb F:|Digital2|ToyProcessor(Main)|bin_to_7seghex_tb.v</ClosedNode>
          <ClosedNode>/bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|bin_to_7seghex_tb.v</ClosedNode>
+         <ClosedNode>/control_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|control_tb.v</ClosedNode>
          <ClosedNode>/control_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|control_tb.v</ClosedNode>
          <ClosedNode>/control_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|control_tb.v</ClosedNode>
          <ClosedNode>/control_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|control_tb.v</ClosedNode>
+         <ClosedNode>/controller_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|controller_tb.v</ClosedNode>
          <ClosedNode>/controller_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|controller_tb.v</ClosedNode>
          <ClosedNode>/controller_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|controller_tb.v</ClosedNode>
          <ClosedNode>/controller_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|controller_tb.v</ClosedNode>
          <ClosedNode>/counter_sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|counter_sch.sch</ClosedNode>
+         <ClosedNode>/counter_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v/UUT - counter_sch/XLXI_10 - ha8_sch</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|counter_tb.v/UUT - counter_sch/XLXI_6 - mux8sch</ClosedNode>
@@ -147,29 +161,35 @@
          <ClosedNode>/counter_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|counter_tb.v</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|counter_tb.v</ClosedNode>
          <ClosedNode>/fa_sch_fa_sch_sch_tb F:|Digital2|ToyProcessor|fa_tb.v</ClosedNode>
+         <ClosedNode>/fa_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|fa_tb.v</ClosedNode>
          <ClosedNode>/fa_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|fa_tb.v</ClosedNode>
          <ClosedNode>/fa_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|fa_tb.v</ClosedNode>
          <ClosedNode>/fa_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|fa_tb.v</ClosedNode>
          <ClosedNode>/fa_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|fa_tb.v</ClosedNode>
+         <ClosedNode>/logic_ext_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|logic_ext_tb.v</ClosedNode>
          <ClosedNode>/logic_ext_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|logic_ext_tb.v</ClosedNode>
          <ClosedNode>/logic_ext_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|logic_ext_tb.v</ClosedNode>
          <ClosedNode>/logic_ext_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|logic_ext_tb.v</ClosedNode>
          <ClosedNode>/logic_ext_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|logic_ext_tb.v</ClosedNode>
+         <ClosedNode>/mux8_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|mux_tb2.v</ClosedNode>
          <ClosedNode>/mux8_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|mux_tb2.v</ClosedNode>
          <ClosedNode>/mux8_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|mux_tb2.v</ClosedNode>
          <ClosedNode>/mux8_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|mux_tb2.v</ClosedNode>
          <ClosedNode>/mux8_tbw_tb_0 F:|Digital2|ToyProcessor|mux_tb2.v/UUT - mux8sch</ClosedNode>
          <ClosedNode>/mux8_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|mux_tb2.v</ClosedNode>
+         <ClosedNode>/mux_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|mux_tb.v</ClosedNode>
          <ClosedNode>/mux_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|mux_tb.v</ClosedNode>
          <ClosedNode>/mux_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|mux_tb.v</ClosedNode>
          <ClosedNode>/mux_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|mux_tb.v</ClosedNode>
          <ClosedNode>/mux_tbw_tb_0 F:|Digital2|ToyProcessor2|mux_tb.v</ClosedNode>
          <ClosedNode>/mux_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|mux_tb.v</ClosedNode>
+         <ClosedNode>/reg_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|reg_tb.v</ClosedNode>
          <ClosedNode>/reg_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|reg_tb.v</ClosedNode>
          <ClosedNode>/reg_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|reg_tb.v</ClosedNode>
          <ClosedNode>/reg_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|reg_tb.v</ClosedNode>
          <ClosedNode>/reg_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|reg_tb.v</ClosedNode>
          <ClosedNode>/seven_seg_control_sch F:|Digital2|ToyProcessor2|seven_seg_controller|seven_seg_control_sch.vf</ClosedNode>
+         <ClosedNode>/toZERO_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toZero_tb.v</ClosedNode>
          <ClosedNode>/toZERO_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toZero_tb.v</ClosedNode>
          <ClosedNode>/toZERO_tbw_tb_0 C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|toZero_tb.v</ClosedNode>
          <ClosedNode>/toZERO_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|toZero_tb.v</ClosedNode>
@@ -177,6 +197,7 @@
          <ClosedNode>/toy_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_sch.sch</ClosedNode>
          <ClosedNode>/toy_sch_toy_sch_sch_tb C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_tbw.v/UUT - toy_sch/XLXI_5 - controller_sch</ClosedNode>
          <ClosedNode>/toy_sch_toy_sch_sch_tb C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_tbw.v/UUT - toy_sch/XLXI_6 - Datapath_sch</ClosedNode>
+         <ClosedNode>/toy_tbw_tb_0 C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_tbw.v</ClosedNode>
          <ClosedNode>/toy_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_tbw.v</ClosedNode>
          <ClosedNode>/toy_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_tbw.v/UUT - toy_sch</ClosedNode>
          <ClosedNode>/toy_tbw_tb_0 C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_tbw.v/UUT - toy_sch/XLXI_5 - controller_sch</ClosedNode>
@@ -189,13 +210,13 @@
          <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>RAM_array (C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/RAM_array.sch)</SelectedItem>
+         <SelectedItem>ROM_array_ROM_array_sch_tb (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b20000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>RAM_array (C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/RAM_array.sch)</CurrentItem>
+      <CurrentItem>ROM_array_ROM_array_sch_tb (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -216,13 +237,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -249,7 +270,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000191000000010000000100000000000000000000000064ffffffff000000810000000000000001000001910000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Update All Schematic Files</CurrentItem>
    </ItemView>

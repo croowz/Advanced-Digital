@@ -1,0 +1,6 @@
+verilog isim_temp "enoutput8_sch.vf"
+verilog isim_temp "encode8.vf"
+verilog isim_temp "bus8_mux.vf"
+verilog isim_temp "ROM_array.vf"
+verilog isim_temp "ROM_array_tb.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

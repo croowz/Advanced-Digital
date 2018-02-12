@@ -1,6 +1,0 @@
-verilog work "enoutput8_sch.vf"
-verilog work "encode8.vf"
-verilog work "bus8_mux.vf"
-verilog work "ROM_array.vf"
-verilog work "ROM_array_tb.v"
-verilog work "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

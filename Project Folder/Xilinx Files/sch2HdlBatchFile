@@ -1,4 +1,0 @@
-sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,F:/Digital2/ToyProcessor(Main)/ROM_array.vf,-w,C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/ROM_array.sch
-sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,F:/Digital2/ToyProcessor(Main)/encode8.vf,-w,C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/encode8.sch
-sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,F:/Digital2/ToyProcessor(Main)/bus8_mux.vf,-w,C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/bus8_mux.sch
-sch2hdl,-intstyle,ise,-family,spartan3e,-verilog,F:/Digital2/ToyProcessor(Main)/enoutput8_sch.vf,-w,C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/enoutput8_sch.sch
