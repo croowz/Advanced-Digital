@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "F:/Digital2/ToyProcessor(Main)/ROM_array.vf";
+static const char *ng0 = "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array.vf";
 
 
 
