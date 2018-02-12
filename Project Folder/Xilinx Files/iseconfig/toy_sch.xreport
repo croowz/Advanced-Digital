@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-02-09T12:29:10</DateModified>
+  <DateModified>2018-02-12T13:11:54</DateModified>
   <ModuleName>toy_sch</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/iseconfig/toy_sch.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files\</ImplementationReportsDirectory>
+  <SavedFilePath>F:/Digital2/ToyProcessor(Main)/iseconfig/toy_sch.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>F:/Digital2/ToyProcessor(Main)\</ImplementationReportsDirectory>
   <DateInitialized>2018-02-09T10:36:47</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

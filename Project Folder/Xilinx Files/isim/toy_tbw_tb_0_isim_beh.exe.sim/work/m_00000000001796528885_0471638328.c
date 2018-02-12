@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.vf";
+static const char *ng0 = "F:/Digital2/ToyProcessor(Main)/toy_sch.vf";
 
 
 

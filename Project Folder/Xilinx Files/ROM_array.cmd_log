@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym ROM_array C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/ROM_array.sch F:/Digital2/ToyProcessor(Main)/ROM_array.sym 
