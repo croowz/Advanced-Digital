@@ -2,6 +2,7 @@
 CLK
 CLR
 RESET
+OVERFLOW
 [Outputs]
 S0
 S1

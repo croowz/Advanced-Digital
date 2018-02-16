@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="472" delta="unknown" >"C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v" Line 21: Illegal character in binary number
-</msg>
-
-<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v" Line 3: Module &lt;<arg fmt="%s" index="1">ROM_array_ROM_array_sch_tb</arg>&gt; ignored due to previous errors.
-</msg>
-
 </messages>
 

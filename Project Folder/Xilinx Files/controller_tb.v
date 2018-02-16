@@ -10,7 +10,7 @@ module controller_tbw_tb_0;
 	reg STORE = 1'b0; 
 	reg SUB = 1'b0;	
 	reg ZERO = 1'b0; 
-	//reg Overflow = 1'b0;
+	reg Overflow = 1'b0;
 
 	wire ADDSUB; 
 	wire CL;
@@ -46,7 +46,7 @@ module controller_tbw_tb_0;
 		.BNZ(BNZ), 
 		.CLK(CLK), 
 		.CLR(CLR),
-		//.Overflow(Overflow), 
+		.Overflow(Overflow), 
 		.RESET(RESET), 
 		.STORE(STORE), 
 		.SUB(SUB), 

@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : controller_sch.vf
-// /___/   /\     Timestamp : 02/12/2018 14:00:30
+// /___/   /\     Timestamp : 02/16/2018 13:33:45
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/controller_sch.sch"
 //Design Name: controller_sch
 //Device: spartan3e
 //Purpose:
@@ -24,6 +24,7 @@ module controller_sch(ADD,
                       BNZ, 
                       CLK, 
                       CLR, 
+                      OVERFLOW, 
                       RESET, 
                       STORE, 
                       SUB, 
@@ -50,6 +51,7 @@ module controller_sch(ADD,
     input BNZ;
     input CLK;
     input CLR;
+    input OVERFLOW;
     input RESET;
     input STORE;
     input SUB;
@@ -82,7 +84,9 @@ module controller_sch(ADD,
    wire XLXN_50;
    wire XLXN_54;
    wire XLXN_66;
+   wire XLXN_185;
    wire CL_DUMMY;
+   wire S0_DUMMY;
    wire S1_DUMMY;
    wire S2_DUMMY;
    wire S4_DUMMY;
@@ -90,13 +94,15 @@ module controller_sch(ADD,
    
    assign CL = CL_DUMMY;
    assign LD_D = LD_D_DUMMY;
+   assign S0 = S0_DUMMY;
    assign S1 = S1_DUMMY;
    assign S2 = S2_DUMMY;
    assign S4 = S4_DUMMY;
    control  XLXI_1 (.CLK(CLK), 
                    .CLR(CLR), 
+                   .OVERFLOW(OVERFLOW), 
                    .RESET(RESET), 
-                   .S0(S0), 
+                   .S0(S0_DUMMY), 
                    .S1(S1_DUMMY), 
                    .S2(S2_DUMMY), 
                    .S3(LD_D_DUMMY), 
@@ -151,7 +157,7 @@ module controller_sch(ADD,
                  .O(LD_AC));
    AND2  XLXI_19 (.I0(S4_DUMMY), 
                  .I1(STORE), 
-                 .O(RORW));
+                 .O(XLXN_185));
    AND3  XLXI_20 (.I0(BNZ), 
                  .I1(ZERO), 
                  .I2(S4_DUMMY), 
@@ -165,4 +171,7 @@ module controller_sch(ADD,
    OR2  XLXI_24 (.I0(STORE), 
                 .I1(BNZ), 
                 .O(XLXN_66));
+   OR2  XLXI_25 (.I0(S0_DUMMY), 
+                .I1(XLXN_185), 
+                .O(RORW));
 endmodule

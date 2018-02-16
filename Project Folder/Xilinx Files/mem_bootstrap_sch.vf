@@ -1,0 +1,1430 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mem_bootstrap_sch.vf
+// /___/   /\     Timestamp : 02/16/2018 13:41:25
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.sch"
+//Design Name: mem_bootstrap_sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module COMP8_MXILINX_mem_bootstrap_sch(A, 
+                                       B, 
+                                       EQ);
+
+    input [7:0] A;
+    input [7:0] B;
+   output EQ;
+   
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   wire AB4;
+   wire AB5;
+   wire AB6;
+   wire AB7;
+   wire AB03;
+   wire AB47;
+   
+   AND4  I_36_32 (.I0(AB7), 
+                 .I1(AB6), 
+                 .I2(AB5), 
+                 .I3(AB4), 
+                 .O(AB47));
+   XNOR2  I_36_33 (.I0(B[6]), 
+                  .I1(A[6]), 
+                  .O(AB6));
+   XNOR2  I_36_34 (.I0(B[7]), 
+                  .I1(A[7]), 
+                  .O(AB7));
+   XNOR2  I_36_35 (.I0(B[5]), 
+                  .I1(A[5]), 
+                  .O(AB5));
+   XNOR2  I_36_36 (.I0(B[4]), 
+                  .I1(A[4]), 
+                  .O(AB4));
+   AND4  I_36_41 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(AB03));
+   XNOR2  I_36_42 (.I0(B[2]), 
+                  .I1(A[2]), 
+                  .O(AB2));
+   XNOR2  I_36_43 (.I0(B[3]), 
+                  .I1(A[3]), 
+                  .O(AB3));
+   XNOR2  I_36_44 (.I0(B[1]), 
+                  .I1(A[1]), 
+                  .O(AB1));
+   XNOR2  I_36_45 (.I0(B[0]), 
+                  .I1(A[0]), 
+                  .O(AB0));
+   AND2  I_36_50 (.I0(AB47), 
+                 .I1(AB03), 
+                 .O(EQ));
+endmodule
+`timescale 1ns / 1ps
+
+module ha_sch_MUSER_mem_bootstrap_sch(Ci, 
+                                      Xi, 
+                                      Cout, 
+                                      S);
+
+    input Ci;
+    input Xi;
+   output Cout;
+   output S;
+   
+   
+   AND2  XLXI_1 (.I0(Xi), 
+                .I1(Ci), 
+                .O(Cout));
+   XOR2  XLXI_2 (.I0(Xi), 
+                .I1(Ci), 
+                .O(S));
+endmodule
+`timescale 1ns / 1ps
+
+module ha8_sch_MUSER_mem_bootstrap_sch(HA_IN, 
+                                       HA_OUT);
+
+    input [7:0] HA_IN;
+   output [7:0] HA_OUT;
+   
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   
+   ha_sch_MUSER_mem_bootstrap_sch  XLXI_1 (.Ci(XLXN_28), 
+                                          .Xi(HA_IN[7]), 
+                                          .Cout(), 
+                                          .S(HA_OUT[7]));
+   ha_sch_MUSER_mem_bootstrap_sch  XLXI_2 (.Ci(XLXN_29), 
+                                          .Xi(HA_IN[6]), 
+                                          .Cout(XLXN_28), 
+                                          .S(HA_OUT[6]));
+   ha_sch_MUSER_mem_bootstrap_sch  XLXI_3 (.Ci(XLXN_30), 
+                                          .Xi(HA_IN[5]), 
+                                          .Cout(XLXN_29), 
+                                          .S(HA_OUT[5]));
+   ha_sch_MUSER_mem_bootstrap_sch  XLXI_4 (.Ci(XLXN_31), 
+                                          .Xi(HA_IN[4]), 
+                                          .Cout(XLXN_30), 
+                                          .S(HA_OUT[4]));
+   ha_sch_MUSER_mem_bootstrap_sch  XLXI_5 (.Ci(XLXN_32), 
+                                          .Xi(HA_IN[3]), 
+                                          .Cout(XLXN_31), 
+                                          .S(HA_OUT[3]));
+   ha_sch_MUSER_mem_bootstrap_sch  XLXI_6 (.Ci(XLXN_33), 
+                                          .Xi(HA_IN[2]), 
+                                          .Cout(XLXN_32), 
+                                          .S(HA_OUT[2]));
+   ha_sch_MUSER_mem_bootstrap_sch  XLXI_7 (.Ci(HA_IN[0]), 
+                                          .Xi(HA_IN[1]), 
+                                          .Cout(XLXN_33), 
+                                          .S(HA_OUT[1]));
+   INV  XLXI_22 (.I(HA_IN[0]), 
+                .O(HA_OUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module mux_MUSER_mem_bootstrap_sch(IN0, 
+                                   IN1, 
+                                   SEL, 
+                                   MUX_OUT);
+
+    input IN0;
+    input IN1;
+    input SEL;
+   output MUX_OUT;
+   
+   wire XLXN_7;
+   wire XLXN_13;
+   wire XLXN_14;
+   
+   AND2  XLXI_1 (.I0(SEL), 
+                .I1(IN0), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(IN1), 
+                .I1(XLXN_14), 
+                .O(XLXN_13));
+   OR2  XLXI_3 (.I0(XLXN_13), 
+               .I1(XLXN_7), 
+               .O(MUX_OUT));
+   INV  XLXI_5 (.I(SEL), 
+               .O(XLXN_14));
+endmodule
+`timescale 1ns / 1ps
+
+module mux8sch_MUSER_mem_bootstrap_sch(IN0, 
+                                       IN1, 
+                                       SEL, 
+                                       MUX_OUT);
+
+    input [7:0] IN0;
+    input [7:0] IN1;
+    input SEL;
+   output [7:0] MUX_OUT;
+   
+   
+   mux_MUSER_mem_bootstrap_sch  XLXI_1 (.IN0(IN0[0]), 
+                                       .IN1(IN1[0]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[0]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_2 (.IN0(IN0[1]), 
+                                       .IN1(IN1[1]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[1]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_3 (.IN0(IN0[2]), 
+                                       .IN1(IN1[2]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[2]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_4 (.IN0(IN0[3]), 
+                                       .IN1(IN1[3]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[3]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_5 (.IN0(IN0[4]), 
+                                       .IN1(IN1[4]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[4]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_6 (.IN0(IN0[5]), 
+                                       .IN1(IN1[5]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[5]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_7 (.IN0(IN0[6]), 
+                                       .IN1(IN1[6]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[6]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_8 (.IN0(IN0[7]), 
+                                       .IN1(IN1[7]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module reg_sch_MUSER_mem_bootstrap_sch(CLK, 
+                                       LOAD, 
+                                       REG_IN, 
+                                       RST, 
+                                       REG_OUT);
+
+    input CLK;
+    input LOAD;
+    input [7:0] REG_IN;
+    input RST;
+   output [7:0] REG_OUT;
+   
+   
+   FDRE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[7]), 
+                .R(RST), 
+                .Q(REG_OUT[7]));
+   FDRE #( .INIT(1'b0) ) XLXI_5 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[6]), 
+                .R(RST), 
+                .Q(REG_OUT[6]));
+   FDRE #( .INIT(1'b0) ) XLXI_6 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[5]), 
+                .R(RST), 
+                .Q(REG_OUT[5]));
+   FDRE #( .INIT(1'b0) ) XLXI_7 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[4]), 
+                .R(RST), 
+                .Q(REG_OUT[4]));
+   FDRE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[3]), 
+                .R(RST), 
+                .Q(REG_OUT[3]));
+   FDRE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[2]), 
+                .R(RST), 
+                .Q(REG_OUT[2]));
+   FDRE #( .INIT(1'b0) ) XLXI_16 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[1]), 
+                 .R(RST), 
+                 .Q(REG_OUT[1]));
+   FDRE #( .INIT(1'b0) ) XLXI_17 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[0]), 
+                 .R(RST), 
+                 .Q(REG_OUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module counter_sch_MUSER_mem_bootstrap_sch(CLK, 
+                                           COUNT, 
+                                           COUNT_IN, 
+                                           LOAD, 
+                                           RST, 
+                                           COUNT_OUT);
+
+    input CLK;
+    input COUNT;
+    input [7:0] COUNT_IN;
+    input LOAD;
+    input RST;
+   output [7:0] COUNT_OUT;
+   
+   wire XLXN_1;
+   wire [7:0] XLXN_7;
+   wire XLXN_8;
+   wire XLXN_15;
+   wire [7:0] XLXN_52;
+   wire [7:0] COUNT_OUT_DUMMY;
+   
+   assign COUNT_OUT[7:0] = COUNT_OUT_DUMMY[7:0];
+   OR2  XLXI_1 (.I0(COUNT), 
+               .I1(LOAD), 
+               .O(XLXN_15));
+   AND2  XLXI_2 (.I0(COUNT), 
+                .I1(XLXN_1), 
+                .O(XLXN_8));
+   INV  XLXI_3 (.I(LOAD), 
+               .O(XLXN_1));
+   reg_sch_MUSER_mem_bootstrap_sch  XLXI_5 (.CLK(CLK), 
+                                           .LOAD(XLXN_15), 
+                                           .REG_IN(XLXN_7[7:0]), 
+                                           .RST(RST), 
+                                           .REG_OUT(COUNT_OUT_DUMMY[7:0]));
+   mux8sch_MUSER_mem_bootstrap_sch  XLXI_6 (.IN0(COUNT_IN[7:0]), 
+                                           .IN1(XLXN_52[7:0]), 
+                                           .SEL(XLXN_8), 
+                                           .MUX_OUT(XLXN_7[7:0]));
+   ha8_sch_MUSER_mem_bootstrap_sch  XLXI_10 (.HA_IN(COUNT_OUT_DUMMY[7:0]), 
+                                            .HA_OUT(XLXN_52[7:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module OR8_MXILINX_mem_bootstrap_sch(I0, 
+                                     I1, 
+                                     I2, 
+                                     I3, 
+                                     I4, 
+                                     I5, 
+                                     I6, 
+                                     I7, 
+                                     O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+   output O;
+   
+   wire dummy;
+   wire S0;
+   wire S1;
+   wire O_DUMMY;
+   
+   assign O = O_DUMMY;
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_91 (.I1(S0), 
+                 .I2(S1), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(O_DUMMY));
+   OR2  I_36_94 (.I0(S0), 
+                .I1(S1), 
+                .O(O_DUMMY));
+   OR4  I_36_95 (.I0(I4), 
+                .I1(I5), 
+                .I2(I6), 
+                .I3(I7), 
+                .O(S1));
+   OR4  I_36_112 (.I0(I0), 
+                 .I1(I1), 
+                 .I2(I2), 
+                 .I3(I3), 
+                 .O(S0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_116 (.I1(I0), 
+                  .I2(I1), 
+                  .I3(I2), 
+                  .I4(I3), 
+                  .O(S0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_117 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+endmodule
+`timescale 1ns / 1ps
+
+module enoutput8_sch_MUSER_mem_bootstrap_sch(MUXIN, 
+                                             SEL, 
+                                             MUXOUT0, 
+                                             MUXOUT1, 
+                                             MUXOUT2, 
+                                             MUXOUT3, 
+                                             MUXOUT4, 
+                                             MUXOUT5, 
+                                             MUXOUT6, 
+                                             MUXOUT7);
+
+    input [7:0] MUXIN;
+    input SEL;
+   output MUXOUT0;
+   output MUXOUT1;
+   output MUXOUT2;
+   output MUXOUT3;
+   output MUXOUT4;
+   output MUXOUT5;
+   output MUXOUT6;
+   output MUXOUT7;
+   
+   
+   AND2  XLXI_1 (.I0(MUXIN[7]), 
+                .I1(SEL), 
+                .O(MUXOUT7));
+   AND2  XLXI_2 (.I0(MUXIN[6]), 
+                .I1(SEL), 
+                .O(MUXOUT6));
+   AND2  XLXI_3 (.I0(SEL), 
+                .I1(MUXIN[5]), 
+                .O(MUXOUT5));
+   AND2  XLXI_4 (.I0(SEL), 
+                .I1(MUXIN[4]), 
+                .O(MUXOUT4));
+   AND2  XLXI_5 (.I0(SEL), 
+                .I1(MUXIN[3]), 
+                .O(MUXOUT3));
+   AND2  XLXI_6 (.I0(SEL), 
+                .I1(MUXIN[2]), 
+                .O(MUXOUT2));
+   AND2  XLXI_7 (.I0(SEL), 
+                .I1(MUXIN[1]), 
+                .O(MUXOUT1));
+   AND2  XLXI_8 (.I0(SEL), 
+                .I1(MUXIN[0]), 
+                .O(MUXOUT0));
+endmodule
+`timescale 1ns / 1ps
+
+module encode8_MUSER_mem_bootstrap_sch(S1, 
+                                       S2, 
+                                       S3, 
+                                       Out0, 
+                                       Out1, 
+                                       Out2, 
+                                       Out3, 
+                                       Out4, 
+                                       Out5, 
+                                       Out6, 
+                                       Out7);
+
+    input S1;
+    input S2;
+    input S3;
+   output Out0;
+   output Out1;
+   output Out2;
+   output Out3;
+   output Out4;
+   output Out5;
+   output Out6;
+   output Out7;
+   
+   wire SN1;
+   wire SN2;
+   wire SN3;
+   
+   INV  XLXI_22 (.I(S3), 
+                .O(SN3));
+   INV  XLXI_23 (.I(S2), 
+                .O(SN2));
+   INV  XLXI_24 (.I(S1), 
+                .O(SN1));
+   AND3  XLXI_25 (.I0(S1), 
+                 .I1(S2), 
+                 .I2(S3), 
+                 .O(Out7));
+   AND3  XLXI_26 (.I0(S1), 
+                 .I1(S2), 
+                 .I2(SN3), 
+                 .O(Out3));
+   AND3  XLXI_27 (.I0(S1), 
+                 .I1(SN2), 
+                 .I2(S3), 
+                 .O(Out5));
+   AND3  XLXI_28 (.I0(S2), 
+                 .I1(S3), 
+                 .I2(SN1), 
+                 .O(Out6));
+   AND3  XLXI_29 (.I0(SN3), 
+                 .I1(SN2), 
+                 .I2(S1), 
+                 .O(Out1));
+   AND3  XLXI_30 (.I0(SN1), 
+                 .I1(S2), 
+                 .I2(SN3), 
+                 .O(Out2));
+   AND3  XLXI_31 (.I0(SN1), 
+                 .I1(SN2), 
+                 .I2(S3), 
+                 .O(Out4));
+   AND3  XLXI_32 (.I0(SN3), 
+                 .I1(SN2), 
+                 .I2(SN1), 
+                 .O(Out0));
+endmodule
+`timescale 1ns / 1ps
+
+module bus8_mux_MUSER_mem_bootstrap_sch(DIN0, 
+                                        DIN1, 
+                                        DIN2, 
+                                        DIN3, 
+                                        DIN4, 
+                                        DIN5, 
+                                        DIN6, 
+                                        DIN7, 
+                                        S0, 
+                                        S1, 
+                                        S2, 
+                                        DOUT);
+
+    input [7:0] DIN0;
+    input [7:0] DIN1;
+    input [7:0] DIN2;
+    input [7:0] DIN3;
+    input [7:0] DIN4;
+    input [7:0] DIN5;
+    input [7:0] DIN6;
+    input [7:0] DIN7;
+    input S0;
+    input S1;
+    input S2;
+   output [7:0] DOUT;
+   
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_59;
+   wire XLXN_60;
+   wire XLXN_62;
+   wire XLXN_63;
+   wire XLXN_64;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire XLXN_67;
+   wire XLXN_68;
+   wire XLXN_69;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire XLXN_78;
+   wire XLXN_90;
+   wire XLXN_91;
+   wire XLXN_92;
+   wire XLXN_93;
+   wire XLXN_94;
+   wire XLXN_95;
+   wire XLXN_96;
+   wire XLXN_97;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_104;
+   wire XLXN_105;
+   wire XLXN_106;
+   wire XLXN_107;
+   wire XLXN_108;
+   wire XLXN_109;
+   wire XLXN_110;
+   wire XLXN_111;
+   wire XLXN_112;
+   wire XLXN_113;
+   wire XLXN_114;
+   wire XLXN_116;
+   wire XLXN_118;
+   wire XLXN_119;
+   wire XLXN_120;
+   wire XLXN_121;
+   wire XLXN_122;
+   wire XLXN_123;
+   wire XLXN_124;
+   wire XLXN_125;
+   wire XLXN_126;
+   wire XLXN_127;
+   wire XLXN_128;
+   wire XLXN_129;
+   wire XLXN_130;
+   wire XLXN_131;
+   wire XLXN_133;
+   wire XLXN_134;
+   wire XLXN_135;
+   wire XLXN_136;
+   wire XLXN_137;
+   wire XLXN_138;
+   wire XLXN_139;
+   wire XLXN_140;
+   wire XLXN_143;
+   wire XLXN_151;
+   wire XLXN_154;
+   wire XLXN_156;
+   wire XLXN_157;
+   wire XLXN_158;
+   wire XLXN_160;
+   wire XLXN_161;
+   
+   encode8_MUSER_mem_bootstrap_sch  XLXI_1 (.S1(S0), 
+                                           .S2(S1), 
+                                           .S3(S2), 
+                                           .Out0(XLXN_65), 
+                                           .Out1(XLXN_63), 
+                                           .Out2(XLXN_64), 
+                                           .Out3(XLXN_10), 
+                                           .Out4(XLXN_62), 
+                                           .Out5(XLXN_60), 
+                                           .Out6(XLXN_59), 
+                                           .Out7(XLXN_9));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_14 (.MUXIN(DIN7[7:0]), 
+                                                  .SEL(XLXN_9), 
+                                                  .MUXOUT0(XLXN_66), 
+                                                  .MUXOUT1(XLXN_90), 
+                                                  .MUXOUT2(XLXN_98), 
+                                                  .MUXOUT3(XLXN_106), 
+                                                  .MUXOUT4(XLXN_114), 
+                                                  .MUXOUT5(XLXN_124), 
+                                                  .MUXOUT6(XLXN_133), 
+                                                  .MUXOUT7(XLXN_143));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_15 (.MUXIN(DIN6[7:0]), 
+                                                  .SEL(XLXN_59), 
+                                                  .MUXOUT0(XLXN_67), 
+                                                  .MUXOUT1(XLXN_91), 
+                                                  .MUXOUT2(XLXN_99), 
+                                                  .MUXOUT3(XLXN_107), 
+                                                  .MUXOUT4(XLXN_116), 
+                                                  .MUXOUT5(XLXN_125), 
+                                                  .MUXOUT6(XLXN_134), 
+                                                  .MUXOUT7(XLXN_151));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_16 (.MUXIN(DIN5[7:0]), 
+                                                  .SEL(XLXN_60), 
+                                                  .MUXOUT0(XLXN_68), 
+                                                  .MUXOUT1(XLXN_92), 
+                                                  .MUXOUT2(XLXN_100), 
+                                                  .MUXOUT3(XLXN_108), 
+                                                  .MUXOUT4(XLXN_118), 
+                                                  .MUXOUT5(XLXN_126), 
+                                                  .MUXOUT6(XLXN_135), 
+                                                  .MUXOUT7(XLXN_154));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_18 (.MUXIN(DIN4[7:0]), 
+                                                  .SEL(XLXN_62), 
+                                                  .MUXOUT0(XLXN_69), 
+                                                  .MUXOUT1(XLXN_93), 
+                                                  .MUXOUT2(XLXN_101), 
+                                                  .MUXOUT3(XLXN_109), 
+                                                  .MUXOUT4(XLXN_119), 
+                                                  .MUXOUT5(XLXN_127), 
+                                                  .MUXOUT6(XLXN_136), 
+                                                  .MUXOUT7(XLXN_156));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_19 (.MUXIN(DIN2[7:0]), 
+                                                  .SEL(XLXN_64), 
+                                                  .MUXOUT0(XLXN_76), 
+                                                  .MUXOUT1(XLXN_95), 
+                                                  .MUXOUT2(XLXN_103), 
+                                                  .MUXOUT3(XLXN_111), 
+                                                  .MUXOUT4(XLXN_121), 
+                                                  .MUXOUT5(XLXN_129), 
+                                                  .MUXOUT6(XLXN_138), 
+                                                  .MUXOUT7(XLXN_160));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_20 (.MUXIN(DIN1[7:0]), 
+                                                  .SEL(XLXN_63), 
+                                                  .MUXOUT0(XLXN_77), 
+                                                  .MUXOUT1(XLXN_96), 
+                                                  .MUXOUT2(XLXN_104), 
+                                                  .MUXOUT3(XLXN_112), 
+                                                  .MUXOUT4(XLXN_122), 
+                                                  .MUXOUT5(XLXN_130), 
+                                                  .MUXOUT6(XLXN_139), 
+                                                  .MUXOUT7(XLXN_158));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_21 (.MUXIN(DIN0[7:0]), 
+                                                  .SEL(XLXN_65), 
+                                                  .MUXOUT0(XLXN_78), 
+                                                  .MUXOUT1(XLXN_97), 
+                                                  .MUXOUT2(XLXN_105), 
+                                                  .MUXOUT3(XLXN_113), 
+                                                  .MUXOUT4(XLXN_123), 
+                                                  .MUXOUT5(XLXN_131), 
+                                                  .MUXOUT6(XLXN_140), 
+                                                  .MUXOUT7(XLXN_157));
+   enoutput8_sch_MUSER_mem_bootstrap_sch  XLXI_22 (.MUXIN(DIN3[7:0]), 
+                                                  .SEL(XLXN_10), 
+                                                  .MUXOUT0(XLXN_75), 
+                                                  .MUXOUT1(XLXN_94), 
+                                                  .MUXOUT2(XLXN_102), 
+                                                  .MUXOUT3(XLXN_110), 
+                                                  .MUXOUT4(XLXN_120), 
+                                                  .MUXOUT5(XLXN_128), 
+                                                  .MUXOUT6(XLXN_137), 
+                                                  .MUXOUT7(XLXN_161));
+   (* HU_SET = "XLXI_34_10" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_34 (.I0(XLXN_78), 
+                                          .I1(XLXN_77), 
+                                          .I2(XLXN_76), 
+                                          .I3(XLXN_75), 
+                                          .I4(XLXN_69), 
+                                          .I5(XLXN_68), 
+                                          .I6(XLXN_67), 
+                                          .I7(XLXN_66), 
+                                          .O(DOUT[0]));
+   (* HU_SET = "XLXI_38_11" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_38 (.I0(XLXN_97), 
+                                          .I1(XLXN_96), 
+                                          .I2(XLXN_95), 
+                                          .I3(XLXN_94), 
+                                          .I4(XLXN_93), 
+                                          .I5(XLXN_92), 
+                                          .I6(XLXN_91), 
+                                          .I7(XLXN_90), 
+                                          .O(DOUT[1]));
+   (* HU_SET = "XLXI_39_12" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_39 (.I0(XLXN_105), 
+                                          .I1(XLXN_104), 
+                                          .I2(XLXN_103), 
+                                          .I3(XLXN_102), 
+                                          .I4(XLXN_101), 
+                                          .I5(XLXN_100), 
+                                          .I6(XLXN_99), 
+                                          .I7(XLXN_98), 
+                                          .O(DOUT[2]));
+   (* HU_SET = "XLXI_40_13" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_40 (.I0(XLXN_113), 
+                                          .I1(XLXN_112), 
+                                          .I2(XLXN_111), 
+                                          .I3(XLXN_110), 
+                                          .I4(XLXN_109), 
+                                          .I5(XLXN_108), 
+                                          .I6(XLXN_107), 
+                                          .I7(XLXN_106), 
+                                          .O(DOUT[3]));
+   (* HU_SET = "XLXI_41_14" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_41 (.I0(XLXN_123), 
+                                          .I1(XLXN_122), 
+                                          .I2(XLXN_121), 
+                                          .I3(XLXN_120), 
+                                          .I4(XLXN_119), 
+                                          .I5(XLXN_118), 
+                                          .I6(XLXN_116), 
+                                          .I7(XLXN_114), 
+                                          .O(DOUT[4]));
+   (* HU_SET = "XLXI_42_15" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_42 (.I0(XLXN_131), 
+                                          .I1(XLXN_130), 
+                                          .I2(XLXN_129), 
+                                          .I3(XLXN_128), 
+                                          .I4(XLXN_127), 
+                                          .I5(XLXN_126), 
+                                          .I6(XLXN_125), 
+                                          .I7(XLXN_124), 
+                                          .O(DOUT[5]));
+   (* HU_SET = "XLXI_43_16" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_43 (.I0(XLXN_140), 
+                                          .I1(XLXN_139), 
+                                          .I2(XLXN_138), 
+                                          .I3(XLXN_137), 
+                                          .I4(XLXN_136), 
+                                          .I5(XLXN_135), 
+                                          .I6(XLXN_134), 
+                                          .I7(XLXN_133), 
+                                          .O(DOUT[6]));
+   (* HU_SET = "XLXI_44_17" *) 
+   OR8_MXILINX_mem_bootstrap_sch  XLXI_44 (.I0(XLXN_157), 
+                                          .I1(XLXN_158), 
+                                          .I2(XLXN_160), 
+                                          .I3(XLXN_161), 
+                                          .I4(XLXN_156), 
+                                          .I5(XLXN_154), 
+                                          .I6(XLXN_151), 
+                                          .I7(XLXN_143), 
+                                          .O(DOUT[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module ROM_array_MUSER_mem_bootstrap_sch(ADDR, 
+                                         DATA_OUT);
+
+    input [7:0] ADDR;
+   output [7:0] DATA_OUT;
+   
+   wire [7:0] A1;
+   wire [7:0] A2;
+   wire [7:0] A3;
+   wire [7:0] A4;
+   wire [7:0] A5;
+   wire [7:0] A6;
+   wire [7:0] A7;
+   wire [7:0] A8;
+   
+   bus8_mux_MUSER_mem_bootstrap_sch  XLXI_1 (.DIN0(A1[7:0]), 
+                                            .DIN1(A2[7:0]), 
+                                            .DIN2(A3[7:0]), 
+                                            .DIN3(A4[7:0]), 
+                                            .DIN4(A5[7:0]), 
+                                            .DIN5(A6[7:0]), 
+                                            .DIN6(A7[7:0]), 
+                                            .DIN7(A8[7:0]), 
+                                            .S0(ADDR[5]), 
+                                            .S1(ADDR[6]), 
+                                            .S2(ADDR[7]), 
+                                            .DOUT(DATA_OUT[7:0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_9 (.A0(ADDR[0]), 
+                   .A1(ADDR[1]), 
+                   .A2(ADDR[2]), 
+                   .A3(ADDR[3]), 
+                   .A4(ADDR[4]), 
+                   .O(A1[7]));
+   ROM32X1 #( .INIT(32'h00100000) ) XLXI_42 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A1[6]));
+   ROM32X1 #( .INIT(32'h00100000) ) XLXI_43 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A1[5]));
+   ROM32X1 #( .INIT(32'h00080000) ) XLXI_44 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A1[4]));
+   ROM32X1 #( .INIT(32'h00050000) ) XLXI_45 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A1[3]));
+   ROM32X1 #( .INIT(32'h00105501) ) XLXI_46 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A1[2]));
+   ROM32X1 #( .INIT(32'h00005050) ) XLXI_47 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A1[1]));
+   ROM32X1 #( .INIT(32'h0006EEEE) ) XLXI_48 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A1[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_65 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_66 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_67 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_68 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_69 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_70 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_71 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_72 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A2[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_73 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_74 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_75 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_76 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_77 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_78 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_79 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_80 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A3[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_81 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_82 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_83 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_84 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_85 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_86 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_87 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_88 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .O(A4[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_155 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_156 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_157 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_158 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_159 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_160 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_161 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_162 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A5[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_163 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_164 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_165 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_166 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_167 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_168 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_169 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_170 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A6[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_171 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_172 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_173 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_174 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_175 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_176 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_177 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_178 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A7[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_179 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_180 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_181 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_182 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_183 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_184 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_185 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) XLXI_186 (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .O(A8[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module RAM_array_MUSER_mem_bootstrap_sch(ADDR, 
+                                         CLK, 
+                                         DATA_IN, 
+                                         WE, 
+                                         DATA_OUT1);
+
+    input [7:0] ADDR;
+    input CLK;
+    input [7:0] DATA_IN;
+    input WE;
+   output [0:7] DATA_OUT1;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_8;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire [7:0] XLXN_13;
+   wire [7:0] XLXN_14;
+   wire [7:0] XLXN_15;
+   wire [7:0] XLXN_16;
+   wire [7:0] XLXN_17;
+   wire [7:0] XLXN_18;
+   wire [7:0] XLXN_19;
+   wire [7:0] XLXN_20;
+   
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_1 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .D(DATA_IN[7:0]), 
+                    .WCLK(CLK), 
+                    .WE(XLXN_1), 
+                    .O(XLXN_13[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_2 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .D(DATA_IN[7:0]), 
+                    .WCLK(CLK), 
+                    .WE(XLXN_2), 
+                    .O(XLXN_14[7:0]));
+   AND4B3  XLXI_9 (.I0(ADDR[7]), 
+                  .I1(ADDR[6]), 
+                  .I2(ADDR[5]), 
+                  .I3(WE), 
+                  .O(XLXN_1));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_11 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_3), 
+                     .O(XLXN_15[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_12 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_4), 
+                     .O(XLXN_16[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_15 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_10), 
+                     .O(XLXN_17[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_16 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_11), 
+                     .O(XLXN_18[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_19 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_12), 
+                     .O(XLXN_19[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_20 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_8), 
+                     .O(XLXN_20[7:0]));
+   AND4B2  XLXI_23 (.I0(ADDR[7]), 
+                   .I1(ADDR[6]), 
+                   .I2(ADDR[5]), 
+                   .I3(WE), 
+                   .O(XLXN_2));
+   AND4B2  XLXI_24 (.I0(ADDR[7]), 
+                   .I1(ADDR[5]), 
+                   .I2(ADDR[6]), 
+                   .I3(WE), 
+                   .O(XLXN_3));
+   AND4B1  XLXI_25 (.I0(ADDR[7]), 
+                   .I1(ADDR[6]), 
+                   .I2(ADDR[5]), 
+                   .I3(WE), 
+                   .O(XLXN_4));
+   AND4B1  XLXI_27 (.I0(ADDR[5]), 
+                   .I1(ADDR[6]), 
+                   .I2(ADDR[7]), 
+                   .I3(WE), 
+                   .O(XLXN_12));
+   AND4B1  XLXI_28 (.I0(ADDR[6]), 
+                   .I1(ADDR[7]), 
+                   .I2(ADDR[5]), 
+                   .I3(WE), 
+                   .O(XLXN_11));
+   AND4B2  XLXI_29 (.I0(ADDR[6]), 
+                   .I1(ADDR[5]), 
+                   .I2(ADDR[7]), 
+                   .I3(WE), 
+                   .O(XLXN_10));
+   bus8_mux_MUSER_mem_bootstrap_sch  XLXI_30 (.DIN0(XLXN_13[7:0]), 
+                                             .DIN1(XLXN_14[7:0]), 
+                                             .DIN2(XLXN_15[7:0]), 
+                                             .DIN3(XLXN_16[7:0]), 
+                                             .DIN4(XLXN_17[7:0]), 
+                                             .DIN5(XLXN_18[7:0]), 
+                                             .DIN6(XLXN_19[7:0]), 
+                                             .DIN7(XLXN_20[7:0]), 
+                                             .S0(ADDR[5]), 
+                                             .S1(ADDR[6]), 
+                                             .S2(ADDR[7]), 
+                                             .DOUT(DATA_OUT1[0:7]));
+   AND4  XLXI_48 (.I0(ADDR[7]), 
+                 .I1(ADDR[6]), 
+                 .I2(ADDR[5]), 
+                 .I3(WE), 
+                 .O(XLXN_8));
+endmodule
+`timescale 1ns / 1ps
+
+module mem_bootstrap_sch(ADDR, 
+                         CLK, 
+                         COUNT, 
+                         D_IN, 
+                         RST, 
+                         RW, 
+                         SEL, 
+                         D_OUT, 
+                         OVERFLOW);
+
+    input [7:0] ADDR;
+    input CLK;
+    input COUNT;
+    input [7:0] D_IN;
+    input RST;
+    input RW;
+    input SEL;
+   output [7:0] D_OUT;
+   output OVERFLOW;
+   
+   wire [7:0] XLXN_1;
+   wire [7:0] XLXN_2;
+   wire [7:0] XLXN_10;
+   wire [7:0] XLXN_18;
+   wire [7:0] XLXN_20;
+   wire [7:0] XLXN_21;
+   wire XLXN_22;
+   
+   assign XLXN_20 = 8'b11111111;
+   assign XLXN_21 = 8'h00;
+   ROM_array_MUSER_mem_bootstrap_sch  XLXI_1 (.ADDR(XLXN_18[7:0]), 
+                                             .DATA_OUT(XLXN_1[7:0]));
+   RAM_array_MUSER_mem_bootstrap_sch  XLXI_2 (.ADDR(XLXN_10[7:0]), 
+                                             .CLK(CLK), 
+                                             .DATA_IN(XLXN_2[7:0]), 
+                                             .WE(RW), 
+                                             .DATA_OUT1(D_OUT[7:0]));
+   mux8sch_MUSER_mem_bootstrap_sch  XLXI_3 (.IN0(XLXN_1[7:0]), 
+                                           .IN1(D_IN[7:0]), 
+                                           .SEL(SEL), 
+                                           .MUX_OUT(XLXN_2[7:0]));
+   mux8sch_MUSER_mem_bootstrap_sch  XLXI_4 (.IN0(XLXN_18[7:0]), 
+                                           .IN1(ADDR[7:0]), 
+                                           .SEL(SEL), 
+                                           .MUX_OUT(XLXN_10[7:0]));
+   counter_sch_MUSER_mem_bootstrap_sch  XLXI_5 (.CLK(CLK), 
+                                               .COUNT(COUNT), 
+                                               .COUNT_IN(XLXN_21[7:0]), 
+                                               .LOAD(XLXN_22), 
+                                               .RST(RST), 
+                                               .COUNT_OUT(XLXN_18[7:0]));
+   (* HU_SET = "XLXI_7_18" *) 
+   COMP8_MXILINX_mem_bootstrap_sch  XLXI_7 (.A(XLXN_20[7:0]), 
+                                           .B(XLXN_18[7:0]), 
+                                           .EQ(OVERFLOW));
+   GND  XLXI_9 (.G(XLXN_22));
+endmodule

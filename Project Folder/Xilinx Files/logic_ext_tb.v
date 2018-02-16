@@ -26,11 +26,12 @@ module logic_ext_tbw_tb_0;
 		.M(M)
    );
 // Initialize Inputs
-       initial begin
-#100;
- for (i=0; i<max_count; i=i+1)
-	begin {M,S1,S0,ai,bi} = i; 
-	#100; 
-	end
-end
+	initial 
+		begin
+			#100;
+			for (i=0; i<max_count; i=i+1)
+			begin {M,S1,S0,ai,bi} = i; 
+				#100; 
+			end
+		end
 endmodule

@@ -1,0 +1,5 @@
+MODULE toyProcessor_overall
+	SUBMODULE toy_sch
+		INSTANCE XLXI_1
+	SUBMODULE mem_bootstrap_sch
+		INSTANCE XLXI_2
