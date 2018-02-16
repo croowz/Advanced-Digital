@@ -1,27 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<symbol version="7" name="RAM_array">
-    <symboltype>BLOCK</symboltype>
-    <timestamp>2018-2-12T18:36:6</timestamp>
-    <pin polarity="Input" x="0" y="-96" name="ADDR(7:0)" />
-    <pin polarity="Input" x="0" y="-224" name="DATA_IN(7:0)" />
-    <pin polarity="Input" x="0" y="-32" name="WE" />
-    <pin polarity="Input" x="0" y="-160" name="CLK" />
-    <pin polarity="Output" x="384" y="-224" name="DATA_OUT1(0:7)" />
-    <graph>
-        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-264" type="symbol" />
-        <attrtext attrname="PinName" x="72" y="-96" type="pin ADDR(7:0)" />
-        <attrtext attrname="PinName" x="72" y="-224" type="pin DATA_IN(7:0)" />
-        <attrtext attrname="PinName" x="72" y="-32" type="pin WE" />
-        <attrtext attrname="PinName" x="72" y="-160" type="pin CLK" />
-        <attrtext style="alignment:RIGHT" attrname="PinName" x="312" y="-224" type="pin DATA_OUT1(0:7)" />
-        <rect width="256" x="64" y="-256" height="256" />
-        <line x2="0" y1="-96" y2="-96" x1="64" />
-        <rect width="64" x="0" y="-108" height="24" />
-        <line x2="0" y1="-160" y2="-160" x1="64" />
-        <line x2="0" y1="-224" y2="-224" x1="64" />
-        <rect width="64" x="0" y="-236" height="24" />
-        <line x2="384" y1="-224" y2="-224" x1="320" />
-        <rect width="64" x="320" y="-236" height="24" />
-        <line x2="0" y1="-32" y2="-32" x1="64" />
-    </graph>
-</symbol>
+VERSION 5
+BEGIN SYMBOL RAM_array
+SYMBOLTYPE BLOCK
+TIMESTAMP 2006 2 21 6 34 29
+SYMPIN 0 -96 Input ADDR(7:0)
+SYMPIN 0 -160 Input CLK
+SYMPIN 0 -224 Input DATA_IN(7:0)
+SYMPIN 384 -224 Output DATA_OUT1(7:0)
+SYMPIN 0 -32 Input WE
+RECTANGLE N 64 -256 320 0 
+BEGIN DISPLAY 192 -264 ATTR SymbolName
+    ALIGNMENT BCENTER
+    FONT 56 "Arial"
+END DISPLAY
+LINE N 64 -96 0 -96 
+DISPLAY 72 -96 PIN ADDR(7:0) ATTR PinName
+RECTANGLE N 0 -108 64 -84 
+LINE N 64 -160 0 -160 
+DISPLAY 72 -160 PIN CLK ATTR PinName
+LINE N 64 -224 0 -224 
+DISPLAY 72 -224 PIN DATA_IN(7:0) ATTR PinName
+RECTANGLE N 0 -236 64 -212 
+LINE N 320 -224 384 -224 
+BEGIN DISPLAY 312 -224 PIN DATA_OUT1(7:0) ATTR PinName
+    ALIGNMENT RIGHT
+END DISPLAY
+RECTANGLE N 320 -236 384 -212 
+LINE N 64 -32 0 -32 
+DISPLAY 72 -32 PIN WE ATTR PinName
+END SYMBOL

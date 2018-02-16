@@ -244,22 +244,12 @@
     <transform xil_pn:end_ts="1518462392" xil_pn:in_ck="-4693491975578769747" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-4681022585217480766" xil_pn:start_ts="1518462390">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="Datapath_sch.vf"/>
-      <outfile xil_pn:name="ROM_array.vf"/>
-      <outfile xil_pn:name="alu_sch.vf"/>
-      <outfile xil_pn:name="bus8_mux.vf"/>
-      <outfile xil_pn:name="controller_sch.vf"/>
-      <outfile xil_pn:name="counter_sch.vf"/>
-      <outfile xil_pn:name="encode8.vf"/>
-      <outfile xil_pn:name="enoutput8_sch.vf"/>
-      <outfile xil_pn:name="fa_sch.vf"/>
-      <outfile xil_pn:name="ha8_sch.vf"/>
-      <outfile xil_pn:name="ha_sch.vf"/>
-      <outfile xil_pn:name="mux.vf"/>
-      <outfile xil_pn:name="mux8sch.vf"/>
-      <outfile xil_pn:name="reg_sch.vf"/>
-      <outfile xil_pn:name="toZERO_sch.vf"/>
-      <outfile xil_pn:name="toy_sch.vf"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1518190632" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-948602524319075583" xil_pn:start_ts="1518190632">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -272,56 +262,23 @@
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Datapath_sch.vf"/>
-      <outfile xil_pn:name="ROM_array.vf"/>
-      <outfile xil_pn:name="ROM_array_tb.v"/>
-      <outfile xil_pn:name="alu4bit_tb.v"/>
-      <outfile xil_pn:name="alu_sch.vf"/>
-      <outfile xil_pn:name="alu_tb.v"/>
-      <outfile xil_pn:name="arith_ext.vf"/>
-      <outfile xil_pn:name="arith_ext_tb.v"/>
-      <outfile xil_pn:name="bin_to_7seghex_sch.vf"/>
-      <outfile xil_pn:name="bin_to_7seghex_tb.v"/>
-      <outfile xil_pn:name="bus8_mux.vf"/>
-      <outfile xil_pn:name="control.v"/>
-      <outfile xil_pn:name="control_tb.v"/>
-      <outfile xil_pn:name="controller_sch.vf"/>
-      <outfile xil_pn:name="controller_tb.v"/>
-      <outfile xil_pn:name="counter_sch.vf"/>
-      <outfile xil_pn:name="counter_tb.v"/>
-      <outfile xil_pn:name="encode8.vf"/>
-      <outfile xil_pn:name="enoutput8_sch.vf"/>
-      <outfile xil_pn:name="fa_sch.vf"/>
-      <outfile xil_pn:name="fa_tb.v"/>
-      <outfile xil_pn:name="ha8_sch.vf"/>
-      <outfile xil_pn:name="ha_sch.vf"/>
-      <outfile xil_pn:name="logic_ext.vf"/>
-      <outfile xil_pn:name="logic_ext_tb.v"/>
-      <outfile xil_pn:name="mux.vf"/>
-      <outfile xil_pn:name="mux8sch.vf"/>
-      <outfile xil_pn:name="mux_tb.v"/>
-      <outfile xil_pn:name="mux_tb2.v"/>
-      <outfile xil_pn:name="reg_sch.vf"/>
-      <outfile xil_pn:name="reg_tb.v"/>
-      <outfile xil_pn:name="seven_seg_controller/mux4_7bit_sch.vf"/>
-      <outfile xil_pn:name="seven_seg_controller/mux4_sch.vf"/>
-      <outfile xil_pn:name="seven_seg_controller/seven_seg_control_sch.vf"/>
-      <outfile xil_pn:name="toZERO_sch.vf"/>
-      <outfile xil_pn:name="toZero_tb.v"/>
-      <outfile xil_pn:name="toy_sch.vf"/>
-      <outfile xil_pn:name="toy_tbw.v"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1518462617" xil_pn:in_ck="-6518504276488903269" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5267410543934288543" xil_pn:start_ts="1518462615">
       <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1518462395" xil_pn:in_ck="4148768461506965282" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-1935228980982074106" xil_pn:start_ts="1518462394">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForced"/>
       <outfile xil_pn:name="ROM_array_ROM_array_sch_tb_isim_beh.wdb"/>

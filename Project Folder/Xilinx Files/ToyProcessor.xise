@@ -180,31 +180,35 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="192"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="192"/>
     </file>
-    <file xil_pn:name="../../../../../Downloads/ROMRAM/ROMRAM/bus8_mux.sch" xil_pn:type="FILE_SCHEMATIC">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="3"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="193"/>
-    </file>
-    <file xil_pn:name="../../../../../Downloads/ROMRAM/ROMRAM/encode8.sch" xil_pn:type="FILE_SCHEMATIC">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="194"/>
-    </file>
-    <file xil_pn:name="../../../../../Downloads/ROMRAM/ROMRAM/enoutput8_sch.sch" xil_pn:type="FILE_SCHEMATIC">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="195"/>
-    </file>
-    <file xil_pn:name="../../../../../Downloads/ROMRAM/ROMRAM/RAM_array.sch" xil_pn:type="FILE_SCHEMATIC">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="196"/>
-    </file>
-    <file xil_pn:name="../../../../../Downloads/ROMRAM/ROMRAM/ROM_array.sch" xil_pn:type="FILE_SCHEMATIC">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="4"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="197"/>
-    </file>
     <file xil_pn:name="ROM_array_tb.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="200"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="200"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="200"/>
+    </file>
+    <file xil_pn:name="bus8_mux.sch" xil_pn:type="FILE_SCHEMATIC">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="203"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="203"/>
+    </file>
+    <file xil_pn:name="encode8.sch" xil_pn:type="FILE_SCHEMATIC">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="204"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="204"/>
+    </file>
+    <file xil_pn:name="enoutput8_sch.sch" xil_pn:type="FILE_SCHEMATIC">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="205"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="205"/>
+    </file>
+    <file xil_pn:name="RAM_array.sch" xil_pn:type="FILE_SCHEMATIC">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="206"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="206"/>
+    </file>
+    <file xil_pn:name="ROM_array.sch" xil_pn:type="FILE_SCHEMATIC">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="207"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="207"/>
+    </file>
+    <file xil_pn:name="mem_bootstrap_sch.sch" xil_pn:type="FILE_SCHEMATIC">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="208"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="208"/>
     </file>
   </files>
 

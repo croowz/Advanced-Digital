@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<symbol version="7" name="ROM_array">
-    <symboltype>BLOCK</symboltype>
-    <timestamp>2018-2-12T18:35:41</timestamp>
-    <pin polarity="Input" x="0" y="-32" name="ADDR(7:0)" />
-    <pin polarity="Output" x="384" y="-32" name="DATA_OUT(7:0)" />
-    <graph>
-        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-72" type="symbol" />
-        <attrtext attrname="PinName" x="72" y="-32" type="pin ADDR(7:0)" />
-        <attrtext style="alignment:RIGHT" attrname="PinName" x="312" y="-32" type="pin DATA_OUT(7:0)" />
-        <rect width="256" x="64" y="-64" height="64" />
-        <line x2="0" y1="-32" y2="-32" x1="64" />
-        <rect width="64" x="0" y="-44" height="24" />
-        <line x2="384" y1="-32" y2="-32" x1="320" />
-        <rect width="64" x="320" y="-44" height="24" />
-    </graph>
-</symbol>
+VERSION 5
+BEGIN SYMBOL 
+SYMBOLTYPE BLOCK
+TIMESTAMP 2010 3 3 3 16 31
+SYMPIN 0 -32 Input ADDR(7:0)
+SYMPIN 384 -32 Output DATA_OUT(7:0)
+BEGIN DISPLAY 192 -72 ATTR SymbolName
+    ALIGNMENT BCENTER
+    FONT 56 "Arial"
+END DISPLAY
+DISPLAY 72 -32 PIN ADDR(7:0) ATTR PinName
+BEGIN DISPLAY 312 -32 PIN DATA_OUT(7:0) ATTR PinName
+    ALIGNMENT RIGHT
+END DISPLAY
+RECTANGLE N 64 -64 320 0 
+LINE N 64 -32 0 -32 
+RECTANGLE N 0 -44 64 -20 
+LINE N 320 -32 384 -32 
+RECTANGLE N 320 -44 384 -20 
+END SYMBOL

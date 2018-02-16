@@ -11,7 +11,11 @@
          <ClosedNode>/Datapath_sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|Datapath_sch.sch</ClosedNode>
          <ClosedNode>/Datapath_sch Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|Datapath_sch.sch</ClosedNode>
          <ClosedNode>/RAM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|RAM_array.sch</ClosedNode>
+         <ClosedNode>/RAM_array C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|RAM_array.sch</ClosedNode>
+         <ClosedNode>/RAM_array C:|Users|zad65674|Downloads|ROMRAM|ROMRAM|RAM_array.sch</ClosedNode>
          <ClosedNode>/ROM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|ROM_array.sch</ClosedNode>
+         <ClosedNode>/ROM_array C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|ROM_array.sch</ClosedNode>
+         <ClosedNode>/ROM_array C:|Users|zad65674|Downloads|ROMRAM|ROMRAM|ROM_array.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch/XLXI_2 - seven_seg_control_sch</ClosedNode>
@@ -39,6 +43,7 @@
          <ClosedNode>/counter_tbw_tb_0 F:|Digital2|ToyProcessor(Main)|counter_tb.v</ClosedNode>
          <ClosedNode>/counter_tbw_tb_0 Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|counter_tb.v</ClosedNode>
          <ClosedNode>/ha8_sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|ha8_sch.sch</ClosedNode>
+         <ClosedNode>/mem_bootstrap_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|mem_bootstrap_sch.sch</ClosedNode>
          <ClosedNode>/mux4_7bit_sch C:|Users|zad65674|Downloads|seven_seg_controller|mux4_7bit_sch.sch</ClosedNode>
          <ClosedNode>/mux4_7bit_sch C:|Users|zad65674|Downloads|seven_seg_controller|mux4_7bit_sch.vf</ClosedNode>
          <ClosedNode>/mux4_7bit_sch F:|Digital2|ToyProcessor2|seven_seg_controller|mux4_7bit_sch.vf</ClosedNode>
@@ -60,14 +65,12 @@
          <ClosedNode>/toy_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|toy_sch.sch/XLXI_6 - Datapath_sch</ClosedNode>
          <ClosedNode>/toy_sch F:|Digital2|ToyProcessor(Main)|toy_sch.sch</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>toy_sch (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000122000000020000000000000000000000000200000064ffffffff000000810000000300000002000001220000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000013a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000013a0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>toy_sch (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch)</CurrentItem>
+      <CurrentItem>toy_sch (C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -94,7 +97,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002f2000000040101000100000000000000000000000064ffffffff0000008100000000000000040000006b00000001000000000000004a0000000100000000000000660000000100000000000001d70000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000031a000000040101000100000000000000000000000064ffffffff0000008100000000000000040000006b00000001000000000000004a0000000100000000000000660000000100000000000001ff0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>alu4bit_board_sch.sch</CurrentItem>
    </ItemView>
@@ -115,11 +118,16 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Datapath_sch Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|Datapath_sch.sch</ClosedNode>
          <ClosedNode>/RAM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|RAM_array.sch</ClosedNode>
+         <ClosedNode>/RAM_array C:|Users|zad65674|Downloads|ROMRAM|ROMRAM|RAM_array.sch</ClosedNode>
          <ClosedNode>/ROM_array C:|Users|rac71636|Downloads|ROMRAM|ROMRAM|ROM_array.sch</ClosedNode>
          <ClosedNode>/ROM_array_ROM_array_sch_tb C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|ROM_array_tb.v/UUT - ROM_array</ClosedNode>
+         <ClosedNode>/ROM_array_ROM_array_sch_tb C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|ROM_array_tb.v</ClosedNode>
          <ClosedNode>/ROM_array_ROM_array_sch_tb F:|Digital2|ToyProcessor(Main)|ROM_array_tb.v</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|rac71636|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
+         <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch/XLXI_2 - seven_seg_control_sch/XLXI_1 - mux4_7bit_sch</ClosedNode>
+         <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch/XLXI_2 - seven_seg_control_sch/XLXI_2 - CB16CE_MXILINX_seven_seg_control_sch</ClosedNode>
+         <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Documents|GitHub|Advanced-Digital|Project Folder|Xilinx Files|alu4bit_board_sch.sch/XLXI_5 - alu4bit_sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch C:|Users|zad65674|Downloads|Advanced-Digital-master|Lab02|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch F:|Digital2|ToyProcessor(Main)|alu4bit_board_sch.sch</ClosedNode>
          <ClosedNode>/alu4bit_board_sch Z:|Advanced-Digital-master|Advanced-Digital-master|Project Folder|Xilinx Files|alu4bit_board_sch.sch</ClosedNode>
@@ -210,13 +218,13 @@
          <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ROM_array_ROM_array_sch_tb (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v)</SelectedItem>
+         <SelectedItem>ROM_array_ROM_array_sch_tb (C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b20000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>ROM_array_ROM_array_sch_tb (C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v)</CurrentItem>
+      <CurrentItem>ROM_array_ROM_array_sch_tb (C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ROM_array_tb.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -259,7 +267,7 @@
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000241000000b601000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>

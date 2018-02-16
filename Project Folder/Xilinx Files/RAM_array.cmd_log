@@ -1,1 +1,2 @@
 sch2sym -intstyle ise -family spartan3e -w -refsym RAM_array C:/Users/rac71636/Downloads/ROMRAM/ROMRAM/RAM_array.sch F:/Digital2/ToyProcessor(Main)/RAM_array.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym RAM_array C:/Users/zad65674/Downloads/ROMRAM/ROMRAM/RAM_array.sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/RAM_array.sym} 
