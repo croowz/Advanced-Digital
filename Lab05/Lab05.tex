@@ -281,26 +281,19 @@ endmodule
 	
 		\end{Verbatim}
 		Test bench runs through every given instruction by just changing values of D\_IN in binary and adding waits for visibility convenience. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
-			
+\newpage			
 \section{Experimental Results}\vspace{-.7cm} \line(1,0){470}
 
-\begin{figure}[h]
-    \centering
-	%\includegraphics[scale=.48]{}
-	\caption{}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-	%\includegraphics[scale=.33]{}
-	\caption{}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-	%\includegraphics[scale=.33]{}
-	\caption{}
-\end{figure}
+\begin{center}
+	\includegraphics[scale=.35]{c1.png}\\
+	This segment shows a reset followed by adding 170 and clearing.
+	\includegraphics[scale=.35]{c2.png}\\
+	This segment shows adding 254 and then subtracting 3 leaving 251 which can be seen at the beginning of the next segment.
+	\includegraphics[scale=.35]{c3.png}\\
+	This segment begins with a store of the answer previous to the address 255. Then a clear and we branch if not zero to 11001100 which can be seen in the next segment.
+	\includegraphics[scale=.35]{c4.png}\\
+	Finally we clear add 15 and branch if not zero to 11001100.
+\end{center}
 
 	\newpage
 \section{Significance} \vspace{-.7cm} \line(1,0){470}
@@ -309,6 +302,7 @@ endmodule
 
  \section{Comments/Suggestions}\vspace{-.7cm} \line(1,0){470}
  	\paragraph{} 
+ 		N.A.
 		
 \end{document}
 

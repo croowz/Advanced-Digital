@@ -4,8 +4,8 @@
 \contentsline {subsection}{\numberline {2.1}Prelab}{3}
 \contentsline {subsection}{\numberline {2.2}Circuit Implementation in Schematic Editor}{4}
 \contentsline {subsection}{\numberline {2.3}Simulation}{5}
-\contentsline {section}{\numberline {3}Experimental Results}{9}
-\contentsline {section}{\numberline {4}Significance}{10}
-\contentsline {paragraph}{}{10}
-\contentsline {section}{\numberline {5}Comments/Suggestions}{10}
-\contentsline {paragraph}{}{10}
+\contentsline {section}{\numberline {3}Experimental Results}{10}
+\contentsline {section}{\numberline {4}Significance}{12}
+\contentsline {paragraph}{}{12}
+\contentsline {section}{\numberline {5}Comments/Suggestions}{12}
+\contentsline {paragraph}{}{12}
