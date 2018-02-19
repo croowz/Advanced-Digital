@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="Datapath_sch">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2018-2-9T17:33:10</timestamp>
+    <timestamp>2018-2-19T18:36:16</timestamp>
     <pin polarity="Input" x="0" y="-672" name="CL_D" />
     <pin polarity="Input" x="0" y="-608" name="LD_D" />
     <pin polarity="Input" x="0" y="-160" name="CL_IR" />

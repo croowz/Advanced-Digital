@@ -25,7 +25,6 @@
         <signal name="B(3:0)" />
         <signal name="S0" />
         <signal name="M" />
-        <signal name="XLXN_27" />
         <signal name="ML(6:0)" />
         <signal name="ML(0)" />
         <signal name="ML(1)" />
@@ -60,14 +59,7 @@
         <signal name="A(3)" />
         <signal name="A(1)" />
         <signal name="A(0)" />
-        <signal name="XLXN_31" />
-        <signal name="XLXN_32" />
         <signal name="XLXN_33" />
-        <signal name="XLXN_34" />
-        <signal name="XLXN_35" />
-        <signal name="XLXN_36" />
-        <signal name="XLXN_37" />
-        <signal name="XLXN_38" />
         <signal name="B(3)" />
         <signal name="B(1)" />
         <signal name="B(0)" />

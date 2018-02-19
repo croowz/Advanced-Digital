@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ha8_sch.vf
-// /___/   /\     Timestamp : 02/16/2018 13:33:49
+// /___/   /\     Timestamp : 02/19/2018 13:38:16
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sch"
 //Design Name: ha8_sch
 //Device: spartan3e
 //Purpose:
@@ -41,10 +41,12 @@ endmodule
 `timescale 1ns / 1ps
 
 module ha8_sch(HA_IN, 
-               HA_OUT);
+               HA_OUT, 
+               OVERFLOW);
 
     input [7:0] HA_IN;
    output [7:0] HA_OUT;
+   output OVERFLOW;
    
    wire XLXN_28;
    wire XLXN_29;
@@ -55,7 +57,7 @@ module ha8_sch(HA_IN,
    
    ha_sch_MUSER_ha8_sch  XLXI_1 (.Ci(XLXN_28), 
                                 .Xi(HA_IN[7]), 
-                                .Cout(), 
+                                .Cout(OVERFLOW), 
                                 .S(HA_OUT[7]));
    ha_sch_MUSER_ha8_sch  XLXI_2 (.Ci(XLXN_29), 
                                 .Xi(HA_IN[6]), 

@@ -1,270 +1,233 @@
-VERSION 6
-BEGIN SCHEMATIC
-    BEGIN ATTR DeviceFamilyName "spartan2e"
-        DELETE all:0
-        EDITNAME all:0
-        EDITTRAIT all:0
-    END ATTR
-    BEGIN NETLIST
-        SIGNAL MUXIN(6)
-        SIGNAL SEL
-        SIGNAL MUXIN(7:0)
-        SIGNAL MUXIN(7)
-        SIGNAL MUXIN(5)
-        SIGNAL MUXIN(4)
-        SIGNAL MUXIN(3)
-        SIGNAL MUXIN(2)
-        SIGNAL MUXIN(1)
-        SIGNAL MUXIN(0)
-        SIGNAL MUXOUT7
-        SIGNAL MUXOUT6
-        SIGNAL MUXOUT5
-        SIGNAL MUXOUT4
-        SIGNAL MUXOUT3
-        SIGNAL MUXOUT2
-        SIGNAL MUXOUT1
-        SIGNAL MUXOUT0
-        SIGNAL XLXN_1
-        PORT Input SEL
-        PORT Input MUXIN(7:0)
-        PORT Output MUXOUT7
-        PORT Output MUXOUT6
-        PORT Output MUXOUT5
-        PORT Output MUXOUT4
-        PORT Output MUXOUT3
-        PORT Output MUXOUT2
-        PORT Output MUXOUT1
-        PORT Output MUXOUT0
-        BEGIN BLOCKDEF and2
-            TIMESTAMP 2000 1 1 10 10 10
-            LINE N 0 -64 64 -64 
-            LINE N 0 -128 64 -128 
-            LINE N 256 -96 192 -96 
-            ARC N 96 -144 192 -48 144 -48 144 -144 
-            LINE N 144 -48 64 -48 
-            LINE N 64 -144 144 -144 
-            LINE N 64 -48 64 -144 
-        END BLOCKDEF
-        BEGIN BLOCK XLXI_1 and2
-            PIN I0 MUXIN(7)
-            PIN I1 SEL
-            PIN O MUXOUT7
-        END BLOCK
-        BEGIN BLOCK XLXI_2 and2
-            PIN I0 MUXIN(6)
-            PIN I1 SEL
-            PIN O MUXOUT6
-        END BLOCK
-        BEGIN BLOCK XLXI_3 and2
-            PIN I0 SEL
-            PIN I1 MUXIN(5)
-            PIN O MUXOUT5
-        END BLOCK
-        BEGIN BLOCK XLXI_4 and2
-            PIN I0 SEL
-            PIN I1 MUXIN(4)
-            PIN O MUXOUT4
-        END BLOCK
-        BEGIN BLOCK XLXI_5 and2
-            PIN I0 SEL
-            PIN I1 MUXIN(3)
-            PIN O MUXOUT3
-        END BLOCK
-        BEGIN BLOCK XLXI_6 and2
-            PIN I0 SEL
-            PIN I1 MUXIN(2)
-            PIN O MUXOUT2
-        END BLOCK
-        BEGIN BLOCK XLXI_7 and2
-            PIN I0 SEL
-            PIN I1 MUXIN(1)
-            PIN O MUXOUT1
-        END BLOCK
-        BEGIN BLOCK XLXI_8 and2
-            PIN I0 SEL
-            PIN I1 MUXIN(0)
-            PIN O MUXOUT0
-        END BLOCK
-    END NETLIST
-    BEGIN SHEET 1 3520 2720
-        INSTANCE XLXI_1 1264 496 R0
-        INSTANCE XLXI_2 1264 704 R0
-        INSTANCE XLXI_3 1264 896 R0
-        INSTANCE XLXI_4 1264 1104 R0
-        INSTANCE XLXI_5 1264 1312 R0
-        INSTANCE XLXI_6 1264 1504 R0
-        INSTANCE XLXI_7 1264 1696 R0
-        INSTANCE XLXI_8 1264 1888 R0
-        BEGIN BRANCH MUXIN(6)
-            WIRE 624 640 976 640
-            WIRE 976 640 1264 640
-            BEGIN DISPLAY 976 640 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH SEL
-            WIRE 848 368 896 368
-            WIRE 896 368 896 576
-            WIRE 896 576 1264 576
-            WIRE 896 576 896 832
-            WIRE 896 832 1264 832
-            WIRE 896 832 896 1040
-            WIRE 896 1040 896 1248
-            WIRE 896 1248 896 1440
-            WIRE 896 1440 896 1632
-            WIRE 896 1632 1264 1632
-            WIRE 896 1632 896 1824
-            WIRE 896 1824 1264 1824
-            WIRE 896 1440 1264 1440
-            WIRE 896 1248 1264 1248
-            WIRE 896 1040 1264 1040
-            WIRE 896 368 1088 368
-            WIRE 1088 368 1264 368
-            BEGIN DISPLAY 1088 368 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(7:0)
-            WIRE 528 224 528 368
-            WIRE 528 368 528 496
-            WIRE 528 496 528 640
-            WIRE 528 640 528 832
-            WIRE 528 832 528 976
-            WIRE 528 976 528 1184
-            WIRE 528 1184 528 1376
-            WIRE 528 1376 528 1568
-            WIRE 528 1568 528 1760
-            WIRE 528 1760 528 1792
-            BEGIN DISPLAY 528 496 ATTR Name
-                ALIGNMENT SOFT-TVCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(7)
-            WIRE 624 368 656 368
-            WIRE 656 368 656 432
-            WIRE 656 432 1024 432
-            WIRE 1024 432 1264 432
-            BEGIN DISPLAY 1024 432 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(5)
-            WIRE 624 832 656 832
-            WIRE 656 768 656 832
-            WIRE 656 768 992 768
-            WIRE 992 768 1264 768
-            BEGIN DISPLAY 992 768 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(4)
-            WIRE 624 976 1008 976
-            WIRE 1008 976 1264 976
-            BEGIN DISPLAY 1008 976 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(3)
-            WIRE 624 1184 992 1184
-            WIRE 992 1184 1264 1184
-            BEGIN DISPLAY 992 1184 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(2)
-            WIRE 624 1376 1024 1376
-            WIRE 1024 1376 1264 1376
-            BEGIN DISPLAY 1024 1376 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(1)
-            WIRE 624 1568 992 1568
-            WIRE 992 1568 1264 1568
-            BEGIN DISPLAY 992 1568 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXIN(0)
-            WIRE 624 1760 1040 1760
-            WIRE 1040 1760 1264 1760
-            BEGIN DISPLAY 1040 1760 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BUSTAP 528 368 624 368
-        BUSTAP 528 640 624 640
-        BUSTAP 528 832 624 832
-        BUSTAP 528 976 624 976
-        BUSTAP 528 1184 624 1184
-        BUSTAP 528 1376 624 1376
-        BUSTAP 528 1568 624 1568
-        BUSTAP 528 1760 624 1760
-        BEGIN BRANCH MUXOUT7
-            WIRE 1520 400 1568 400
-            WIRE 1568 400 1744 400
-            BEGIN DISPLAY 1568 400 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXOUT6
-            WIRE 1520 608 1552 608
-            WIRE 1552 608 1744 608
-            BEGIN DISPLAY 1552 608 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXOUT5
-            WIRE 1520 800 1568 800
-            WIRE 1568 800 1728 800
-            BEGIN DISPLAY 1568 800 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXOUT4
-            WIRE 1520 1008 1584 1008
-            WIRE 1584 1008 1744 1008
-            BEGIN DISPLAY 1584 1008 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXOUT3
-            WIRE 1520 1216 1600 1216
-            WIRE 1600 1216 1744 1216
-            BEGIN DISPLAY 1600 1216 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXOUT2
-            WIRE 1520 1408 1584 1408
-            WIRE 1584 1408 1744 1408
-            BEGIN DISPLAY 1584 1408 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXOUT1
-            WIRE 1520 1600 1600 1600
-            WIRE 1600 1600 1744 1600
-            BEGIN DISPLAY 1600 1600 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH MUXOUT0
-            WIRE 1520 1792 1600 1792
-            WIRE 1600 1792 1744 1792
-            BEGIN DISPLAY 1600 1792 ATTR Name
-                ALIGNMENT SOFT-BCENTER
-            END DISPLAY
-        END BRANCH
-        IOMARKER 1744 608 MUXOUT6 R0 28
-        IOMARKER 1744 1008 MUXOUT4 R0 28
-        IOMARKER 1744 1216 MUXOUT3 R0 28
-        IOMARKER 1744 1408 MUXOUT2 R0 28
-        IOMARKER 1744 1600 MUXOUT1 R0 28
-        IOMARKER 1744 1792 MUXOUT0 R0 28
-        IOMARKER 1744 400 MUXOUT7 R0 28
-        IOMARKER 848 368 SEL R180 28
-        IOMARKER 1728 800 MUXOUT5 R0 28
-        IOMARKER 528 224 MUXIN(7:0) R270 28
-    END SHEET
-END SCHEMATIC
+<?xml version="1.0" encoding="UTF-8"?>
+<drawing version="7">
+    <attr value="spartan2e" name="DeviceFamilyName">
+        <trait delete="all:0" />
+        <trait editname="all:0" />
+        <trait edittrait="all:0" />
+    </attr>
+    <netlist>
+        <signal name="MUXIN(6)" />
+        <signal name="SEL" />
+        <signal name="MUXIN(7:0)" />
+        <signal name="MUXIN(7)" />
+        <signal name="MUXIN(5)" />
+        <signal name="MUXIN(4)" />
+        <signal name="MUXIN(3)" />
+        <signal name="MUXIN(2)" />
+        <signal name="MUXIN(1)" />
+        <signal name="MUXIN(0)" />
+        <signal name="MUXOUT7" />
+        <signal name="MUXOUT6" />
+        <signal name="MUXOUT5" />
+        <signal name="MUXOUT4" />
+        <signal name="MUXOUT3" />
+        <signal name="MUXOUT2" />
+        <signal name="MUXOUT1" />
+        <signal name="MUXOUT0" />
+        <port polarity="Input" name="SEL" />
+        <port polarity="Input" name="MUXIN(7:0)" />
+        <port polarity="Output" name="MUXOUT7" />
+        <port polarity="Output" name="MUXOUT6" />
+        <port polarity="Output" name="MUXOUT5" />
+        <port polarity="Output" name="MUXOUT4" />
+        <port polarity="Output" name="MUXOUT3" />
+        <port polarity="Output" name="MUXOUT2" />
+        <port polarity="Output" name="MUXOUT1" />
+        <port polarity="Output" name="MUXOUT0" />
+        <blockdef name="and2">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-64" y2="-64" x1="0" />
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="192" y1="-96" y2="-96" x1="256" />
+            <arc ex="144" ey="-144" sx="144" sy="-48" r="48" cx="144" cy="-96" />
+            <line x2="64" y1="-48" y2="-48" x1="144" />
+            <line x2="144" y1="-144" y2="-144" x1="64" />
+            <line x2="64" y1="-48" y2="-144" x1="64" />
+        </blockdef>
+        <block symbolname="and2" name="XLXI_1">
+            <blockpin signalname="MUXIN(7)" name="I0" />
+            <blockpin signalname="SEL" name="I1" />
+            <blockpin signalname="MUXOUT7" name="O" />
+        </block>
+        <block symbolname="and2" name="XLXI_2">
+            <blockpin signalname="MUXIN(6)" name="I0" />
+            <blockpin signalname="SEL" name="I1" />
+            <blockpin signalname="MUXOUT6" name="O" />
+        </block>
+        <block symbolname="and2" name="XLXI_3">
+            <blockpin signalname="SEL" name="I0" />
+            <blockpin signalname="MUXIN(5)" name="I1" />
+            <blockpin signalname="MUXOUT5" name="O" />
+        </block>
+        <block symbolname="and2" name="XLXI_4">
+            <blockpin signalname="SEL" name="I0" />
+            <blockpin signalname="MUXIN(4)" name="I1" />
+            <blockpin signalname="MUXOUT4" name="O" />
+        </block>
+        <block symbolname="and2" name="XLXI_5">
+            <blockpin signalname="SEL" name="I0" />
+            <blockpin signalname="MUXIN(3)" name="I1" />
+            <blockpin signalname="MUXOUT3" name="O" />
+        </block>
+        <block symbolname="and2" name="XLXI_6">
+            <blockpin signalname="SEL" name="I0" />
+            <blockpin signalname="MUXIN(2)" name="I1" />
+            <blockpin signalname="MUXOUT2" name="O" />
+        </block>
+        <block symbolname="and2" name="XLXI_7">
+            <blockpin signalname="SEL" name="I0" />
+            <blockpin signalname="MUXIN(1)" name="I1" />
+            <blockpin signalname="MUXOUT1" name="O" />
+        </block>
+        <block symbolname="and2" name="XLXI_8">
+            <blockpin signalname="SEL" name="I0" />
+            <blockpin signalname="MUXIN(0)" name="I1" />
+            <blockpin signalname="MUXOUT0" name="O" />
+        </block>
+    </netlist>
+    <sheet sheetnum="1" width="3520" height="2720">
+        <instance x="1264" y="496" name="XLXI_1" orien="R0" />
+        <instance x="1264" y="704" name="XLXI_2" orien="R0" />
+        <instance x="1264" y="896" name="XLXI_3" orien="R0" />
+        <instance x="1264" y="1104" name="XLXI_4" orien="R0" />
+        <instance x="1264" y="1312" name="XLXI_5" orien="R0" />
+        <instance x="1264" y="1504" name="XLXI_6" orien="R0" />
+        <instance x="1264" y="1696" name="XLXI_7" orien="R0" />
+        <instance x="1264" y="1888" name="XLXI_8" orien="R0" />
+        <branch name="MUXIN(6)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="976" y="640" type="branch" />
+            <wire x2="976" y1="640" y2="640" x1="624" />
+            <wire x2="1264" y1="640" y2="640" x1="976" />
+        </branch>
+        <branch name="SEL">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1088" y="368" type="branch" />
+            <wire x2="896" y1="368" y2="368" x1="848" />
+            <wire x2="896" y1="368" y2="576" x1="896" />
+            <wire x2="1264" y1="576" y2="576" x1="896" />
+            <wire x2="896" y1="576" y2="832" x1="896" />
+            <wire x2="1264" y1="832" y2="832" x1="896" />
+            <wire x2="896" y1="832" y2="1040" x1="896" />
+            <wire x2="896" y1="1040" y2="1248" x1="896" />
+            <wire x2="896" y1="1248" y2="1440" x1="896" />
+            <wire x2="896" y1="1440" y2="1632" x1="896" />
+            <wire x2="1264" y1="1632" y2="1632" x1="896" />
+            <wire x2="896" y1="1632" y2="1824" x1="896" />
+            <wire x2="1264" y1="1824" y2="1824" x1="896" />
+            <wire x2="1264" y1="1440" y2="1440" x1="896" />
+            <wire x2="1264" y1="1248" y2="1248" x1="896" />
+            <wire x2="1264" y1="1040" y2="1040" x1="896" />
+            <wire x2="1088" y1="368" y2="368" x1="896" />
+            <wire x2="1264" y1="368" y2="368" x1="1088" />
+        </branch>
+        <branch name="MUXIN(7:0)">
+            <attrtext style="alignment:SOFT-TVCENTER" attrname="Name" x="528" y="496" type="branch" />
+            <wire x2="528" y1="224" y2="368" x1="528" />
+            <wire x2="528" y1="368" y2="496" x1="528" />
+            <wire x2="528" y1="496" y2="640" x1="528" />
+            <wire x2="528" y1="640" y2="832" x1="528" />
+            <wire x2="528" y1="832" y2="976" x1="528" />
+            <wire x2="528" y1="976" y2="1184" x1="528" />
+            <wire x2="528" y1="1184" y2="1376" x1="528" />
+            <wire x2="528" y1="1376" y2="1568" x1="528" />
+            <wire x2="528" y1="1568" y2="1760" x1="528" />
+            <wire x2="528" y1="1760" y2="1792" x1="528" />
+        </branch>
+        <branch name="MUXIN(7)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1024" y="432" type="branch" />
+            <wire x2="656" y1="368" y2="368" x1="624" />
+            <wire x2="656" y1="368" y2="432" x1="656" />
+            <wire x2="1024" y1="432" y2="432" x1="656" />
+            <wire x2="1264" y1="432" y2="432" x1="1024" />
+        </branch>
+        <branch name="MUXIN(5)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="992" y="768" type="branch" />
+            <wire x2="656" y1="832" y2="832" x1="624" />
+            <wire x2="656" y1="768" y2="832" x1="656" />
+            <wire x2="992" y1="768" y2="768" x1="656" />
+            <wire x2="1264" y1="768" y2="768" x1="992" />
+        </branch>
+        <branch name="MUXIN(4)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1008" y="976" type="branch" />
+            <wire x2="1008" y1="976" y2="976" x1="624" />
+            <wire x2="1264" y1="976" y2="976" x1="1008" />
+        </branch>
+        <branch name="MUXIN(3)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="992" y="1184" type="branch" />
+            <wire x2="992" y1="1184" y2="1184" x1="624" />
+            <wire x2="1264" y1="1184" y2="1184" x1="992" />
+        </branch>
+        <branch name="MUXIN(2)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1024" y="1376" type="branch" />
+            <wire x2="1024" y1="1376" y2="1376" x1="624" />
+            <wire x2="1264" y1="1376" y2="1376" x1="1024" />
+        </branch>
+        <branch name="MUXIN(1)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="992" y="1568" type="branch" />
+            <wire x2="992" y1="1568" y2="1568" x1="624" />
+            <wire x2="1264" y1="1568" y2="1568" x1="992" />
+        </branch>
+        <branch name="MUXIN(0)">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1040" y="1760" type="branch" />
+            <wire x2="1040" y1="1760" y2="1760" x1="624" />
+            <wire x2="1264" y1="1760" y2="1760" x1="1040" />
+        </branch>
+        <bustap x2="624" y1="368" y2="368" x1="528" />
+        <bustap x2="624" y1="640" y2="640" x1="528" />
+        <bustap x2="624" y1="832" y2="832" x1="528" />
+        <bustap x2="624" y1="976" y2="976" x1="528" />
+        <bustap x2="624" y1="1184" y2="1184" x1="528" />
+        <bustap x2="624" y1="1376" y2="1376" x1="528" />
+        <bustap x2="624" y1="1568" y2="1568" x1="528" />
+        <bustap x2="624" y1="1760" y2="1760" x1="528" />
+        <branch name="MUXOUT7">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1568" y="400" type="branch" />
+            <wire x2="1568" y1="400" y2="400" x1="1520" />
+            <wire x2="1744" y1="400" y2="400" x1="1568" />
+        </branch>
+        <branch name="MUXOUT6">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1552" y="608" type="branch" />
+            <wire x2="1552" y1="608" y2="608" x1="1520" />
+            <wire x2="1744" y1="608" y2="608" x1="1552" />
+        </branch>
+        <branch name="MUXOUT5">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1568" y="800" type="branch" />
+            <wire x2="1568" y1="800" y2="800" x1="1520" />
+            <wire x2="1728" y1="800" y2="800" x1="1568" />
+        </branch>
+        <branch name="MUXOUT4">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1584" y="1008" type="branch" />
+            <wire x2="1584" y1="1008" y2="1008" x1="1520" />
+            <wire x2="1744" y1="1008" y2="1008" x1="1584" />
+        </branch>
+        <branch name="MUXOUT3">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1600" y="1216" type="branch" />
+            <wire x2="1600" y1="1216" y2="1216" x1="1520" />
+            <wire x2="1744" y1="1216" y2="1216" x1="1600" />
+        </branch>
+        <branch name="MUXOUT2">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1584" y="1408" type="branch" />
+            <wire x2="1584" y1="1408" y2="1408" x1="1520" />
+            <wire x2="1744" y1="1408" y2="1408" x1="1584" />
+        </branch>
+        <branch name="MUXOUT1">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1600" y="1600" type="branch" />
+            <wire x2="1600" y1="1600" y2="1600" x1="1520" />
+            <wire x2="1744" y1="1600" y2="1600" x1="1600" />
+        </branch>
+        <branch name="MUXOUT0">
+            <attrtext style="alignment:SOFT-BCENTER" attrname="Name" x="1600" y="1792" type="branch" />
+            <wire x2="1600" y1="1792" y2="1792" x1="1520" />
+            <wire x2="1744" y1="1792" y2="1792" x1="1600" />
+        </branch>
+        <iomarker fontsize="28" x="1744" y="608" name="MUXOUT6" orien="R0" />
+        <iomarker fontsize="28" x="1744" y="1008" name="MUXOUT4" orien="R0" />
+        <iomarker fontsize="28" x="1744" y="1216" name="MUXOUT3" orien="R0" />
+        <iomarker fontsize="28" x="1744" y="1408" name="MUXOUT2" orien="R0" />
+        <iomarker fontsize="28" x="1744" y="1600" name="MUXOUT1" orien="R0" />
+        <iomarker fontsize="28" x="1744" y="1792" name="MUXOUT0" orien="R0" />
+        <iomarker fontsize="28" x="1744" y="400" name="MUXOUT7" orien="R0" />
+        <iomarker fontsize="28" x="848" y="368" name="SEL" orien="R180" />
+        <iomarker fontsize="28" x="1728" y="800" name="MUXOUT5" orien="R0" />
+        <iomarker fontsize="28" x="528" y="224" name="MUXIN(7:0)" orien="R270" />
+    </sheet>
+</drawing>

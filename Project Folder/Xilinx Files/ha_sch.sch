@@ -6,8 +6,6 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_1" />
-        <signal name="XLXN_2" />
         <signal name="Xi" />
         <signal name="Ci" />
         <signal name="Cout" />

@@ -37,7 +37,7 @@
         <port polarity="Output" name="S0" />
         <port polarity="Output" name="OVERFLOW" />
         <blockdef name="toy_sch">
-            <timestamp>2018-2-16T17:33:1</timestamp>
+            <timestamp>2018-2-19T18:36:31</timestamp>
             <rect width="64" x="0" y="-620" height="24" />
             <line x2="0" y1="-608" y2="-608" x1="64" />
             <rect width="64" x="320" y="-620" height="24" />
@@ -58,7 +58,7 @@
             <line x2="0" y1="-416" y2="-416" x1="64" />
         </blockdef>
         <blockdef name="mem_bootstrap_sch">
-            <timestamp>2018-2-16T18:40:48</timestamp>
+            <timestamp>2018-2-19T18:36:35</timestamp>
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-240" y2="-240" x1="64" />
             <line x2="0" y1="-176" y2="-176" x1="64" />
@@ -90,6 +90,9 @@
         </blockdef>
         <block symbolname="toy_sch" name="XLXI_1">
             <blockpin signalname="D_OUT(7:0)" name="D_IN(7:0)" />
+            <blockpin signalname="CLK" name="CLK" />
+            <blockpin signalname="RESET" name="RESET" />
+            <blockpin signalname="OVERFLOW" name="OVERFLOW" />
             <blockpin signalname="RW" name="RORW" />
             <blockpin signalname="MEM_EN" name="MEM_EN" />
             <blockpin signalname="S0" name="S0" />
@@ -100,9 +103,6 @@
             <blockpin signalname="S5" name="S5" />
             <blockpin signalname="OUTPUT(7:0)" name="D_OUT(7:0)" />
             <blockpin signalname="ADDR(7:0)" name="ADDR(7:0)" />
-            <blockpin signalname="OVERFLOW" name="OVERFLOW" />
-            <blockpin signalname="RESET" name="RESET" />
-            <blockpin signalname="CLK" name="CLK" />
         </block>
         <block symbolname="mem_bootstrap_sch" name="XLXI_2">
             <blockpin signalname="XLXN_21" name="SEL" />

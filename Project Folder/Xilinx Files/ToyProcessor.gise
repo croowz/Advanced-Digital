@@ -26,6 +26,9 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Datapath_sch.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_array.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="RAM_array.vf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAM_array_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RAM_array_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RAM_array_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ROM_array.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ROM_array.vf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ROM_array_ROM_array_sch_tb_isim_beh.exe"/>
@@ -132,6 +135,7 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ha_sch.vf"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="logic_ext.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="logic_ext.vf">
       <branch xil_pn:name="Implementation"/>
@@ -201,9 +205,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="toZERO_tbw_tb_0_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toyProcessor_overall.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toyProcessor_overall.vf"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="toyProcessor_overall_toyProcessor_overall_sch_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="toyProcessor_overall_toyProcessor_overall_sch_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="toyProcessor_overall_toyProcessor_overall_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="toyProcessor_overall_toyProcessor_overall_sch_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="toy_sch.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="toy_sch.vf"/>
@@ -218,13 +220,14 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1518462637" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1518462637">
+    <transform xil_pn:end_ts="1519065459" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1519065459">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518806017" xil_pn:in_ck="-2605904718275161567" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1518806017">
+    <transform xil_pn:end_ts="1519066118" xil_pn:in_ck="-8202900291478629576" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1519066118">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAM_array_tb.v"/>
       <outfile xil_pn:name="ROM_array_tb.v"/>
       <outfile xil_pn:name="alu4bit_tb.v"/>
       <outfile xil_pn:name="alu_tb.v"/>
@@ -246,11 +249,11 @@
       <outfile xil_pn:name="toyProcessor_overall_tb.v"/>
       <outfile xil_pn:name="toy_tbw.v"/>
     </transform>
-    <transform xil_pn:end_ts="1518806020" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3121741840774697128" xil_pn:start_ts="1518806020">
+    <transform xil_pn:end_ts="1519066118" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5397654843313957174" xil_pn:start_ts="1519066118">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518806488" xil_pn:in_ck="-2787292148265511689" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8135233946278335210" xil_pn:start_ts="1518806482">
+    <transform xil_pn:end_ts="1519066120" xil_pn:in_ck="-2787292148265511689" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="883626735845174668" xil_pn:start_ts="1519066118">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Datapath_sch.vf"/>
@@ -277,11 +280,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1518806488" xil_pn:in_ck="2301168863243682505" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1518806488">
+    <transform xil_pn:end_ts="1519066120" xil_pn:in_ck="-9041317605319582848" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1519066120">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Datapath_sch.vf"/>
       <outfile xil_pn:name="RAM_array.vf"/>
+      <outfile xil_pn:name="RAM_array_tb.v"/>
       <outfile xil_pn:name="ROM_array.vf"/>
       <outfile xil_pn:name="ROM_array_tb.v"/>
       <outfile xil_pn:name="alu4bit_tb.v"/>
@@ -323,20 +327,24 @@
       <outfile xil_pn:name="toy_sch.vf"/>
       <outfile xil_pn:name="toy_tbw.v"/>
     </transform>
-    <transform xil_pn:end_ts="1518806493" xil_pn:in_ck="2301168863243682505" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="326367875165996017" xil_pn:start_ts="1518806488">
+    <transform xil_pn:end_ts="1519066122" xil_pn:in_ck="-9041317605319582848" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3480655717618959413" xil_pn:start_ts="1519066120">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RAM_array_tb_beh.prj"/>
+      <outfile xil_pn:name="RAM_array_tb_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="toyProcessor_overall_toyProcessor_overall_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="toyProcessor_overall_toyProcessor_overall_sch_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1518806493" xil_pn:in_ck="-7868711343405324798" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3254874584659303978" xil_pn:start_ts="1518806493">
+    <transform xil_pn:end_ts="1519066122" xil_pn:in_ck="785907735778561572" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2819084356598303706" xil_pn:start_ts="1519066122">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAM_array_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="toyProcessor_overall_toyProcessor_overall_sch_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.log"/>
     </transform>
     <transform xil_pn:end_ts="1516396372" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1516396372">
       <status xil_pn:value="SuccessfullyRun"/>

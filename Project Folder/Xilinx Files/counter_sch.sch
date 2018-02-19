@@ -17,12 +17,14 @@
         <signal name="LOAD" />
         <signal name="COUNT_OUT(7:0)" />
         <signal name="XLXN_52(7:0)" />
+        <signal name="OVERFLOW" />
         <port polarity="Input" name="RST" />
         <port polarity="Input" name="CLK" />
         <port polarity="Input" name="COUNT_IN(7:0)" />
         <port polarity="Input" name="COUNT" />
         <port polarity="Input" name="LOAD" />
         <port polarity="Output" name="COUNT_OUT(7:0)" />
+        <port polarity="Output" name="OVERFLOW" />
         <blockdef name="or2">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-64" y2="-64" x1="0" />
@@ -65,7 +67,7 @@
             <line x2="432" y1="-224" y2="-224" x1="368" />
         </blockdef>
         <blockdef name="mux8sch">
-            <timestamp>2018-2-9T17:18:47</timestamp>
+            <timestamp>2018-2-19T18:34:0</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <rect width="64" x="0" y="-108" height="24" />
@@ -76,12 +78,13 @@
             <line x2="384" y1="-160" y2="-160" x1="320" />
         </blockdef>
         <blockdef name="ha8_sch">
-            <timestamp>2018-2-9T17:19:15</timestamp>
+            <timestamp>2018-2-19T18:27:52</timestamp>
+            <line x2="464" y1="-16" y2="-16" x1="400" />
             <line x2="0" y1="-80" y2="-80" x1="64" />
             <rect width="64" x="0" y="-92" height="24" />
             <line x2="464" y1="-80" y2="-80" x1="400" />
             <rect width="64" x="400" y="-92" height="24" />
-            <rect width="336" x="64" y="-112" height="64" />
+            <rect width="336" x="64" y="-112" height="128" />
         </blockdef>
         <block symbolname="reg_sch" name="XLXI_5">
             <blockpin signalname="RST" name="RST" />
@@ -113,6 +116,7 @@
         <block symbolname="ha8_sch" name="XLXI_10">
             <blockpin signalname="COUNT_OUT(7:0)" name="HA_IN(7:0)" />
             <blockpin signalname="XLXN_52(7:0)" name="HA_OUT(7:0)" />
+            <blockpin signalname="OVERFLOW" name="OVERFLOW" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -154,17 +158,15 @@
         <iomarker fontsize="28" x="2800" y="1152" name="COUNT_OUT(7:0)" orien="R0" />
         <branch name="COUNT">
             <wire x2="672" y1="1376" y2="1376" x1="624" />
-            <wire x2="928" y1="1376" y2="1376" x1="672" />
-            <wire x2="960" y1="1376" y2="1376" x1="928" />
+            <wire x2="960" y1="1376" y2="1376" x1="672" />
             <wire x2="672" y1="1216" y2="1376" x1="672" />
             <wire x2="960" y1="1216" y2="1216" x1="672" />
         </branch>
         <branch name="LOAD">
             <wire x2="688" y1="1152" y2="1152" x1="624" />
-            <wire x2="704" y1="1152" y2="1152" x1="688" />
-            <wire x2="960" y1="1152" y2="1152" x1="704" />
             <wire x2="688" y1="1152" y2="1312" x1="688" />
             <wire x2="704" y1="1312" y2="1312" x1="688" />
+            <wire x2="960" y1="1152" y2="1152" x1="688" />
         </branch>
         <instance x="2464" y="1488" name="XLXI_10" orien="R180">
         </instance>
@@ -179,5 +181,9 @@
             <wire x2="1392" y1="1408" y2="1568" x1="1392" />
             <wire x2="2000" y1="1568" y2="1568" x1="1392" />
         </branch>
+        <branch name="OVERFLOW">
+            <wire x2="2000" y1="1504" y2="1504" x1="1968" />
+        </branch>
+        <iomarker fontsize="28" x="1968" y="1504" name="OVERFLOW" orien="R180" />
     </sheet>
 </drawing>

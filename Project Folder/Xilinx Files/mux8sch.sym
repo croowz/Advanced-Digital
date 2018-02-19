@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="mux8sch">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2018-2-9T17:18:47</timestamp>
+    <timestamp>2018-2-19T18:34:0</timestamp>
     <pin polarity="Input" x="0" y="-160" name="SEL" />
     <pin polarity="Input" x="0" y="-96" name="IN1(7:0)" />
     <pin polarity="Input" x="0" y="-32" name="IN0(7:0)" />

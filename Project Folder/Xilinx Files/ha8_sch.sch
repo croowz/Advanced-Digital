@@ -30,8 +30,10 @@
         <signal name="XLXN_33" />
         <signal name="HA_IN(0)" />
         <signal name="HA_IN(1)" />
+        <signal name="OVERFLOW" />
         <port polarity="Input" name="HA_IN(7:0)" />
         <port polarity="Output" name="HA_OUT(7:0)" />
+        <port polarity="Output" name="OVERFLOW" />
         <blockdef name="ha_sch">
             <timestamp>2018-2-9T17:19:11</timestamp>
             <line x2="0" y1="-144" y2="-144" x1="64" />
@@ -52,7 +54,7 @@
         <block symbolname="ha_sch" name="XLXI_1">
             <blockpin signalname="HA_IN(7)" name="Xi" />
             <blockpin signalname="XLXN_28" name="Ci" />
-            <blockpin name="Cout" />
+            <blockpin signalname="OVERFLOW" name="Cout" />
             <blockpin signalname="HA_OUT(7)" name="S" />
         </block>
         <block symbolname="ha_sch" name="XLXI_2">
@@ -280,5 +282,11 @@
             <wire x2="2128" y1="1584" y2="1600" x1="2128" />
             <wire x2="2128" y1="1600" y2="1616" x1="2128" />
         </branch>
+        <branch name="OVERFLOW">
+            <wire x2="3648" y1="2000" y2="2080" x1="3648" />
+            <wire x2="3664" y1="2080" y2="2080" x1="3648" />
+            <wire x2="4048" y1="2080" y2="2080" x1="3664" />
+        </branch>
+        <iomarker fontsize="28" x="4048" y="2080" name="OVERFLOW" orien="R0" />
     </sheet>
 </drawing>

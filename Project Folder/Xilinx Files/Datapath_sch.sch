@@ -24,11 +24,8 @@
         <signal name="A(7:0)" />
         <signal name="IR(7:0)" />
         <signal name="ZERO" />
-        <signal name="XLXN_28(7:0)" />
-        <signal name="XLXN_29(7:0)" />
         <signal name="XLXN_30(7:0)" />
         <signal name="D_OUT(7:0)" />
-        <signal name="XLXN_32(7:0)" />
         <port polarity="Input" name="CL_D" />
         <port polarity="Input" name="LD_D" />
         <port polarity="Input" name="CL_IR" />
@@ -58,8 +55,8 @@
             <line x2="432" y1="-224" y2="-224" x1="368" />
         </blockdef>
         <blockdef name="counter_sch">
-            <timestamp>2018-2-9T17:19:25</timestamp>
-            <rect width="368" x="64" y="-320" height="320" />
+            <timestamp>2018-2-19T18:33:56</timestamp>
+            <line x2="496" y1="32" y2="32" x1="432" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <rect width="64" x="0" y="-172" height="24" />
@@ -68,6 +65,7 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="432" y="-300" height="24" />
             <line x2="496" y1="-288" y2="-288" x1="432" />
+            <rect width="368" x="64" y="-320" height="384" />
         </blockdef>
         <blockdef name="alu_sch">
             <timestamp>2018-2-9T17:19:7</timestamp>
@@ -82,7 +80,7 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <blockdef name="mux8sch">
-            <timestamp>2018-2-9T17:18:47</timestamp>
+            <timestamp>2018-2-19T18:34:0</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <rect width="64" x="0" y="-108" height="24" />
@@ -120,6 +118,7 @@
             <blockpin signalname="COUNT" name="COUNT" />
             <blockpin signalname="LD_PC" name="LOAD" />
             <blockpin signalname="XLXN_19(7:0)" name="COUNT_OUT(7:0)" />
+            <blockpin name="OVERFLOW" />
         </block>
         <block symbolname="alu_sch" name="XLXI_5">
             <blockpin signalname="D_OUT(7:0)" name="X(7:0)" />

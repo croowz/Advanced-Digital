@@ -7,76 +7,17 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mem_bootstrap_sch.vf
-// /___/   /\     Timestamp : 02/16/2018 13:41:25
+// /___/   /\     Timestamp : 02/19/2018 13:38:14
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.sch"
 //Design Name: mem_bootstrap_sch
 //Device: spartan3e
 //Purpose:
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
-`timescale 1ns / 1ps
-
-module COMP8_MXILINX_mem_bootstrap_sch(A, 
-                                       B, 
-                                       EQ);
-
-    input [7:0] A;
-    input [7:0] B;
-   output EQ;
-   
-   wire AB0;
-   wire AB1;
-   wire AB2;
-   wire AB3;
-   wire AB4;
-   wire AB5;
-   wire AB6;
-   wire AB7;
-   wire AB03;
-   wire AB47;
-   
-   AND4  I_36_32 (.I0(AB7), 
-                 .I1(AB6), 
-                 .I2(AB5), 
-                 .I3(AB4), 
-                 .O(AB47));
-   XNOR2  I_36_33 (.I0(B[6]), 
-                  .I1(A[6]), 
-                  .O(AB6));
-   XNOR2  I_36_34 (.I0(B[7]), 
-                  .I1(A[7]), 
-                  .O(AB7));
-   XNOR2  I_36_35 (.I0(B[5]), 
-                  .I1(A[5]), 
-                  .O(AB5));
-   XNOR2  I_36_36 (.I0(B[4]), 
-                  .I1(A[4]), 
-                  .O(AB4));
-   AND4  I_36_41 (.I0(AB3), 
-                 .I1(AB2), 
-                 .I2(AB1), 
-                 .I3(AB0), 
-                 .O(AB03));
-   XNOR2  I_36_42 (.I0(B[2]), 
-                  .I1(A[2]), 
-                  .O(AB2));
-   XNOR2  I_36_43 (.I0(B[3]), 
-                  .I1(A[3]), 
-                  .O(AB3));
-   XNOR2  I_36_44 (.I0(B[1]), 
-                  .I1(A[1]), 
-                  .O(AB1));
-   XNOR2  I_36_45 (.I0(B[0]), 
-                  .I1(A[0]), 
-                  .O(AB0));
-   AND2  I_36_50 (.I0(AB47), 
-                 .I1(AB03), 
-                 .O(EQ));
-endmodule
 `timescale 1ns / 1ps
 
 module ha_sch_MUSER_mem_bootstrap_sch(Ci, 
@@ -100,10 +41,12 @@ endmodule
 `timescale 1ns / 1ps
 
 module ha8_sch_MUSER_mem_bootstrap_sch(HA_IN, 
-                                       HA_OUT);
+                                       HA_OUT, 
+                                       OVERFLOW);
 
     input [7:0] HA_IN;
    output [7:0] HA_OUT;
+   output OVERFLOW;
    
    wire XLXN_28;
    wire XLXN_29;
@@ -114,7 +57,7 @@ module ha8_sch_MUSER_mem_bootstrap_sch(HA_IN,
    
    ha_sch_MUSER_mem_bootstrap_sch  XLXI_1 (.Ci(XLXN_28), 
                                           .Xi(HA_IN[7]), 
-                                          .Cout(), 
+                                          .Cout(OVERFLOW), 
                                           .S(HA_OUT[7]));
    ha_sch_MUSER_mem_bootstrap_sch  XLXI_2 (.Ci(XLXN_29), 
                                           .Xi(HA_IN[6]), 
@@ -280,7 +223,8 @@ module counter_sch_MUSER_mem_bootstrap_sch(CLK,
                                            COUNT_IN, 
                                            LOAD, 
                                            RST, 
-                                           COUNT_OUT);
+                                           COUNT_OUT, 
+                                           OVERFLOW);
 
     input CLK;
     input COUNT;
@@ -288,6 +232,7 @@ module counter_sch_MUSER_mem_bootstrap_sch(CLK,
     input LOAD;
     input RST;
    output [7:0] COUNT_OUT;
+   output OVERFLOW;
    
    wire XLXN_1;
    wire [7:0] XLXN_7;
@@ -315,7 +260,8 @@ module counter_sch_MUSER_mem_bootstrap_sch(CLK,
                                            .SEL(XLXN_8), 
                                            .MUX_OUT(XLXN_7[7:0]));
    ha8_sch_MUSER_mem_bootstrap_sch  XLXI_10 (.HA_IN(COUNT_OUT_DUMMY[7:0]), 
-                                            .HA_OUT(XLXN_52[7:0]));
+                                            .HA_OUT(XLXN_52[7:0]), 
+                                            .OVERFLOW(OVERFLOW));
 endmodule
 `timescale 1ns / 1ps
 
@@ -688,7 +634,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                                   .MUXOUT5(XLXN_128), 
                                                   .MUXOUT6(XLXN_137), 
                                                   .MUXOUT7(XLXN_161));
-   (* HU_SET = "XLXI_34_10" *) 
+   (* HU_SET = "XLXI_34_53" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_34 (.I0(XLXN_78), 
                                           .I1(XLXN_77), 
                                           .I2(XLXN_76), 
@@ -698,7 +644,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_67), 
                                           .I7(XLXN_66), 
                                           .O(DOUT[0]));
-   (* HU_SET = "XLXI_38_11" *) 
+   (* HU_SET = "XLXI_38_54" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_38 (.I0(XLXN_97), 
                                           .I1(XLXN_96), 
                                           .I2(XLXN_95), 
@@ -708,7 +654,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_91), 
                                           .I7(XLXN_90), 
                                           .O(DOUT[1]));
-   (* HU_SET = "XLXI_39_12" *) 
+   (* HU_SET = "XLXI_39_55" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_39 (.I0(XLXN_105), 
                                           .I1(XLXN_104), 
                                           .I2(XLXN_103), 
@@ -718,7 +664,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_99), 
                                           .I7(XLXN_98), 
                                           .O(DOUT[2]));
-   (* HU_SET = "XLXI_40_13" *) 
+   (* HU_SET = "XLXI_40_56" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_40 (.I0(XLXN_113), 
                                           .I1(XLXN_112), 
                                           .I2(XLXN_111), 
@@ -728,7 +674,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_107), 
                                           .I7(XLXN_106), 
                                           .O(DOUT[3]));
-   (* HU_SET = "XLXI_41_14" *) 
+   (* HU_SET = "XLXI_41_57" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_41 (.I0(XLXN_123), 
                                           .I1(XLXN_122), 
                                           .I2(XLXN_121), 
@@ -738,7 +684,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_116), 
                                           .I7(XLXN_114), 
                                           .O(DOUT[4]));
-   (* HU_SET = "XLXI_42_15" *) 
+   (* HU_SET = "XLXI_42_58" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_42 (.I0(XLXN_131), 
                                           .I1(XLXN_130), 
                                           .I2(XLXN_129), 
@@ -748,7 +694,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_125), 
                                           .I7(XLXN_124), 
                                           .O(DOUT[5]));
-   (* HU_SET = "XLXI_43_16" *) 
+   (* HU_SET = "XLXI_43_59" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_43 (.I0(XLXN_140), 
                                           .I1(XLXN_139), 
                                           .I2(XLXN_138), 
@@ -758,7 +704,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_134), 
                                           .I7(XLXN_133), 
                                           .O(DOUT[6]));
-   (* HU_SET = "XLXI_44_17" *) 
+   (* HU_SET = "XLXI_44_60" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_44 (.I0(XLXN_157), 
                                           .I1(XLXN_158), 
                                           .I2(XLXN_160), 
@@ -1394,14 +1340,12 @@ module mem_bootstrap_sch(ADDR,
    wire [7:0] XLXN_1;
    wire [7:0] XLXN_2;
    wire [7:0] XLXN_10;
-   wire [7:0] XLXN_18;
-   wire [7:0] XLXN_20;
    wire [7:0] XLXN_21;
    wire XLXN_22;
+   wire [7:0] XLXN_30;
    
-   assign XLXN_20 = 8'b11111111;
    assign XLXN_21 = 8'h00;
-   ROM_array_MUSER_mem_bootstrap_sch  XLXI_1 (.ADDR(XLXN_18[7:0]), 
+   ROM_array_MUSER_mem_bootstrap_sch  XLXI_1 (.ADDR(XLXN_30[7:0]), 
                                              .DATA_OUT(XLXN_1[7:0]));
    RAM_array_MUSER_mem_bootstrap_sch  XLXI_2 (.ADDR(XLXN_10[7:0]), 
                                              .CLK(CLK), 
@@ -1412,7 +1356,7 @@ module mem_bootstrap_sch(ADDR,
                                            .IN1(D_IN[7:0]), 
                                            .SEL(SEL), 
                                            .MUX_OUT(XLXN_2[7:0]));
-   mux8sch_MUSER_mem_bootstrap_sch  XLXI_4 (.IN0(XLXN_18[7:0]), 
+   mux8sch_MUSER_mem_bootstrap_sch  XLXI_4 (.IN0(XLXN_30[7:0]), 
                                            .IN1(ADDR[7:0]), 
                                            .SEL(SEL), 
                                            .MUX_OUT(XLXN_10[7:0]));
@@ -1421,10 +1365,7 @@ module mem_bootstrap_sch(ADDR,
                                                .COUNT_IN(XLXN_21[7:0]), 
                                                .LOAD(XLXN_22), 
                                                .RST(RST), 
-                                               .COUNT_OUT(XLXN_18[7:0]));
-   (* HU_SET = "XLXI_7_18" *) 
-   COMP8_MXILINX_mem_bootstrap_sch  XLXI_7 (.A(XLXN_20[7:0]), 
-                                           .B(XLXN_18[7:0]), 
-                                           .EQ(OVERFLOW));
+                                               .COUNT_OUT(XLXN_30[7:0]), 
+                                               .OVERFLOW(OVERFLOW));
    GND  XLXI_9 (.G(XLXN_22));
 endmodule

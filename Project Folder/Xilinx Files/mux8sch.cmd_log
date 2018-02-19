@@ -5,3 +5,4 @@ par -w -intstyle ise -ol high -t 1 mux8sch_map.ncd mux8sch.ncd mux8sch.pcf
 trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml mux8sch.twx mux8sch.ncd -o mux8sch.twr mux8sch.pcf 
 sch2sym -intstyle ise -family spartan3e -w -refsym mux8sch F:/Digital2/ToyProcessor2/mux8sch.sch F:/Digital2/ToyProcessor2/mux8sch.sym 
 sch2sym -intstyle ise -family spartan3e -w -refsym mux8sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux8sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux8sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym mux8sch {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux8sch.sch} {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux8sch.sym} 

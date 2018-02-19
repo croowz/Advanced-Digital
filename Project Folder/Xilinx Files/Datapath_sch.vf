@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Datapath_sch.vf
-// /___/   /\     Timestamp : 02/16/2018 13:33:48
+// /___/   /\     Timestamp : 02/19/2018 13:38:11
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/Datapath_sch.sch"
 //Design Name: Datapath_sch
 //Device: spartan3e
 //Purpose:
@@ -87,7 +87,7 @@ module toZERO_sch_MUSER_Datapath_sch(zero_in,
    output zero_out;
    
    
-   (* HU_SET = "XLXI_1_54" *) 
+   (* HU_SET = "XLXI_1_43" *) 
    NOR8_MXILINX_Datapath_sch  XLXI_1 (.I0(zero_in[0]), 
                                      .I1(zero_in[1]), 
                                      .I2(zero_in[2]), 
@@ -380,10 +380,12 @@ endmodule
 `timescale 1ns / 1ps
 
 module ha8_sch_MUSER_Datapath_sch(HA_IN, 
-                                  HA_OUT);
+                                  HA_OUT, 
+                                  OVERFLOW);
 
     input [7:0] HA_IN;
    output [7:0] HA_OUT;
+   output OVERFLOW;
    
    wire XLXN_28;
    wire XLXN_29;
@@ -394,7 +396,7 @@ module ha8_sch_MUSER_Datapath_sch(HA_IN,
    
    ha_sch_MUSER_Datapath_sch  XLXI_1 (.Ci(XLXN_28), 
                                      .Xi(HA_IN[7]), 
-                                     .Cout(), 
+                                     .Cout(OVERFLOW), 
                                      .S(HA_OUT[7]));
    ha_sch_MUSER_Datapath_sch  XLXI_2 (.Ci(XLXN_29), 
                                      .Xi(HA_IN[6]), 
@@ -430,7 +432,8 @@ module counter_sch_MUSER_Datapath_sch(CLK,
                                       COUNT_IN, 
                                       LOAD, 
                                       RST, 
-                                      COUNT_OUT);
+                                      COUNT_OUT, 
+                                      OVERFLOW);
 
     input CLK;
     input COUNT;
@@ -438,6 +441,7 @@ module counter_sch_MUSER_Datapath_sch(CLK,
     input LOAD;
     input RST;
    output [7:0] COUNT_OUT;
+   output OVERFLOW;
    
    wire XLXN_1;
    wire [7:0] XLXN_7;
@@ -465,7 +469,8 @@ module counter_sch_MUSER_Datapath_sch(CLK,
                                       .SEL(XLXN_8), 
                                       .MUX_OUT(XLXN_7[7:0]));
    ha8_sch_MUSER_Datapath_sch  XLXI_10 (.HA_IN(COUNT_OUT_DUMMY[7:0]), 
-                                       .HA_OUT(XLXN_52[7:0]));
+                                       .HA_OUT(XLXN_52[7:0]), 
+                                       .OVERFLOW(OVERFLOW));
 endmodule
 `timescale 1ns / 1ps
 
@@ -526,7 +531,8 @@ module Datapath_sch(ADDORSUB,
                                           .COUNT_IN(XLXN_30[7:0]), 
                                           .LOAD(LD_PC), 
                                           .RST(CL_PC), 
-                                          .COUNT_OUT(XLXN_19[7:0]));
+                                          .COUNT_OUT(XLXN_19[7:0]), 
+                                          .OVERFLOW());
    alu_sch_MUSER_Datapath_sch  XLXI_5 (.SEL(ADDORSUB), 
                                       .X(D_OUT_DUMMY[7:0]), 
                                       .Y(XLXN_30[7:0]), 
