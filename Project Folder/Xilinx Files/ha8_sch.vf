@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : ha8_sch.vf
-// /___/   /\     Timestamp : 02/19/2018 13:38:16
+// /___/   /\     Timestamp : 02/22/2018 14:45:04
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha8_sch.sch"
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/rac71636/Desktop/Test/ha8_sch.vf -w C:/Users/rac71636/Desktop/Test/ha8_sch.sch
 //Design Name: ha8_sch
 //Device: spartan3e
 //Purpose:

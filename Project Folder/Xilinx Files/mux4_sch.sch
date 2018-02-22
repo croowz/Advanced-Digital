@@ -9,7 +9,11 @@ BEGIN SCHEMATIC
         SIGNAL XLXN_6
         SIGNAL XLXN_7
         SIGNAL XLXN_8
-        SIGNAL c1
+        SIGNAL XLXN_9
+        SIGNAL XLXN_11
+        SIGNAL XLXN_14
+        SIGNAL XLXN_16
+        SIGNAL XLXN_18
         SIGNAL in3
         SIGNAL in2
         SIGNAL in1
@@ -19,14 +23,11 @@ BEGIN SCHEMATIC
         SIGNAL XLXN_2
         SIGNAL XLXN_1
         SIGNAL mux_out
-        SIGNAL c0
-        PORT Input c1
         PORT Input in3
         PORT Input in2
         PORT Input in1
         PORT Input in0
         PORT Output mux_out
-        PORT Input c0
         BEGIN BLOCKDEF and3
             TIMESTAMP 2000 1 1 10 10 10
             LINE N 0 -64 64 -64 
@@ -63,11 +64,11 @@ BEGIN SCHEMATIC
             CIRCLE N 128 -48 160 -16 
         END BLOCKDEF
         BEGIN BLOCK XLXI_6 inv
-            PIN I c0
+            PIN I
             PIN O XLXN_6
         END BLOCK
         BEGIN BLOCK XLXI_7 inv
-            PIN I c1
+            PIN I
             PIN O XLXN_7
         END BLOCK
         BEGIN BLOCK XLXI_5 or4
@@ -78,19 +79,19 @@ BEGIN SCHEMATIC
             PIN O mux_out
         END BLOCK
         BEGIN BLOCK XLXI_4 and3
-            PIN I0 c0
-            PIN I1 c1
+            PIN I0 XLXN_8
+            PIN I1 XLXN_9
             PIN I2 in3
             PIN O XLXN_5
         END BLOCK
         BEGIN BLOCK XLXI_3 and3
             PIN I0 XLXN_6
-            PIN I1 c1
+            PIN I1 XLXN_9
             PIN I2 in2
             PIN O XLXN_4
         END BLOCK
         BEGIN BLOCK XLXI_2 and3
-            PIN I0 c0
+            PIN I0 XLXN_8
             PIN I1 XLXN_7
             PIN I2 in1
             PIN O XLXN_2
@@ -105,20 +106,12 @@ BEGIN SCHEMATIC
     BEGIN SHEET 1 3520 2720
         INSTANCE XLXI_6 704 208 R90
         INSTANCE XLXI_7 464 208 R90
-        BEGIN BRANCH c1
-            WIRE 416 192 448 192
-            WIRE 448 192 496 192
-            WIRE 496 192 496 208
-            WIRE 416 192 416 1104
+        BEGIN BRANCH XLXN_9
+            WIRE 416 208 416 1104
             WIRE 416 1104 416 1360
             WIRE 416 1360 416 1584
             WIRE 416 1360 1616 1360
             WIRE 416 1104 1616 1104
-            WIRE 448 144 448 160
-            WIRE 448 160 448 192
-            BEGIN DISPLAY 448 160 ATTR Name
-                ALIGNMENT SOFT-TVCENTER
-            END DISPLAY
         END BRANCH
         BEGIN BRANCH XLXN_7
             WIRE 496 432 496 592
@@ -126,6 +119,15 @@ BEGIN SCHEMATIC
             WIRE 496 848 496 1568
             WIRE 496 848 1616 848
             WIRE 496 592 1616 592
+        END BRANCH
+        BEGIN BRANCH XLXN_8
+            WIRE 656 192 656 928
+            WIRE 656 928 656 1440
+            WIRE 656 1440 656 1568
+            WIRE 656 1440 1616 1440
+            WIRE 656 928 1616 928
+            WIRE 1616 912 1616 928
+            WIRE 1616 1424 1616 1440
         END BRANCH
         BEGIN BRANCH XLXN_6
             WIRE 736 432 736 672
@@ -179,24 +181,5 @@ BEGIN SCHEMATIC
             WIRE 2464 688 2576 688
         END BRANCH
         IOMARKER 2576 688 mux_out R0 28
-        BEGIN BRANCH c0
-            WIRE 656 192 656 928
-            WIRE 656 928 656 1440
-            WIRE 656 1440 656 1568
-            WIRE 656 1440 1616 1440
-            WIRE 656 928 1616 928
-            WIRE 656 192 688 192
-            WIRE 688 192 736 192
-            WIRE 736 192 736 208
-            WIRE 688 144 688 160
-            WIRE 688 160 688 192
-            WIRE 1616 912 1616 928
-            WIRE 1616 1424 1616 1440
-            BEGIN DISPLAY 688 160 ATTR Name
-                ALIGNMENT SOFT-TVCENTER
-            END DISPLAY
-        END BRANCH
-        IOMARKER 688 144 c0 R270 28
-        IOMARKER 448 144 c1 R270 28
     END SHEET
 END SCHEMATIC

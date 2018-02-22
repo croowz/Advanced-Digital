@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <drawing version="7">
-    <attr value="spartan2" name="DeviceFamilyName">
+    <attr value="spartan3e" name="DeviceFamilyName">
         <trait delete="all:0" />
         <trait editname="all:0" />
         <trait edittrait="all:0" />
@@ -140,7 +140,7 @@
             <blockpin signalname="ADDR(7)" name="S2" />
         </block>
         <block symbolname="rom32x1" name="XLXI_48">
-            <attr value="0006EEEE" name="INIT">
+            <attr value="00000149" name="INIT">
                 <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
                 <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
                 <trait valuetype="BitVector 32 h" />
@@ -153,7 +153,7 @@
             <blockpin signalname="A1(0)" name="O" />
         </block>
         <block symbolname="rom32x1" name="XLXI_47">
-            <attr value="00005050" name="INIT">
+            <attr value="00000932" name="INIT">
                 <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
                 <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
                 <trait valuetype="BitVector 32 h" />
@@ -166,7 +166,7 @@
             <blockpin signalname="A1(1)" name="O" />
         </block>
         <block symbolname="rom32x1" name="XLXI_46">
-            <attr value="00105501" name="INIT">
+            <attr value="00000B14" name="INIT">
                 <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
                 <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
                 <trait valuetype="BitVector 32 h" />
@@ -179,7 +179,7 @@
             <blockpin signalname="A1(2)" name="O" />
         </block>
         <block symbolname="rom32x1" name="XLXI_45">
-            <attr value="00050000" name="INIT">
+            <attr value="00000D12" name="INIT">
                 <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
                 <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
                 <trait valuetype="BitVector 32 h" />
@@ -192,7 +192,7 @@
             <blockpin signalname="A1(3)" name="O" />
         </block>
         <block symbolname="rom32x1" name="XLXI_44">
-            <attr value="00080000" name="INIT">
+            <attr value="00000990" name="INIT">
                 <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
                 <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
                 <trait valuetype="BitVector 32 h" />
@@ -205,7 +205,7 @@
             <blockpin signalname="A1(4)" name="O" />
         </block>
         <block symbolname="rom32x1" name="XLXI_43">
-            <attr value="00100000" name="INIT">
+            <attr value="00000912" name="INIT">
                 <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
                 <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
                 <trait valuetype="BitVector 32 h" />
@@ -218,7 +218,7 @@
             <blockpin signalname="A1(5)" name="O" />
         </block>
         <block symbolname="rom32x1" name="XLXI_42">
-            <attr value="00100000" name="INIT">
+            <attr value="00000910" name="INIT">
                 <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
                 <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
                 <trait valuetype="BitVector 32 h" />
@@ -231,6 +231,11 @@
             <blockpin signalname="A1(6)" name="O" />
         </block>
         <block symbolname="rom32x1" name="XLXI_9">
+            <attr value="00000912" name="INIT">
+                <trait verilog="all:0 dp:1nosynth wsynop:1 wsynth:1" />
+                <trait vhdl="all:0 gm:1nosynth wa:1 wd:1" />
+                <trait valuetype="BitVector 32 h" />
+            </attr>
             <blockpin signalname="ADDR(0)" name="A0" />
             <blockpin signalname="ADDR(1)" name="A1" />
             <blockpin signalname="ADDR(2)" name="A2" />
