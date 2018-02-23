@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mem_bootstrap_sch.vf
-// /___/   /\     Timestamp : 02/22/2018 14:50:31
+// /___/   /\     Timestamp : 02/23/2018 14:41:44
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/rac71636/Desktop/Test/mem_bootstrap_sch.vf -w C:/Users/rac71636/Desktop/Test/mem_bootstrap_sch.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mem_bootstrap_sch.sch"
 //Design Name: mem_bootstrap_sch
 //Device: spartan3e
 //Purpose:
@@ -88,6 +88,34 @@ module ha8_sch_MUSER_mem_bootstrap_sch(HA_IN,
 endmodule
 `timescale 1ns / 1ps
 
+module mux_MUSER_mem_bootstrap_sch(IN0, 
+                                   IN1, 
+                                   SEL, 
+                                   MUX_OUT);
+
+    input IN0;
+    input IN1;
+    input SEL;
+   output MUX_OUT;
+   
+   wire XLXN_7;
+   wire XLXN_13;
+   wire XLXN_14;
+   
+   AND2  XLXI_1 (.I0(SEL), 
+                .I1(IN0), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(IN1), 
+                .I1(XLXN_14), 
+                .O(XLXN_13));
+   OR2  XLXI_3 (.I0(XLXN_13), 
+               .I1(XLXN_7), 
+               .O(MUX_OUT));
+   INV  XLXI_5 (.I(SEL), 
+               .O(XLXN_14));
+endmodule
+`timescale 1ns / 1ps
+
 module mux8sch_MUSER_mem_bootstrap_sch(IN0, 
                                        IN1, 
                                        SEL, 
@@ -99,38 +127,38 @@ module mux8sch_MUSER_mem_bootstrap_sch(IN0,
    output [7:0] MUX_OUT;
    
    
-   mux  XLXI_1 (.IN0(IN0[0]), 
-               .IN1(IN1[0]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[0]));
-   mux  XLXI_2 (.IN0(IN0[1]), 
-               .IN1(IN1[1]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[1]));
-   mux  XLXI_3 (.IN0(IN0[2]), 
-               .IN1(IN1[2]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[2]));
-   mux  XLXI_4 (.IN0(IN0[3]), 
-               .IN1(IN1[3]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[3]));
-   mux  XLXI_5 (.IN0(IN0[4]), 
-               .IN1(IN1[4]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[4]));
-   mux  XLXI_6 (.IN0(IN0[5]), 
-               .IN1(IN1[5]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[5]));
-   mux  XLXI_7 (.IN0(IN0[6]), 
-               .IN1(IN1[6]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[6]));
-   mux  XLXI_8 (.IN0(IN0[7]), 
-               .IN1(IN1[7]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[7]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_1 (.IN0(IN0[0]), 
+                                       .IN1(IN1[0]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[0]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_2 (.IN0(IN0[1]), 
+                                       .IN1(IN1[1]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[1]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_3 (.IN0(IN0[2]), 
+                                       .IN1(IN1[2]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[2]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_4 (.IN0(IN0[3]), 
+                                       .IN1(IN1[3]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[3]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_5 (.IN0(IN0[4]), 
+                                       .IN1(IN1[4]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[4]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_6 (.IN0(IN0[5]), 
+                                       .IN1(IN1[5]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[5]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_7 (.IN0(IN0[6]), 
+                                       .IN1(IN1[6]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[6]));
+   mux_MUSER_mem_bootstrap_sch  XLXI_8 (.IN0(IN0[7]), 
+                                       .IN1(IN1[7]), 
+                                       .SEL(SEL), 
+                                       .MUX_OUT(MUX_OUT[7]));
 endmodule
 `timescale 1ns / 1ps
 
@@ -606,7 +634,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                                   .MUXOUT5(XLXN_128), 
                                                   .MUXOUT6(XLXN_137), 
                                                   .MUXOUT7(XLXN_161));
-   (* HU_SET = "XLXI_34_16" *) 
+   (* HU_SET = "XLXI_34_0" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_34 (.I0(XLXN_78), 
                                           .I1(XLXN_77), 
                                           .I2(XLXN_76), 
@@ -616,7 +644,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_67), 
                                           .I7(XLXN_66), 
                                           .O(DOUT[0]));
-   (* HU_SET = "XLXI_38_17" *) 
+   (* HU_SET = "XLXI_38_1" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_38 (.I0(XLXN_97), 
                                           .I1(XLXN_96), 
                                           .I2(XLXN_95), 
@@ -626,7 +654,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_91), 
                                           .I7(XLXN_90), 
                                           .O(DOUT[1]));
-   (* HU_SET = "XLXI_39_18" *) 
+   (* HU_SET = "XLXI_39_2" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_39 (.I0(XLXN_105), 
                                           .I1(XLXN_104), 
                                           .I2(XLXN_103), 
@@ -636,7 +664,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_99), 
                                           .I7(XLXN_98), 
                                           .O(DOUT[2]));
-   (* HU_SET = "XLXI_40_19" *) 
+   (* HU_SET = "XLXI_40_3" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_40 (.I0(XLXN_113), 
                                           .I1(XLXN_112), 
                                           .I2(XLXN_111), 
@@ -646,7 +674,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_107), 
                                           .I7(XLXN_106), 
                                           .O(DOUT[3]));
-   (* HU_SET = "XLXI_41_20" *) 
+   (* HU_SET = "XLXI_41_4" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_41 (.I0(XLXN_123), 
                                           .I1(XLXN_122), 
                                           .I2(XLXN_121), 
@@ -656,7 +684,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_116), 
                                           .I7(XLXN_114), 
                                           .O(DOUT[4]));
-   (* HU_SET = "XLXI_42_21" *) 
+   (* HU_SET = "XLXI_42_5" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_42 (.I0(XLXN_131), 
                                           .I1(XLXN_130), 
                                           .I2(XLXN_129), 
@@ -666,7 +694,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_125), 
                                           .I7(XLXN_124), 
                                           .O(DOUT[5]));
-   (* HU_SET = "XLXI_43_22" *) 
+   (* HU_SET = "XLXI_43_6" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_43 (.I0(XLXN_140), 
                                           .I1(XLXN_139), 
                                           .I2(XLXN_138), 
@@ -676,7 +704,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_134), 
                                           .I7(XLXN_133), 
                                           .O(DOUT[6]));
-   (* HU_SET = "XLXI_44_23" *) 
+   (* HU_SET = "XLXI_44_7" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_44 (.I0(XLXN_157), 
                                           .I1(XLXN_158), 
                                           .I2(XLXN_160), 

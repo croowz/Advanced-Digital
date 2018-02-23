@@ -18,7 +18,7 @@
         <signal name="S4" />
         <signal name="S5" />
         <signal name="MEM_EN" />
-        <signal name="OUTPUT(7:0)" />
+        <signal name="D_IN(7:0)" />
         <signal name="S0" />
         <signal name="XLXN_21" />
         <signal name="OVERFLOW" />
@@ -33,7 +33,7 @@
         <port polarity="Output" name="S4" />
         <port polarity="Output" name="S5" />
         <port polarity="Output" name="MEM_EN" />
-        <port polarity="Output" name="OUTPUT(7:0)" />
+        <port polarity="Output" name="D_IN(7:0)" />
         <port polarity="Output" name="S0" />
         <port polarity="Output" name="OVERFLOW" />
         <blockdef name="toy_sch">
@@ -58,7 +58,7 @@
             <line x2="0" y1="-416" y2="-416" x1="64" />
         </blockdef>
         <blockdef name="mem_bootstrap_sch">
-            <timestamp>2018-2-19T18:36:35</timestamp>
+            <timestamp>2018-2-23T17:41:59</timestamp>
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-240" y2="-240" x1="64" />
             <line x2="0" y1="-176" y2="-176" x1="64" />
@@ -101,7 +101,7 @@
             <blockpin signalname="S3" name="S3" />
             <blockpin signalname="S4" name="S4" />
             <blockpin signalname="S5" name="S5" />
-            <blockpin signalname="OUTPUT(7:0)" name="D_OUT(7:0)" />
+            <blockpin signalname="D_IN(7:0)" name="D_OUT(7:0)" />
             <blockpin signalname="ADDR(7:0)" name="ADDR(7:0)" />
         </block>
         <block symbolname="mem_bootstrap_sch" name="XLXI_2">
@@ -109,7 +109,7 @@
             <blockpin signalname="RESET" name="CLK" />
             <blockpin signalname="RW" name="RW" />
             <blockpin signalname="CLK" name="RST" />
-            <blockpin signalname="OUTPUT(7:0)" name="D_IN(7:0)" />
+            <blockpin signalname="D_IN(7:0)" name="D_IN(7:0)" />
             <blockpin signalname="ADDR(7:0)" name="ADDR(7:0)" />
             <blockpin signalname="XLXN_8" name="COUNT" />
             <blockpin signalname="D_OUT(7:0)" name="D_OUT(7:0)" />
@@ -196,8 +196,9 @@
             <wire x2="864" y1="1040" y2="1328" x1="864" />
             <wire x2="2352" y1="1328" y2="1328" x1="864" />
         </branch>
-        <branch name="OUTPUT(7:0)">
-            <wire x2="1312" y1="480" y2="480" x1="832" />
+        <branch name="D_IN(7:0)">
+            <wire x2="1152" y1="480" y2="480" x1="832" />
+            <wire x2="1312" y1="480" y2="480" x1="1152" />
             <wire x2="1488" y1="480" y2="480" x1="1312" />
             <wire x2="1312" y1="480" y2="896" x1="1312" />
             <wire x2="2352" y1="896" y2="896" x1="1312" />
@@ -233,7 +234,7 @@
         </instance>
         <iomarker fontsize="28" x="2352" y="848" name="OVERFLOW" orien="R0" />
         <iomarker fontsize="28" x="2352" y="512" name="D_OUT(7:0)" orien="R0" />
-        <iomarker fontsize="28" x="2352" y="896" name="OUTPUT(7:0)" orien="R0" />
+        <iomarker fontsize="28" x="2352" y="896" name="D_IN(7:0)" orien="R0" />
         <iomarker fontsize="28" x="2352" y="944" name="ADDR(7:0)" orien="R0" />
         <iomarker fontsize="28" x="2352" y="992" name="RW" orien="R0" />
     </sheet>

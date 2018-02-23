@@ -7,7 +7,7 @@ module toyProcessor_overall_toyProcessor_overall_sch_tb();
    reg RESET;
 
 // Output
-	wire [7:0] OUTPUT;
+	wire [7:0] D_IN;
    wire [7:0] D_OUT;
    wire [7:0] ADDR;
    wire RW;
@@ -33,7 +33,7 @@ module toyProcessor_overall_toyProcessor_overall_sch_tb();
 		.S4(S4), 
 		.S5(S5), 
 		.MEM_EN(MEM_EN), 
-		.OUTPUT(OUTPUT), 
+		.D_IN(D_IN), 
 		.S0(S0), 
 		.OVERFLOW(OVERFLOW)
    );

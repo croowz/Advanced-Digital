@@ -4,7 +4,8 @@ module control_tbw_tb_0;
 
 	reg CLK = 1'b0; 
 	reg CLR = 1'b0; 
-	reg RESET = 1'b0; 
+	reg RESET = 1'b0;
+	reg OVERFLOW = 1'b0;
 	
 	wire S0;
 	wire S1; 
@@ -28,6 +29,7 @@ module control_tbw_tb_0;
 		.CLK(CLK), 
 		.CLR(CLR), 
 		.RESET(RESET), 
+		.OVERFLOW(OVERFLOW),
 		.S0(S0),
 		.S1(S1), 
 		.S2(S2), 
@@ -46,6 +48,13 @@ module control_tbw_tb_0;
 			#200;
 			RESET = 1'b0;
 			// -------------------------------------
+			
+			// ------------- Current Time: 300ns 
+			#100;
+			OVERFLOW = 1'b1;
+			// -------------------------------------
+
+
 
 			// ------------- Current Time: 900ns 
 			#750;

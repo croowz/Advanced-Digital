@@ -31,7 +31,7 @@
         <port polarity="Input" name="COUNT" />
         <port polarity="Output" name="OVERFLOW" />
         <blockdef name="ROM_array">
-            <timestamp>2018-2-19T18:34:14</timestamp>
+            <timestamp>2018-2-23T17:41:59</timestamp>
             <rect width="256" x="64" y="-64" height="64" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <rect width="64" x="0" y="-44" height="24" />
@@ -123,7 +123,7 @@
         <block symbolname="gnd" name="XLXI_9">
             <blockpin signalname="XLXN_22" name="G" />
         </block>
-        <block symbolname="constant" name="XLXI_10">
+        <block symbolname="constant" name="XLXI_12">
             <attr value="00" name="CValue">
                 <trait delete="all:1 sym:0" />
                 <trait editname="all:1 sch:0" />
@@ -186,8 +186,6 @@
         <iomarker fontsize="28" x="368" y="928" name="RST" orien="R180" />
         <iomarker fontsize="28" x="368" y="1120" name="COUNT" orien="R180" />
         <instance x="240" y="1120" name="XLXI_9" orien="R90" />
-        <instance x="224" y="1024" name="XLXI_10" orien="R0">
-        </instance>
         <branch name="XLXN_22">
             <wire x2="384" y1="1184" y2="1184" x1="368" />
             <wire x2="768" y1="1184" y2="1184" x1="384" />
@@ -197,8 +195,7 @@
             <wire x2="768" y1="1120" y2="1120" x1="384" />
         </branch>
         <branch name="XLXN_21(7:0)">
-            <wire x2="384" y1="1056" y2="1056" x1="368" />
-            <wire x2="768" y1="1056" y2="1056" x1="384" />
+            <wire x2="768" y1="1056" y2="1056" x1="368" />
         </branch>
         <branch name="CLK">
             <wire x2="448" y1="624" y2="624" x1="368" />
@@ -226,5 +223,7 @@
             <wire x2="1296" y1="1248" y2="1248" x1="1264" />
         </branch>
         <iomarker fontsize="28" x="1296" y="1248" name="OVERFLOW" orien="R0" />
+        <instance x="224" y="1024" name="XLXI_12" orien="R0">
+        </instance>
     </sheet>
 </drawing>
