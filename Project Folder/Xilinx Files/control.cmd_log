@@ -8,3 +8,5 @@ vhdtdtfi -lib work {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project 
 spl2sym -intstyle ise -family spartan3e -w control.spl {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/control.sym} 
 vhdtdtfi -lib work {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/control.v} -lang verilog -prj ToyProcessor -o control.spl -module control -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e -w control.spl {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/control.sym} 
+vhdtdtfi -lib work {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/control.v} -lang verilog -prj ToyProcessor -o control.spl -module control -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w control.spl {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/control.sym} 

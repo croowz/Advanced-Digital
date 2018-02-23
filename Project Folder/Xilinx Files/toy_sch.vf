@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : toy_sch.vf
-// /___/   /\     Timestamp : 02/22/2018 14:45:00
+// /___/   /\     Timestamp : 02/23/2018 15:24:59
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/rac71636/Desktop/Test/toy_sch.vf -w C:/Users/rac71636/Desktop/Test/toy_sch.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toy_sch.sch"
 //Design Name: toy_sch
 //Device: spartan3e
 //Purpose:
@@ -87,7 +87,7 @@ module toZERO_sch_MUSER_toy_sch(zero_in,
    output zero_out;
    
    
-   (* HU_SET = "XLXI_1_84" *) 
+   (* HU_SET = "XLXI_1_0" *) 
    NOR8_MXILINX_toy_sch  XLXI_1 (.I0(zero_in[0]), 
                                 .I1(zero_in[1]), 
                                 .I2(zero_in[2]), 
@@ -156,6 +156,34 @@ module reg_sch_MUSER_toy_sch(CLK,
 endmodule
 `timescale 1ns / 1ps
 
+module mux_MUSER_toy_sch(IN0, 
+                         IN1, 
+                         SEL, 
+                         MUX_OUT);
+
+    input IN0;
+    input IN1;
+    input SEL;
+   output MUX_OUT;
+   
+   wire XLXN_7;
+   wire XLXN_13;
+   wire XLXN_14;
+   
+   AND2  XLXI_1 (.I0(SEL), 
+                .I1(IN0), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(IN1), 
+                .I1(XLXN_14), 
+                .O(XLXN_13));
+   OR2  XLXI_3 (.I0(XLXN_13), 
+               .I1(XLXN_7), 
+               .O(MUX_OUT));
+   INV  XLXI_5 (.I(SEL), 
+               .O(XLXN_14));
+endmodule
+`timescale 1ns / 1ps
+
 module mux8sch_MUSER_toy_sch(IN0, 
                              IN1, 
                              SEL, 
@@ -167,38 +195,72 @@ module mux8sch_MUSER_toy_sch(IN0,
    output [7:0] MUX_OUT;
    
    
-   mux  XLXI_1 (.IN0(IN0[0]), 
-               .IN1(IN1[0]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[0]));
-   mux  XLXI_2 (.IN0(IN0[1]), 
-               .IN1(IN1[1]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[1]));
-   mux  XLXI_3 (.IN0(IN0[2]), 
-               .IN1(IN1[2]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[2]));
-   mux  XLXI_4 (.IN0(IN0[3]), 
-               .IN1(IN1[3]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[3]));
-   mux  XLXI_5 (.IN0(IN0[4]), 
-               .IN1(IN1[4]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[4]));
-   mux  XLXI_6 (.IN0(IN0[5]), 
-               .IN1(IN1[5]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[5]));
-   mux  XLXI_7 (.IN0(IN0[6]), 
-               .IN1(IN1[6]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[6]));
-   mux  XLXI_8 (.IN0(IN0[7]), 
-               .IN1(IN1[7]), 
-               .SEL(SEL), 
-               .MUX_OUT(MUX_OUT[7]));
+   mux_MUSER_toy_sch  XLXI_1 (.IN0(IN0[0]), 
+                             .IN1(IN1[0]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[0]));
+   mux_MUSER_toy_sch  XLXI_2 (.IN0(IN0[1]), 
+                             .IN1(IN1[1]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[1]));
+   mux_MUSER_toy_sch  XLXI_3 (.IN0(IN0[2]), 
+                             .IN1(IN1[2]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[2]));
+   mux_MUSER_toy_sch  XLXI_4 (.IN0(IN0[3]), 
+                             .IN1(IN1[3]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[3]));
+   mux_MUSER_toy_sch  XLXI_5 (.IN0(IN0[4]), 
+                             .IN1(IN1[4]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[4]));
+   mux_MUSER_toy_sch  XLXI_6 (.IN0(IN0[5]), 
+                             .IN1(IN1[5]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[5]));
+   mux_MUSER_toy_sch  XLXI_7 (.IN0(IN0[6]), 
+                             .IN1(IN1[6]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[6]));
+   mux_MUSER_toy_sch  XLXI_8 (.IN0(IN0[7]), 
+                             .IN1(IN1[7]), 
+                             .SEL(SEL), 
+                             .MUX_OUT(MUX_OUT[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module fa_sch_MUSER_toy_sch(Cprev, 
+                            X, 
+                            Y, 
+                            Cnext, 
+                            RES);
+
+    input Cprev;
+    input X;
+    input Y;
+   output Cnext;
+   output RES;
+   
+   wire XLXN_1;
+   wire XLXN_6;
+   wire XLXN_7;
+   
+   XOR2  XLXI_3 (.I0(Y), 
+                .I1(X), 
+                .O(XLXN_1));
+   XOR2  XLXI_4 (.I0(Cprev), 
+                .I1(XLXN_1), 
+                .O(RES));
+   OR2  XLXI_5 (.I0(XLXN_7), 
+               .I1(XLXN_6), 
+               .O(Cnext));
+   AND2  XLXI_6 (.I0(XLXN_1), 
+                .I1(Cprev), 
+                .O(XLXN_6));
+   AND2  XLXI_7 (.I0(X), 
+                .I1(Y), 
+                .O(XLXN_7));
 endmodule
 `timescale 1ns / 1ps
 
@@ -230,46 +292,46 @@ module alu_sch_MUSER_toy_sch(SEL,
    wire XLXN_63;
    wire XLXN_64;
    
-   fa_sch  XLXI_1 (.Cprev(XLXN_33), 
-                  .X(X[5]), 
-                  .Y(XLXN_59), 
-                  .Cnext(XLXN_34), 
-                  .RES(DATA_OUT[5]));
-   fa_sch  XLXI_3 (.Cprev(XLXN_32), 
-                  .X(X[6]), 
-                  .Y(XLXN_58), 
-                  .Cnext(XLXN_33), 
-                  .RES(DATA_OUT[6]));
-   fa_sch  XLXI_4 (.Cprev(SEL), 
-                  .X(X[7]), 
-                  .Y(XLXN_57), 
-                  .Cnext(XLXN_32), 
-                  .RES(DATA_OUT[7]));
-   fa_sch  XLXI_5 (.Cprev(XLXN_34), 
-                  .X(X[4]), 
-                  .Y(XLXN_60), 
-                  .Cnext(XLXN_35), 
-                  .RES(DATA_OUT[4]));
-   fa_sch  XLXI_6 (.Cprev(XLXN_35), 
-                  .X(X[3]), 
-                  .Y(XLXN_61), 
-                  .Cnext(XLXN_36), 
-                  .RES(DATA_OUT[3]));
-   fa_sch  XLXI_7 (.Cprev(XLXN_36), 
-                  .X(X[2]), 
-                  .Y(XLXN_62), 
-                  .Cnext(XLXN_37), 
-                  .RES(DATA_OUT[2]));
-   fa_sch  XLXI_8 (.Cprev(XLXN_37), 
-                  .X(X[1]), 
-                  .Y(XLXN_63), 
-                  .Cnext(XLXN_38), 
-                  .RES(DATA_OUT[1]));
-   fa_sch  XLXI_9 (.Cprev(XLXN_38), 
-                  .X(X[0]), 
-                  .Y(XLXN_64), 
-                  .Cnext(Cnext), 
-                  .RES(DATA_OUT[0]));
+   fa_sch_MUSER_toy_sch  XLXI_1 (.Cprev(XLXN_33), 
+                                .X(X[5]), 
+                                .Y(XLXN_59), 
+                                .Cnext(XLXN_34), 
+                                .RES(DATA_OUT[5]));
+   fa_sch_MUSER_toy_sch  XLXI_3 (.Cprev(XLXN_32), 
+                                .X(X[6]), 
+                                .Y(XLXN_58), 
+                                .Cnext(XLXN_33), 
+                                .RES(DATA_OUT[6]));
+   fa_sch_MUSER_toy_sch  XLXI_4 (.Cprev(SEL), 
+                                .X(X[7]), 
+                                .Y(XLXN_57), 
+                                .Cnext(XLXN_32), 
+                                .RES(DATA_OUT[7]));
+   fa_sch_MUSER_toy_sch  XLXI_5 (.Cprev(XLXN_34), 
+                                .X(X[4]), 
+                                .Y(XLXN_60), 
+                                .Cnext(XLXN_35), 
+                                .RES(DATA_OUT[4]));
+   fa_sch_MUSER_toy_sch  XLXI_6 (.Cprev(XLXN_35), 
+                                .X(X[3]), 
+                                .Y(XLXN_61), 
+                                .Cnext(XLXN_36), 
+                                .RES(DATA_OUT[3]));
+   fa_sch_MUSER_toy_sch  XLXI_7 (.Cprev(XLXN_36), 
+                                .X(X[2]), 
+                                .Y(XLXN_62), 
+                                .Cnext(XLXN_37), 
+                                .RES(DATA_OUT[2]));
+   fa_sch_MUSER_toy_sch  XLXI_8 (.Cprev(XLXN_37), 
+                                .X(X[1]), 
+                                .Y(XLXN_63), 
+                                .Cnext(XLXN_38), 
+                                .RES(DATA_OUT[1]));
+   fa_sch_MUSER_toy_sch  XLXI_9 (.Cprev(XLXN_38), 
+                                .X(X[0]), 
+                                .Y(XLXN_64), 
+                                .Cnext(Cnext), 
+                                .RES(DATA_OUT[0]));
    XOR2  XLXI_10 (.I0(SEL), 
                  .I1(Y[7]), 
                  .O(XLXN_57));

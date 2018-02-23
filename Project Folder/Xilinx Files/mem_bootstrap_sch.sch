@@ -195,7 +195,8 @@
             <wire x2="768" y1="1120" y2="1120" x1="384" />
         </branch>
         <branch name="XLXN_21(7:0)">
-            <wire x2="768" y1="1056" y2="1056" x1="368" />
+            <wire x2="384" y1="1056" y2="1056" x1="368" />
+            <wire x2="768" y1="1056" y2="1056" x1="384" />
         </branch>
         <branch name="CLK">
             <wire x2="448" y1="624" y2="624" x1="368" />
@@ -220,10 +221,11 @@
             <wire x2="1296" y1="928" y2="928" x1="1264" />
         </branch>
         <branch name="OVERFLOW">
-            <wire x2="1296" y1="1248" y2="1248" x1="1264" />
+            <wire x2="1280" y1="1248" y2="1248" x1="1264" />
+            <wire x2="1440" y1="1248" y2="1248" x1="1280" />
         </branch>
-        <iomarker fontsize="28" x="1296" y="1248" name="OVERFLOW" orien="R0" />
         <instance x="224" y="1024" name="XLXI_12" orien="R0">
         </instance>
+        <iomarker fontsize="28" x="1440" y="1248" name="OVERFLOW" orien="R0" />
     </sheet>
 </drawing>
