@@ -4,8 +4,10 @@
 \contentsline {subsection}{\numberline {2.1}Prelab}{3}
 \contentsline {subsection}{\numberline {2.2}Part 1 - Include ROM}{4}
 \contentsline {subsection}{\numberline {2.3}Part 2 - RAM}{5}
-\contentsline {section}{\numberline {3}Experimental Results}{6}
-\contentsline {section}{\numberline {4}Significance}{7}
-\contentsline {paragraph}{}{7}
-\contentsline {section}{\numberline {5}Comments/Suggestions}{7}
-\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {2.4}Part 3 - Memory Bootstrapping}{6}
+\contentsline {subsection}{\numberline {2.5}Part 4 - Integration}{6}
+\contentsline {section}{\numberline {3}Experimental Results}{8}
+\contentsline {section}{\numberline {4}Significance}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {section}{\numberline {5}Comments/Suggestions}{9}
+\contentsline {paragraph}{}{9}
