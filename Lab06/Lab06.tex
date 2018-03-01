@@ -46,241 +46,108 @@ Lab Report Writing 				  & 50 & 50\\
 			\includegraphics[scale=.8]{Prelab.pdf}
 			\caption{Memory Bootstrapping circuit to copy the entire contents of the ROM array into the RAM array.}
 		\end{figure}
-
-		
-\newpage
-	\subsection{Circuit Implementation in Schematic Editor}
-		\paragraph*{}
 			
 		\begin{figure}[h]
-			%\includegraphics[scale=.6]{toy_sch.PNG}
-			\caption{Controller and Datapath components from previous labs connected here in toy\_sch.}
+			%\includegraphics[scale=.6]{Prelab2.}
+			\caption{Modification of the controller so that we do not transition from S0 to S1 before the memory bootstrapping is complete.}
 		\end{figure}
 		
 		\newpage
-	\subsection{Simulation}
-		
+	\subsection{Part 1 - Include ROM}
+	The ROM array was given to us as a schematic of ROM32X1 modules. Below is a testbench to make sure it is operating correctly. We also initialized the first row of modules with the following values:
+
+\begin{flushleft}
+\begin{tabular}{|l|}
+\hline
+00000912 \\
+00000910 \\
+00000912 \\
+00000990 \\
+00000D12 \\
+00000B14 \\
+00000932 \\
+00000149 \\
+\hline
+\end{tabular}
+\end{flushleft}
 
 		
 		\begin{Verbatim}[frame=single, fontsize= \small]
-//toy_tb.v
-`timescale 1ns/1ps
+//ROM Testbench
+`timescale 1ns / 1ps
 
-module toy_tbw_tb_0;
+module ROM_array_ROM_array_sch_tb();
 
-	reg CLK = 1'b0;
-	reg [7:0] D_IN = 8'b00000000;
-	reg RESET = 1'b1; 
+// Inputs
+   reg [7:0] ADDR = 8'b00000000;
 
-	wire [7:0] ADDR; 	
-	wire [7:0] D_OUT; 
-	wire MEM_EN;
-	wire RORW; 
-	wire S0;
-	wire S1;
-	wire S2;
-	wire S3; 
-	wire S4; 
-	wire S5;
+// Output
+   wire [7:0] DATA_OUT;
 
-	initial // Clock process for CLK 
-		begin 
-			forever 
-				begin
-					CLK = 1'b0;
-					#50; 
-					CLK = 1'b1; 
-					#50;
-				end 
-		end
-		
-	toy_sch UUT ( 
-	.CLK(CLK), 
-	.D_IN(D_IN),
-	.RESET(RESET),
-	.ADDR(ADDR), 
-	.D_OUT(D_OUT), 
-	.MEM_EN(MEM_EN), 
-	.RORW(RORW), 
-	.S0(S0),
-	.S1(S1), 
-	.S2(S2), 
-	.S3(S3), 
-	.S4(S4), 
-	.S5(S5));
-	
-	initial 
-		begin
-			// ------------- Current Time: 135ns 
-			#135;
-			RESET = 1'b0;
-			// -------------------------------------
-			
-			// ------------- Current Time: 235ns 
+// Bidirs
+
+// Instantiate the UUT
+   ROM_array UUT (
+		.ADDR(ADDR), 
+		.DATA_OUT(DATA_OUT)
+   );
+// Initialize Inputs
+       initial begin
+			#400;
+			ADDR = 8'b00100000;
 			#100;
-			D_IN = 8'b00000001;
-			// -------------------------------------
-			
-			// ------------- Current Time: 335ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 435ns 
-			#100;
-			D_IN = 8'b10101010;
-			// -------------------------------------
-			
-			// ------------- Current Time: 535ns
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 735ns 
-			#200;
-			D_IN = 8'b00000100;
-			// -------------------------------------
-			
-			// ------------- Current Time: 835ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 1035ns 
-			#200;
-			D_IN = 8'b00000001;
-			// -------------------------------------
-			
-			// ------------- Current Time: 1135ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 1235ns 
-			#100;
-			D_IN = 8'b11111110;
-			// -------------------------------------
-			
-			// ------------- Current Time: 1335ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 1535ns 
-			#200;
-			D_IN = 8'b00000010;
-			// -------------------------------------
-			
-			// ------------- Current Time: 1635ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 1735ns 
-			#100;
-			D_IN = 8'b00000011;/////*********
-			// -------------------------------------
-			
-			// ------------- Current Time: 1835ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2035ns 
-			#200;
-			D_IN = 8'b00010000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2135ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2235ns 
-			#100;
-			D_IN = 8'b11111111;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2335ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2535ns 
-			#200;
-			D_IN = 8'b00000100;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2635ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2835ns 
-			#200;
-			D_IN = 8'b00001000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 2935ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3035ns 
-			#100;
-			D_IN = 8'b11001100;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3135ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3335ns 
-			#200;
-			D_IN = 8'b00000001;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3435ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3535ns 
-			#100;
-			D_IN = 8'b00001111;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3635ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3835ns 
-			#200;
-			D_IN = 8'b00001000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 3935ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-			
-			// ------------- Current Time: 4035ns 
-			#100;
-			D_IN = 8'b11111110;
-			// -------------------------------------
-			
-			// ------------- Current Time: 4135ns 
-			#100;
-			D_IN = 8'b00000000;
-			// -------------------------------------
-		end 
+			ADDR = 8'b00000001;
+			end
 endmodule
 
-	
 		\end{Verbatim}
-		Test bench runs through every given instruction by just changing values of D\_IN in binary and adding waits for visibility convenience. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
+		The test bench simply executes one address change to show that it is working properly. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
+		\newpage
+		\subsection{Part 2 - RAM}
+		The ROM array was given to us as a schematic as well. Below is a testbench to make sure it is operating correctly.
+
+		\begin{Verbatim}[frame=single, fontsize= \small]
+//RAM_array_tb.v
+`timescale 1ns/1ps
+module RAM_array_tb;
+
+reg [7:0] ADDR = 8'b00000000;
+reg CLK = 1'b0;
+reg [7:0] DATA_IN = 8'b00000000;
+reg WE = 1'b0;
+wire [0:7] DATA_OUT1;
+
+initial // Clock process for CLK
+begin
+	forever 
+		begin
+			CLK = 1'b0;
+			#100;
+			CLK = 1'b1; 
+			#100;
+		end
+	end
+RAM_array UUT (
+.ADDR(ADDR),CLK(CLK),.DATA_IN(DATA_IN),.WE(WE),.DATA_OUT1(DATA_OUT1));
+
+initial begin
+#85;
+DATA_IN = 8'b11111111;
+#200;
+WE = 1'b1;
+ADDR = 8'b00010000;
+#600;
+WE = 1'b0;
+#200;
+ADDR = 8'b00100000;
+#600;
+ADDR = 8'b00010000;
+
+end
+endmodule
+		\end{Verbatim}
+		This test bench is similar to the ROM one in purpose, simply executing a write to make sure it works. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
+
 \newpage			
 \section{Experimental Results}\vspace{-.7cm} \line(1,0){470}
 
