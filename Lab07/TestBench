@@ -1,0 +1,57 @@
+`timescale 1ns / 1ps
+
+module toyProcessor_overall_toyProcessor_overall_sch_tb();
+
+// Inputs
+   reg CLK;
+   reg RESET;
+
+// Output
+	wire [7:0] D_IN;
+   wire [7:0] D_OUT;
+   wire [7:0] ADDR;
+   wire RW;
+	wire S0;
+   wire S1;
+   wire S2;
+   wire S3;
+   wire S4;
+   wire S5;
+   wire MEM_EN;
+   wire OVERFLOW;
+
+// Instantiate the UUT
+   toyProcessor_overall UUT (
+		.D_OUT(D_OUT), 
+		.CLK(CLK), 
+		.RESET(RESET), 
+		.ADDR(ADDR), 
+		.RW(RW), 
+		.S1(S1), 
+		.S2(S2), 
+		.S3(S3), 
+		.S4(S4), 
+		.S5(S5), 
+		.MEM_EN(MEM_EN), 
+		.D_IN(D_IN), 
+		.S0(S0), 
+		.OVERFLOW(OVERFLOW)
+   );
+// Initialize Inputs
+	initial
+		begin forever
+			begin
+				CLK = 1'b0;
+				#50;
+				CLK = 1'b1;
+				#50;
+			end
+		end
+		
+	initial
+		begin
+			RESET = 1;
+			#300
+			RESET = 0;
+		end
+endmodule
