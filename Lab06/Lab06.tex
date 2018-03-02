@@ -101,6 +101,10 @@ module ROM_array_ROM_array_sch_tb();
 endmodule
 		\end{Verbatim}
 		The test bench simply executes one address change to show that it is working properly. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
+		\begin{center}
+			\includegraphics[scale=.5]{ROM.PNG}
+		\end{center}
+
 		\newpage
 		\subsection{Part 2 - RAM}
 		The ROM array was given to us as a schematic as well. Below is a testbench to make sure it is operating correctly.
@@ -146,14 +150,16 @@ end
 endmodule
 		\end{Verbatim}
 		This test bench is similar to the ROM one in purpose, simply executing a write to make sure it works. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
-
+		\begin{center}
+ 		\includegraphics[scale=0.4]{RAM.png}\\
+ 	\end{center}
 
 		\subsection{Part 3 - Memory Bootstrapping}
 		The design was shown in the prelab, and below is the final schematic we made.
 
 		\begin{figure}[h]
-			%\includegraphics[scale=.6]{mem_bootstrap_sch.png}
-			\caption{Memory bootstrapping schematic.}
+			\includegraphics[scale=.5]{mem.png}
+			\caption{Memory Bootstrapping Schematic.}
 		\end{figure}
 
 
@@ -161,8 +167,8 @@ endmodule
 		\subsection{Part 4 - Integration}
 
 		\begin{figure}[h]
-			%\includegraphics[scale=.6]{toyProcessor_overall.png}
-			\caption{Memory bootstrapping schematic.}
+			\includegraphics[scale=.4]{toy.png}
+			\caption{Toy Processor Overall Schematic.}
 		\end{figure}
 
 		\begin{Verbatim}[frame=single, fontsize= \small]
@@ -229,16 +235,18 @@ endmodule
 \newpage			
 \section{Experimental Results}\vspace{-.7cm} \line(1,0){470}
 
-% \begin{center}
-% 	\includegraphics[scale=.35]{c1.png}\\
-% 	This segment shows a reset followed by adding 170 and clearing.
-% 	\includegraphics[scale=.35]{c2.png}\\
-% 	This segment shows adding 254 and then subtracting 3 leaving 251 which can be seen at the beginning of the next segment.
-% 	\includegraphics[scale=.35]{c3.png}\\
-% 	This segment begins with a store of the answer previous to the address 255. Then a clear and we branch if not zero to 11001100 which can be seen in the next segment.
-% 	\includegraphics[scale=.35]{c4.png}\\
-% 	Finally we clear add 15 and branch if not zero to 11001100.
-% \end{center}
+\begin{center}
+	\includegraphics[scale=.3]{ROM_tb.png}\\
+	This is our ROM testbench and using the chart above in the ROM section you can match the addresses with the output given.\\
+	\includegraphics[scale=.3]{RAM_tb.png}\\
+	This is out RAM testbench and you can again see and verify what is stored in the tested address as well as se us write something to RAM. It is worth noting that nothing is actually written until WE goes high.\\
+	\newpage
+	\includegraphics[scale=.4]{tb1.png}
+	\includegraphics[scale=.4]{tb2.png}
+	\includegraphics[scale=.4]{tb3.png}
+	\includegraphics[scale=.4]{tb4.png}\\
+	This is the testbench of out Toy\_Overall\_Processor. We wrote the original program from Lab 5 into ROM and you can see that being written to RAM and that the program does not begin running until all of ROM is written to RAM. After that you can see the state changes occuring as they did in the last lab and the program runs as it did in the last lab as well now it is just coming from RAM.
+\end{center}
 
 	\newpage
 \section{Significance} \vspace{-.7cm} \line(1,0){470}
