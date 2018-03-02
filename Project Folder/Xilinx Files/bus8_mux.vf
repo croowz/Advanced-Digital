@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : bus8_mux.vf
-// /___/   /\     Timestamp : 02/22/2018 14:50:38
+// /___/   /\     Timestamp : 03/02/2018 15:36:46
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/rac71636/Desktop/Test/bus8_mux.vf -w C:/Users/rac71636/Desktop/Test/bus8_mux.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/bus8_mux.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/bus8_mux.sch"
 //Design Name: bus8_mux
 //Device: spartan3e
 //Purpose:
@@ -389,7 +389,7 @@ module bus8_mux(DIN0,
                                          .MUXOUT5(XLXN_128), 
                                          .MUXOUT6(XLXN_137), 
                                          .MUXOUT7(XLXN_161));
-   (* HU_SET = "XLXI_34_40" *) 
+   (* HU_SET = "XLXI_34_60" *) 
    OR8_MXILINX_bus8_mux  XLXI_34 (.I0(XLXN_78), 
                                  .I1(XLXN_77), 
                                  .I2(XLXN_76), 
@@ -399,7 +399,7 @@ module bus8_mux(DIN0,
                                  .I6(XLXN_67), 
                                  .I7(XLXN_66), 
                                  .O(DOUT[0]));
-   (* HU_SET = "XLXI_38_41" *) 
+   (* HU_SET = "XLXI_38_61" *) 
    OR8_MXILINX_bus8_mux  XLXI_38 (.I0(XLXN_97), 
                                  .I1(XLXN_96), 
                                  .I2(XLXN_95), 
@@ -409,7 +409,7 @@ module bus8_mux(DIN0,
                                  .I6(XLXN_91), 
                                  .I7(XLXN_90), 
                                  .O(DOUT[1]));
-   (* HU_SET = "XLXI_39_42" *) 
+   (* HU_SET = "XLXI_39_62" *) 
    OR8_MXILINX_bus8_mux  XLXI_39 (.I0(XLXN_105), 
                                  .I1(XLXN_104), 
                                  .I2(XLXN_103), 
@@ -419,7 +419,7 @@ module bus8_mux(DIN0,
                                  .I6(XLXN_99), 
                                  .I7(XLXN_98), 
                                  .O(DOUT[2]));
-   (* HU_SET = "XLXI_40_43" *) 
+   (* HU_SET = "XLXI_40_63" *) 
    OR8_MXILINX_bus8_mux  XLXI_40 (.I0(XLXN_113), 
                                  .I1(XLXN_112), 
                                  .I2(XLXN_111), 
@@ -429,7 +429,7 @@ module bus8_mux(DIN0,
                                  .I6(XLXN_107), 
                                  .I7(XLXN_106), 
                                  .O(DOUT[3]));
-   (* HU_SET = "XLXI_41_44" *) 
+   (* HU_SET = "XLXI_41_64" *) 
    OR8_MXILINX_bus8_mux  XLXI_41 (.I0(XLXN_123), 
                                  .I1(XLXN_122), 
                                  .I2(XLXN_121), 
@@ -439,7 +439,7 @@ module bus8_mux(DIN0,
                                  .I6(XLXN_116), 
                                  .I7(XLXN_114), 
                                  .O(DOUT[4]));
-   (* HU_SET = "XLXI_42_45" *) 
+   (* HU_SET = "XLXI_42_65" *) 
    OR8_MXILINX_bus8_mux  XLXI_42 (.I0(XLXN_131), 
                                  .I1(XLXN_130), 
                                  .I2(XLXN_129), 
@@ -449,7 +449,7 @@ module bus8_mux(DIN0,
                                  .I6(XLXN_125), 
                                  .I7(XLXN_124), 
                                  .O(DOUT[5]));
-   (* HU_SET = "XLXI_43_46" *) 
+   (* HU_SET = "XLXI_43_66" *) 
    OR8_MXILINX_bus8_mux  XLXI_43 (.I0(XLXN_140), 
                                  .I1(XLXN_139), 
                                  .I2(XLXN_138), 
@@ -459,7 +459,7 @@ module bus8_mux(DIN0,
                                  .I6(XLXN_134), 
                                  .I7(XLXN_133), 
                                  .O(DOUT[6]));
-   (* HU_SET = "XLXI_44_47" *) 
+   (* HU_SET = "XLXI_44_67" *) 
    OR8_MXILINX_bus8_mux  XLXI_44 (.I0(XLXN_157), 
                                  .I1(XLXN_158), 
                                  .I2(XLXN_160), 

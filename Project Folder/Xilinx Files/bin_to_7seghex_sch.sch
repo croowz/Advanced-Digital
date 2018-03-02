@@ -25,13 +25,13 @@
         <signal name="XLXN_289" />
         <signal name="XLXN_290" />
         <signal name="XLXN_291" />
-        <signal name="L0" />
-        <signal name="L1" />
-        <signal name="L2" />
-        <signal name="L3" />
-        <signal name="L4" />
-        <signal name="L5" />
-        <signal name="L6" />
+        <signal name="SegA" />
+        <signal name="SegB" />
+        <signal name="SegC" />
+        <signal name="SegD" />
+        <signal name="SegE" />
+        <signal name="SegF" />
+        <signal name="SegG" />
         <signal name="XLXN_292" />
         <signal name="a0" />
         <signal name="XLXN_184" />
@@ -40,13 +40,13 @@
         <port polarity="Input" name="a1" />
         <port polarity="Input" name="a2" />
         <port polarity="Input" name="a3" />
-        <port polarity="Output" name="L0" />
-        <port polarity="Output" name="L1" />
-        <port polarity="Output" name="L2" />
-        <port polarity="Output" name="L3" />
-        <port polarity="Output" name="L4" />
-        <port polarity="Output" name="L5" />
-        <port polarity="Output" name="L6" />
+        <port polarity="Output" name="SegA" />
+        <port polarity="Output" name="SegB" />
+        <port polarity="Output" name="SegC" />
+        <port polarity="Output" name="SegD" />
+        <port polarity="Output" name="SegE" />
+        <port polarity="Output" name="SegF" />
+        <port polarity="Output" name="SegG" />
         <port polarity="Input" name="a0" />
         <blockdef name="inv">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -242,7 +242,7 @@
             <blockpin signalname="XLXN_76" name="I7" />
             <blockpin signalname="XLXN_75" name="I8" />
             <blockpin signalname="XLXN_75" name="I9" />
-            <blockpin signalname="L6" name="O" />
+            <blockpin signalname="SegG" name="O" />
         </block>
         <block symbolname="nor16" name="XLXI_403">
             <blockpin signalname="XLXN_237" name="I0" />
@@ -261,7 +261,7 @@
             <blockpin signalname="XLXN_76" name="I7" />
             <blockpin signalname="XLXN_75" name="I8" />
             <blockpin signalname="XLXN_75" name="I9" />
-            <blockpin signalname="L5" name="O" />
+            <blockpin signalname="SegF" name="O" />
         </block>
         <block symbolname="nor16" name="XLXI_401">
             <blockpin signalname="XLXN_237" name="I0" />
@@ -280,7 +280,7 @@
             <blockpin signalname="XLXN_76" name="I7" />
             <blockpin signalname="XLXN_75" name="I8" />
             <blockpin signalname="XLXN_75" name="I9" />
-            <blockpin signalname="L4" name="O" />
+            <blockpin signalname="SegE" name="O" />
         </block>
         <block symbolname="nor16" name="XLXI_400">
             <blockpin signalname="XLXN_78" name="I0" />
@@ -299,7 +299,7 @@
             <blockpin signalname="XLXN_76" name="I7" />
             <blockpin signalname="XLXN_75" name="I8" />
             <blockpin signalname="XLXN_75" name="I9" />
-            <blockpin signalname="L3" name="O" />
+            <blockpin signalname="SegD" name="O" />
         </block>
         <block symbolname="nor16" name="XLXI_399">
             <blockpin signalname="XLXN_29" name="I0" />
@@ -318,7 +318,7 @@
             <blockpin signalname="XLXN_76" name="I7" />
             <blockpin signalname="XLXN_184" name="I8" />
             <blockpin signalname="XLXN_75" name="I9" />
-            <blockpin signalname="L2" name="O" />
+            <blockpin signalname="SegC" name="O" />
         </block>
         <block symbolname="nor16" name="XLXI_398">
             <blockpin signalname="XLXN_29" name="I0" />
@@ -337,7 +337,7 @@
             <blockpin signalname="XLXN_76" name="I7" />
             <blockpin signalname="XLXN_184" name="I8" />
             <blockpin signalname="XLXN_25" name="I9" />
-            <blockpin signalname="L1" name="O" />
+            <blockpin signalname="SegB" name="O" />
         </block>
         <block symbolname="nor16" name="XLXI_397">
             <blockpin signalname="XLXN_237" name="I0" />
@@ -356,7 +356,7 @@
             <blockpin signalname="XLXN_76" name="I7" />
             <blockpin signalname="XLXN_184" name="I8" />
             <blockpin signalname="XLXN_75" name="I9" />
-            <blockpin signalname="L0" name="O" />
+            <blockpin signalname="SegA" name="O" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="5440" height="7040">
@@ -787,36 +787,36 @@
             <wire x2="2080" y1="144" y2="144" x1="1008" />
             <wire x2="1008" y1="144" y2="224" x1="1008" />
         </branch>
-        <branch name="L0">
+        <branch name="SegA">
             <wire x2="4848" y1="512" y2="512" x1="4560" />
         </branch>
-        <iomarker fontsize="28" x="4848" y="512" name="L0" orien="R0" />
-        <branch name="L1">
+        <iomarker fontsize="28" x="4848" y="512" name="SegA" orien="R0" />
+        <branch name="SegB">
             <wire x2="4848" y1="1520" y2="1520" x1="4560" />
         </branch>
-        <iomarker fontsize="28" x="4848" y="1520" name="L1" orien="R0" />
-        <branch name="L2">
+        <iomarker fontsize="28" x="4848" y="1520" name="SegB" orien="R0" />
+        <branch name="SegC">
             <wire x2="4832" y1="2528" y2="2528" x1="4560" />
         </branch>
-        <iomarker fontsize="28" x="4832" y="2528" name="L2" orien="R0" />
-        <iomarker fontsize="28" x="4848" y="3536" name="L3" orien="R0" />
-        <branch name="L4">
+        <iomarker fontsize="28" x="4832" y="2528" name="SegC" orien="R0" />
+        <iomarker fontsize="28" x="4848" y="3536" name="SegD" orien="R0" />
+        <branch name="SegE">
             <wire x2="4848" y1="4544" y2="4544" x1="4560" />
         </branch>
-        <iomarker fontsize="28" x="4848" y="4544" name="L4" orien="R0" />
-        <iomarker fontsize="28" x="4848" y="5552" name="L5" orien="R0" />
-        <branch name="L6">
+        <iomarker fontsize="28" x="4848" y="4544" name="SegE" orien="R0" />
+        <iomarker fontsize="28" x="4848" y="5552" name="SegF" orien="R0" />
+        <branch name="SegG">
             <wire x2="4848" y1="6544" y2="6544" x1="4560" />
         </branch>
-        <iomarker fontsize="28" x="4848" y="6544" name="L6" orien="R0" />
+        <iomarker fontsize="28" x="4848" y="6544" name="SegG" orien="R0" />
         <instance x="384" y="432" name="XLXI_2" orien="R0" />
         <instance x="384" y="608" name="XLXI_5" orien="R0" />
         <instance x="384" y="256" name="XLXI_1" orien="R0" />
         <instance x="384" y="768" name="XLXI_6" orien="R0" />
-        <branch name="L5">
+        <branch name="SegF">
             <wire x2="4848" y1="5552" y2="5552" x1="4560" />
         </branch>
-        <branch name="L3">
+        <branch name="SegD">
             <wire x2="4848" y1="3536" y2="3536" x1="4560" />
         </branch>
         <branch name="XLXN_184">

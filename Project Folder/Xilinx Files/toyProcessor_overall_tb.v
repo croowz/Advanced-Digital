@@ -5,11 +5,13 @@ module toyProcessor_overall_toyProcessor_overall_sch_tb();
 // Inputs
    reg CLK;
    reg RESET;
+	reg PUSH;
 
 // Output
 	wire [7:0] D_IN;
-   wire [7:0] D_OUT;
-   wire [7:0] ADDR;
+   wire [7:0] Output;
+   wire [7:0] Addr;
+	wire [6:0] seven_seg_out;
    wire RW;
 	wire S0;
    wire S1;
@@ -19,13 +21,23 @@ module toyProcessor_overall_toyProcessor_overall_sch_tb();
    wire S5;
    wire MEM_EN;
    wire OVERFLOW;
+	wire EN_L;
+	wire EN_ML;
+	wire EN_MR;
+	wire EN_R;
 
 // Instantiate the UUT
    toyProcessor_overall UUT (
-		.D_OUT(D_OUT), 
+		.Output(Output), 
 		.CLK(CLK), 
-		.RESET(RESET), 
-		.ADDR(ADDR), 
+		.RESET(RESET),
+		.PUSH(PUSH),
+		.Addr(Addr),
+		.seven_seg_out(seven_seg_out),
+		.EN_L(EN_l),
+		.EN_ML(EN_ML),
+		.EN_MR(EN_MR),
+		.EN_R(EN_R),
 		.RW(RW), 
 		.S1(S1), 
 		.S2(S2), 

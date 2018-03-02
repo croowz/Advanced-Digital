@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : encode8.vf
-// /___/   /\     Timestamp : 02/22/2018 14:50:25
+// /___/   /\     Timestamp : 03/02/2018 15:36:39
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/rac71636/Desktop/Test/encode8.vf -w C:/Users/rac71636/Desktop/Test/encode8.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/encode8.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/encode8.sch"
 //Design Name: encode8
 //Device: spartan3e
 //Purpose:

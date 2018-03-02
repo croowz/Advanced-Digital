@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : bin_to_7seghex_sch.vf
-// /___/   /\     Timestamp : 01/19/2018 13:57:24
+// /___/   /\     Timestamp : 03/02/2018 15:34:53
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor2/bin_to_7seghex_sch.vf -w F:/Digital2/ToyProcessor2/bin_to_7seghex_sch.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/bin_to_7seghex_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/bin_to_7seghex_sch.sch"
 //Design Name: bin_to_7seghex_sch
 //Device: spartan3e
 //Purpose:
@@ -139,76 +139,41 @@ module bin_to_7seghex_sch(a0,
                           a1, 
                           a2, 
                           a3, 
-                          L0, 
-                          L1, 
-                          L2, 
-                          L3, 
-                          L4, 
-                          L5, 
-                          L6);
+                          SegA, 
+                          SegB, 
+                          SegC, 
+                          SegD, 
+                          SegE, 
+                          SegF, 
+                          SegG);
 
     input a0;
     input a1;
     input a2;
     input a3;
-   output L0;
-   output L1;
-   output L2;
-   output L3;
-   output L4;
-   output L5;
-   output L6;
+   output SegA;
+   output SegB;
+   output SegC;
+   output SegD;
+   output SegE;
+   output SegF;
+   output SegG;
    
-   wire XLXN_19;
-   wire XLXN_20;
-   wire XLXN_21;
-   wire XLXN_22;
-   wire XLXN_23;
    wire XLXN_24;
    wire XLXN_25;
-   wire XLXN_26;
    wire XLXN_27;
-   wire XLXN_28;
    wire XLXN_29;
-   wire XLXN_30;
    wire XLXN_31;
-   wire XLXN_32;
-   wire XLXN_33;
    wire XLXN_34;
-   wire XLXN_73;
    wire XLXN_74;
    wire XLXN_75;
    wire XLXN_76;
-   wire XLXN_77;
    wire XLXN_78;
-   wire XLXN_79;
    wire XLXN_80;
-   wire XLXN_81;
-   wire XLXN_82;
-   wire XLXN_83;
-   wire XLXN_84;
    wire XLXN_85;
-   wire XLXN_86;
-   wire XLXN_87;
-   wire XLXN_88;
-   wire XLXN_89;
-   wire XLXN_90;
-   wire XLXN_91;
-   wire XLXN_92;
-   wire XLXN_129;
-   wire XLXN_138;
-   wire XLXN_146;
-   wire XLXN_155;
    wire XLXN_163;
-   wire XLXN_177;
    wire XLXN_184;
-   wire XLXN_191;
    wire XLXN_197;
-   wire XLXN_199;
-   wire XLXN_214;
-   wire XLXN_220;
-   wire XLXN_226;
-   wire XLXN_232;
    wire XLXN_237;
    wire XLXN_289;
    wire XLXN_290;
@@ -227,27 +192,27 @@ module bin_to_7seghex_sch(a0,
                 .I1(XLXN_290), 
                 .I2(XLXN_291), 
                 .I3(XLXN_292), 
-                .O(XLXN_19));
+                .O(XLXN_85));
    AND4  XLXI_8 (.I0(XLXN_289), 
                 .I1(XLXN_290), 
                 .I2(XLXN_291), 
                 .I3(a0), 
-                .O(XLXN_129));
+                .O(XLXN_31));
    AND4  XLXI_10 (.I0(XLXN_289), 
                  .I1(XLXN_290), 
                  .I2(a1), 
                  .I3(XLXN_292), 
-                 .O(XLXN_138));
+                 .O(XLXN_80));
    AND4  XLXI_11 (.I0(XLXN_289), 
                  .I1(XLXN_289), 
                  .I2(a1), 
                  .I3(a0), 
-                 .O(XLXN_146));
+                 .O(XLXN_74));
    AND4  XLXI_12 (.I0(XLXN_289), 
                  .I1(a2), 
                  .I2(XLXN_291), 
                  .I3(XLXN_292), 
-                 .O(XLXN_155));
+                 .O(XLXN_25));
    AND4  XLXI_13 (.I0(XLXN_289), 
                  .I1(a2), 
                  .I2(XLXN_291), 
@@ -257,7 +222,7 @@ module bin_to_7seghex_sch(a0,
                  .I1(a2), 
                  .I2(a1), 
                  .I3(XLXN_292), 
-                 .O(XLXN_177));
+                 .O(XLXN_75));
    AND4  XLXI_15 (.I0(XLXN_289), 
                  .I1(a2), 
                  .I2(a1), 
@@ -267,7 +232,7 @@ module bin_to_7seghex_sch(a0,
                  .I1(XLXN_290), 
                  .I2(XLXN_291), 
                  .I3(XLXN_292), 
-                 .O(XLXN_191));
+                 .O(XLXN_76));
    AND4  XLXI_20 (.I0(a3), 
                  .I1(XLXN_290), 
                  .I2(XLXN_291), 
@@ -277,226 +242,156 @@ module bin_to_7seghex_sch(a0,
                  .I1(XLXN_290), 
                  .I2(a1), 
                  .I3(XLXN_292), 
-                 .O(XLXN_199));
+                 .O(XLXN_27));
    AND4  XLXI_22 (.I0(a3), 
                  .I1(XLXN_290), 
                  .I2(a1), 
                  .I3(a0), 
-                 .O(XLXN_214));
+                 .O(XLXN_34));
    AND4  XLXI_43 (.I0(a3), 
                  .I1(a3), 
                  .I2(XLXN_291), 
                  .I3(XLXN_292), 
-                 .O(XLXN_220));
+                 .O(XLXN_24));
    AND4  XLXI_44 (.I0(a3), 
                  .I1(a2), 
                  .I2(XLXN_291), 
                  .I3(a0), 
-                 .O(XLXN_226));
+                 .O(XLXN_29));
    AND4  XLXI_45 (.I0(a3), 
                  .I1(a2), 
                  .I2(a1), 
                  .I3(XLXN_292), 
-                 .O(XLXN_232));
+                 .O(XLXN_78));
    AND4  XLXI_46 (.I0(a3), 
                  .I1(a2), 
                  .I2(a1), 
                  .I3(a0), 
                  .O(XLXN_237));
-   INV  XLXI_341 (.I(XLXN_19), 
-                 .O(XLXN_20));
-   INV  XLXI_361 (.I(XLXN_129), 
-                 .O(XLXN_21));
-   INV  XLXI_362 (.I(XLXN_155), 
-                 .O(XLXN_22));
-   INV  XLXI_363 (.I(XLXN_214), 
-                 .O(XLXN_23));
-   INV  XLXI_364 (.I(XLXN_226), 
-                 .O(XLXN_24));
-   INV  XLXI_365 (.I(XLXN_163), 
-                 .O(XLXN_25));
-   INV  XLXI_366 (.I(XLXN_177), 
-                 .O(XLXN_26));
-   INV  XLXI_367 (.I(XLXN_214), 
-                 .O(XLXN_27));
-   INV  XLXI_368 (.I(XLXN_220), 
-                 .O(XLXN_28));
-   INV  XLXI_369 (.I(XLXN_232), 
-                 .O(XLXN_29));
-   INV  XLXI_370 (.I(XLXN_237), 
-                 .O(XLXN_30));
-   INV  XLXI_371 (.I(XLXN_138), 
-                 .O(XLXN_31));
-   INV  XLXI_372 (.I(XLXN_237), 
-                 .O(XLXN_32));
-   INV  XLXI_373 (.I(XLXN_232), 
-                 .O(XLXN_33));
-   INV  XLXI_374 (.I(XLXN_220), 
-                 .O(XLXN_34));
-   INV  XLXI_375 (.I(XLXN_129), 
-                 .O(XLXN_73));
-   INV  XLXI_376 (.I(XLXN_155), 
-                 .O(XLXN_74));
-   INV  XLXI_377 (.I(XLXN_184), 
-                 .O(XLXN_75));
-   INV  XLXI_378 (.I(XLXN_197), 
-                 .O(XLXN_76));
-   INV  XLXI_379 (.I(XLXN_199), 
-                 .O(XLXN_77));
-   INV  XLXI_380 (.I(XLXN_237), 
-                 .O(XLXN_78));
-   INV  XLXI_381 (.I(XLXN_129), 
-                 .O(XLXN_79));
-   INV  XLXI_383 (.I(XLXN_146), 
-                 .O(XLXN_80));
-   INV  XLXI_384 (.I(XLXN_155), 
-                 .O(XLXN_81));
-   INV  XLXI_386 (.I(XLXN_163), 
-                 .O(XLXN_82));
-   INV  XLXI_387 (.I(XLXN_184), 
-                 .O(XLXN_83));
-   INV  XLXI_388 (.I(XLXN_197), 
-                 .O(XLXN_84));
-   INV  XLXI_389 (.I(XLXN_129), 
-                 .O(XLXN_85));
-   INV  XLXI_390 (.I(XLXN_138), 
-                 .O(XLXN_86));
-   INV  XLXI_391 (.I(XLXN_146), 
-                 .O(XLXN_87));
-   INV  XLXI_392 (.I(XLXN_184), 
-                 .O(XLXN_88));
-   INV  XLXI_393 (.I(XLXN_226), 
-                 .O(XLXN_89));
-   INV  XLXI_394 (.I(XLXN_129), 
-                 .O(XLXN_90));
-   INV  XLXI_395 (.I(XLXN_184), 
-                 .O(XLXN_91));
-   INV  XLXI_396 (.I(XLXN_220), 
-                 .O(XLXN_92));
-   (* HU_SET = "XLXI_397_0" *) 
+   (* HU_SET = "XLXI_397_6" *) 
    NOR16_MXILINX_bin_to_7seghex_sch  XLXI_397 (.I0(XLXN_237), 
-                                              .I1(XLXN_232), 
+                                              .I1(XLXN_78), 
                                               .I2(XLXN_24), 
-                                              .I3(XLXN_220), 
-                                              .I4(XLXN_23), 
-                                              .I5(XLXN_199), 
-                                              .I6(XLXN_197), 
-                                              .I7(XLXN_191), 
-                                              .I8(XLXN_184), 
-                                              .I9(XLXN_177), 
-                                              .I10(XLXN_163), 
-                                              .I11(XLXN_22), 
-                                              .I12(XLXN_146), 
-                                              .I13(XLXN_138), 
-                                              .I14(XLXN_21), 
-                                              .I15(XLXN_19), 
-                                              .O(L0));
-   (* HU_SET = "XLXI_398_1" *) 
-   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_398 (.I0(XLXN_30), 
-                                              .I1(XLXN_29), 
-                                              .I2(XLXN_226), 
-                                              .I3(XLXN_28), 
+                                              .I3(XLXN_24), 
                                               .I4(XLXN_27), 
-                                              .I5(XLXN_199), 
+                                              .I5(XLXN_27), 
                                               .I6(XLXN_197), 
-                                              .I7(XLXN_191), 
+                                              .I7(XLXN_76), 
                                               .I8(XLXN_184), 
-                                              .I9(XLXN_26), 
-                                              .I10(XLXN_25), 
-                                              .I11(XLXN_155), 
-                                              .I12(XLXN_146), 
-                                              .I13(XLXN_138), 
-                                              .I14(XLXN_129), 
-                                              .I15(XLXN_19), 
-                                              .O(L1));
-   (* HU_SET = "XLXI_399_2" *) 
-   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_399 (.I0(XLXN_32), 
-                                              .I1(XLXN_33), 
-                                              .I2(XLXN_226), 
-                                              .I3(XLXN_34), 
-                                              .I4(XLXN_214), 
-                                              .I5(XLXN_199), 
-                                              .I6(XLXN_197), 
-                                              .I7(XLXN_191), 
-                                              .I8(XLXN_184), 
-                                              .I9(XLXN_177), 
-                                              .I10(XLXN_163), 
-                                              .I11(XLXN_155), 
-                                              .I12(XLXN_146), 
-                                              .I13(XLXN_31), 
-                                              .I14(XLXN_129), 
-                                              .I15(XLXN_19), 
-                                              .O(L2));
-   (* HU_SET = "XLXI_400_3" *) 
-   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_400 (.I0(XLXN_78), 
-                                              .I1(XLXN_232), 
-                                              .I2(XLXN_226), 
-                                              .I3(XLXN_220), 
-                                              .I4(XLXN_214), 
-                                              .I5(XLXN_77), 
-                                              .I6(XLXN_76), 
-                                              .I7(XLXN_191), 
-                                              .I8(XLXN_75), 
-                                              .I9(XLXN_177), 
+                                              .I9(XLXN_75), 
                                               .I10(XLXN_163), 
                                               .I11(XLXN_74), 
-                                              .I12(XLXN_146), 
-                                              .I13(XLXN_138), 
-                                              .I14(XLXN_73), 
-                                              .I15(XLXN_19), 
-                                              .O(L3));
-   (* HU_SET = "XLXI_401_4" *) 
-   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_401 (.I0(XLXN_237), 
-                                              .I1(XLXN_232), 
-                                              .I2(XLXN_226), 
-                                              .I3(XLXN_220), 
-                                              .I4(XLXN_214), 
-                                              .I5(XLXN_199), 
-                                              .I6(XLXN_84), 
-                                              .I7(XLXN_191), 
-                                              .I8(XLXN_83), 
-                                              .I9(XLXN_177), 
-                                              .I10(XLXN_82), 
-                                              .I11(XLXN_81), 
-                                              .I12(XLXN_80), 
-                                              .I13(XLXN_138), 
-                                              .I14(XLXN_79), 
-                                              .I15(XLXN_19), 
-                                              .O(L4));
-   (* HU_SET = "XLXI_403_5" *) 
-   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_403 (.I0(XLXN_237), 
-                                              .I1(XLXN_232), 
-                                              .I2(XLXN_89), 
-                                              .I3(XLXN_220), 
-                                              .I4(XLXN_214), 
-                                              .I5(XLXN_199), 
-                                              .I6(XLXN_197), 
-                                              .I7(XLXN_191), 
-                                              .I8(XLXN_88), 
-                                              .I9(XLXN_177), 
-                                              .I10(XLXN_163), 
-                                              .I11(XLXN_155), 
-                                              .I12(XLXN_87), 
-                                              .I13(XLXN_86), 
+                                              .I12(XLXN_74), 
+                                              .I13(XLXN_80), 
                                               .I14(XLXN_85), 
-                                              .I15(XLXN_19), 
-                                              .O(L5));
-   (* HU_SET = "XLXI_404_6" *) 
-   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_404 (.I0(XLXN_237), 
-                                              .I1(XLXN_232), 
-                                              .I2(XLXN_226), 
-                                              .I3(XLXN_92), 
-                                              .I4(XLXN_214), 
-                                              .I5(XLXN_199), 
+                                              .I15(XLXN_85), 
+                                              .O(SegA));
+   (* HU_SET = "XLXI_398_5" *) 
+   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_398 (.I0(XLXN_29), 
+                                              .I1(XLXN_29), 
+                                              .I2(XLXN_29), 
+                                              .I3(XLXN_27), 
+                                              .I4(XLXN_27), 
+                                              .I5(XLXN_27), 
                                               .I6(XLXN_197), 
-                                              .I7(XLXN_191), 
-                                              .I8(XLXN_91), 
-                                              .I9(XLXN_177), 
+                                              .I7(XLXN_76), 
+                                              .I8(XLXN_184), 
+                                              .I9(XLXN_25), 
+                                              .I10(XLXN_25), 
+                                              .I11(XLXN_25), 
+                                              .I12(XLXN_74), 
+                                              .I13(XLXN_80), 
+                                              .I14(XLXN_31), 
+                                              .I15(XLXN_85), 
+                                              .O(SegB));
+   (* HU_SET = "XLXI_399_4" *) 
+   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_399 (.I0(XLXN_29), 
+                                              .I1(XLXN_29), 
+                                              .I2(XLXN_29), 
+                                              .I3(XLXN_34), 
+                                              .I4(XLXN_34), 
+                                              .I5(XLXN_27), 
+                                              .I6(XLXN_197), 
+                                              .I7(XLXN_76), 
+                                              .I8(XLXN_184), 
+                                              .I9(XLXN_75), 
                                               .I10(XLXN_163), 
-                                              .I11(XLXN_155), 
-                                              .I12(XLXN_146), 
-                                              .I13(XLXN_138), 
-                                              .I14(XLXN_90), 
-                                              .I15(XLXN_20), 
-                                              .O(L6));
+                                              .I11(XLXN_25), 
+                                              .I12(XLXN_74), 
+                                              .I13(XLXN_31), 
+                                              .I14(XLXN_31), 
+                                              .I15(XLXN_85), 
+                                              .O(SegC));
+   (* HU_SET = "XLXI_400_3" *) 
+   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_400 (.I0(XLXN_78), 
+                                              .I1(XLXN_78), 
+                                              .I2(XLXN_29), 
+                                              .I3(XLXN_24), 
+                                              .I4(XLXN_34), 
+                                              .I5(XLXN_76), 
+                                              .I6(XLXN_76), 
+                                              .I7(XLXN_76), 
+                                              .I8(XLXN_75), 
+                                              .I9(XLXN_75), 
+                                              .I10(XLXN_163), 
+                                              .I11(XLXN_74), 
+                                              .I12(XLXN_74), 
+                                              .I13(XLXN_80), 
+                                              .I14(XLXN_85), 
+                                              .I15(XLXN_85), 
+                                              .O(SegD));
+   (* HU_SET = "XLXI_401_2" *) 
+   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_401 (.I0(XLXN_237), 
+                                              .I1(XLXN_78), 
+                                              .I2(XLXN_29), 
+                                              .I3(XLXN_24), 
+                                              .I4(XLXN_34), 
+                                              .I5(XLXN_27), 
+                                              .I6(XLXN_76), 
+                                              .I7(XLXN_76), 
+                                              .I8(XLXN_75), 
+                                              .I9(XLXN_75), 
+                                              .I10(XLXN_80), 
+                                              .I11(XLXN_80), 
+                                              .I12(XLXN_80), 
+                                              .I13(XLXN_80), 
+                                              .I14(XLXN_85), 
+                                              .I15(XLXN_85), 
+                                              .O(SegE));
+   (* HU_SET = "XLXI_403_1" *) 
+   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_403 (.I0(XLXN_237), 
+                                              .I1(XLXN_78), 
+                                              .I2(XLXN_24), 
+                                              .I3(XLXN_24), 
+                                              .I4(XLXN_34), 
+                                              .I5(XLXN_27), 
+                                              .I6(XLXN_197), 
+                                              .I7(XLXN_76), 
+                                              .I8(XLXN_75), 
+                                              .I9(XLXN_75), 
+                                              .I10(XLXN_163), 
+                                              .I11(XLXN_25), 
+                                              .I12(XLXN_85), 
+                                              .I13(XLXN_85), 
+                                              .I14(XLXN_85), 
+                                              .I15(XLXN_85), 
+                                              .O(SegF));
+   (* HU_SET = "XLXI_404_0" *) 
+   NOR16_MXILINX_bin_to_7seghex_sch  XLXI_404 (.I0(XLXN_237), 
+                                              .I1(XLXN_78), 
+                                              .I2(XLXN_29), 
+                                              .I3(XLXN_34), 
+                                              .I4(XLXN_34), 
+                                              .I5(XLXN_27), 
+                                              .I6(XLXN_197), 
+                                              .I7(XLXN_76), 
+                                              .I8(XLXN_75), 
+                                              .I9(XLXN_75), 
+                                              .I10(XLXN_163), 
+                                              .I11(XLXN_25), 
+                                              .I12(XLXN_74), 
+                                              .I13(XLXN_80), 
+                                              .I14(XLXN_80), 
+                                              .I15(XLXN_80), 
+                                              .O(SegG));
 endmodule
