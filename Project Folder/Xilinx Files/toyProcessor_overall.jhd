@@ -3,3 +3,15 @@ MODULE toyProcessor_overall
 		INSTANCE XLXI_1
 	SUBMODULE mem_bootstrap_sch
 		INSTANCE XLXI_2
+	SUBMODULE seven_seg_control_sch
+		INSTANCE XLXI_6
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_10
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_7
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_8
+	SUBMODULE bin_to_7seghex_sch
+		INSTANCE XLXI_9
+	SUBMODULE BypassClk
+		INSTANCE XLXI_26
