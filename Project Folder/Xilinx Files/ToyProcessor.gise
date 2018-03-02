@@ -22,7 +22,6 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ToyProcessor.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="BypassClk.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Datapath_sch.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Datapath_sch.vf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="RAM_array.sym" xil_pn:origination="imported"/>
@@ -65,10 +64,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="alu4bit_board_sch.twx" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="alu4bit_board_sch.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="alu4bit_board_sch.ut" xil_pn:subbranch="FPGAConfiguration"/>
-    <file xil_pn:fileType="FILE_VERILOG" xil_pn:name="alu4bit_board_sch.vf">
-      <branch xil_pn:name="Implementation"/>
-      <branch xil_pn:name="BehavioralSim"/>
-    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="alu4bit_board_sch.vf"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="alu4bit_board_sch.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="alu4bit_board_sch.xst"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="alu4bit_board_sch_guide.ncd" xil_pn:origination="imported"/>
@@ -105,7 +101,6 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bin_to_7seghex_sch_bin_to_7seghex_sch_sch_tb_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_VERILOG" xil_pn:name="bus8_mux.vf"/>
-    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="clk_signal_sch.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="control.spl"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="control.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="control_isim_beh.exe"/>
@@ -257,19 +252,19 @@
       <outfile xil_pn:name="toyProcessor_overall_tb.v"/>
       <outfile xil_pn:name="toy_tbw.v"/>
     </transform>
-    <transform xil_pn:end_ts="1520018637" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3121741840774697128" xil_pn:start_ts="1520018637">
+    <transform xil_pn:end_ts="1519418169" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3897445703217624899" xil_pn:start_ts="1519418169">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1520018653" xil_pn:in_ck="-1179309327858991473" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8135233946278335210" xil_pn:start_ts="1520018637">
-      <status xil_pn:value="FailedRun"/>
+    <transform xil_pn:end_ts="1519418171" xil_pn:in_ck="-2787292148265511689" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6127974123674590651" xil_pn:start_ts="1519418169">
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="Datapath_sch.vf"/>
       <outfile xil_pn:name="RAM_array.vf"/>
       <outfile xil_pn:name="ROM_array.vf"/>
-      <outfile xil_pn:name="alu4bit_board_sch.vf"/>
       <outfile xil_pn:name="alu_sch.vf"/>
-      <outfile xil_pn:name="bin_to_7seghex_sch.vf"/>
       <outfile xil_pn:name="bus8_mux.vf"/>
       <outfile xil_pn:name="controller_sch.vf"/>
       <outfile xil_pn:name="counter_sch.vf"/>
@@ -293,12 +288,7 @@
     <transform xil_pn:end_ts="1519418116" xil_pn:in_ck="-9041317605319582848" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1519418116">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Datapath_sch.vf"/>
       <outfile xil_pn:name="RAM_array.vf"/>
       <outfile xil_pn:name="RAM_array_tb.v"/>
@@ -346,25 +336,24 @@
     <transform xil_pn:end_ts="1519418174" xil_pn:in_ck="-9041317605319582848" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="6495204450164507623" xil_pn:start_ts="1519418171">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="toy_tbw_tb_0_beh.prj"/>
       <outfile xil_pn:name="toy_tbw_tb_0_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
     <transform xil_pn:end_ts="1519418174" xil_pn:in_ck="987154589643342548" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4794212730103002924" xil_pn:start_ts="1519418174">
-      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForced"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="toy_tbw_tb_0_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1516396372" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1516396372">

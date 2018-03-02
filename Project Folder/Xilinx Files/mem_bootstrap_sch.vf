@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : mem_bootstrap_sch.vf
-// /___/   /\     Timestamp : 03/02/2018 14:24:08
+// /___/   /\     Timestamp : 02/23/2018 15:23:56
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -634,7 +634,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                                   .MUXOUT5(XLXN_128), 
                                                   .MUXOUT6(XLXN_137), 
                                                   .MUXOUT7(XLXN_161));
-   (* HU_SET = "XLXI_34_110" *) 
+   (* HU_SET = "XLXI_34_30" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_34 (.I0(XLXN_78), 
                                           .I1(XLXN_77), 
                                           .I2(XLXN_76), 
@@ -644,7 +644,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_67), 
                                           .I7(XLXN_66), 
                                           .O(DOUT[0]));
-   (* HU_SET = "XLXI_38_111" *) 
+   (* HU_SET = "XLXI_38_31" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_38 (.I0(XLXN_97), 
                                           .I1(XLXN_96), 
                                           .I2(XLXN_95), 
@@ -654,7 +654,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_91), 
                                           .I7(XLXN_90), 
                                           .O(DOUT[1]));
-   (* HU_SET = "XLXI_39_112" *) 
+   (* HU_SET = "XLXI_39_32" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_39 (.I0(XLXN_105), 
                                           .I1(XLXN_104), 
                                           .I2(XLXN_103), 
@@ -664,7 +664,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_99), 
                                           .I7(XLXN_98), 
                                           .O(DOUT[2]));
-   (* HU_SET = "XLXI_40_113" *) 
+   (* HU_SET = "XLXI_40_33" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_40 (.I0(XLXN_113), 
                                           .I1(XLXN_112), 
                                           .I2(XLXN_111), 
@@ -674,7 +674,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_107), 
                                           .I7(XLXN_106), 
                                           .O(DOUT[3]));
-   (* HU_SET = "XLXI_41_114" *) 
+   (* HU_SET = "XLXI_41_34" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_41 (.I0(XLXN_123), 
                                           .I1(XLXN_122), 
                                           .I2(XLXN_121), 
@@ -684,7 +684,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_116), 
                                           .I7(XLXN_114), 
                                           .O(DOUT[4]));
-   (* HU_SET = "XLXI_42_115" *) 
+   (* HU_SET = "XLXI_42_35" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_42 (.I0(XLXN_131), 
                                           .I1(XLXN_130), 
                                           .I2(XLXN_129), 
@@ -694,7 +694,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_125), 
                                           .I7(XLXN_124), 
                                           .O(DOUT[5]));
-   (* HU_SET = "XLXI_43_116" *) 
+   (* HU_SET = "XLXI_43_36" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_43 (.I0(XLXN_140), 
                                           .I1(XLXN_139), 
                                           .I2(XLXN_138), 
@@ -704,7 +704,7 @@ module bus8_mux_MUSER_mem_bootstrap_sch(DIN0,
                                           .I6(XLXN_134), 
                                           .I7(XLXN_133), 
                                           .O(DOUT[6]));
-   (* HU_SET = "XLXI_44_117" *) 
+   (* HU_SET = "XLXI_44_37" *) 
    OR8_MXILINX_mem_bootstrap_sch  XLXI_44 (.I0(XLXN_157), 
                                           .I1(XLXN_158), 
                                           .I2(XLXN_160), 
