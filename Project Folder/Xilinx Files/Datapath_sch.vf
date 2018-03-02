@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : Datapath_sch.vf
-// /___/   /\     Timestamp : 02/23/2018 15:23:54
+// /___/   /\     Timestamp : 03/02/2018 14:24:10
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -87,7 +87,7 @@ module toZERO_sch_MUSER_Datapath_sch(zero_in,
    output zero_out;
    
    
-   (* HU_SET = "XLXI_1_20" *) 
+   (* HU_SET = "XLXI_1_143" *) 
    NOR8_MXILINX_Datapath_sch  XLXI_1 (.I0(zero_in[0]), 
                                      .I1(zero_in[1]), 
                                      .I2(zero_in[2]), 

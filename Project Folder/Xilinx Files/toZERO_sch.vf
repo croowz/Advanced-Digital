@@ -7,7 +7,7 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : toZERO_sch.vf
-// /___/   /\     Timestamp : 02/19/2018 13:38:06
+// /___/   /\     Timestamp : 03/02/2018 14:24:04
 // \   \  /  \ 
 //  \___\/\___\ 
 //
@@ -87,7 +87,7 @@ module toZERO_sch(zero_in,
    output zero_out;
    
    
-   (* HU_SET = "XLXI_1_0" *) 
+   (* HU_SET = "XLXI_1_75" *) 
    NOR8_MXILINX_toZERO_sch  XLXI_1 (.I0(zero_in[0]), 
                                    .I1(zero_in[1]), 
                                    .I2(zero_in[2]), 

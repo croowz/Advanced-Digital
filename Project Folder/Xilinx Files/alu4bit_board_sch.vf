@@ -7,17 +7,394 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : alu4bit_board_sch.vf
-// /___/   /\     Timestamp : 01/19/2018 16:12:54
+// /___/   /\     Timestamp : 03/02/2018 14:24:11
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog F:/Digital2/ToyProcessor2/alu4bit_board_sch.vf -w F:/Digital2/ToyProcessor2/alu4bit_board_sch.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/alu4bit_board_sch.vf" -w "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/alu4bit_board_sch.sch"
 //Design Name: alu4bit_board_sch
 //Device: spartan3e
 //Purpose:
 //    This verilog netlist is translated from an ECS schematic.It can be 
 //    synthesized and simulated, but it should not be modified. 
 //
+`timescale 1ns / 1ps
+
+module NOR16_MXILINX_alu4bit_board_sch(I0, 
+                                       I1, 
+                                       I2, 
+                                       I3, 
+                                       I4, 
+                                       I5, 
+                                       I6, 
+                                       I7, 
+                                       I8, 
+                                       I9, 
+                                       I10, 
+                                       I11, 
+                                       I12, 
+                                       I13, 
+                                       I14, 
+                                       I15, 
+                                       O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+    input I8;
+    input I9;
+    input I10;
+    input I11;
+    input I12;
+    input I13;
+    input I14;
+    input I15;
+   output O;
+   
+   wire CIN;
+   wire C0;
+   wire C1;
+   wire C2;
+   wire S0;
+   wire S1;
+   wire S2;
+   wire S3;
+   wire XLXN_46;
+   
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_2 (.CI(CIN), 
+                   .DI(XLXN_46), 
+                   .S(S0), 
+                   .LO(C0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   VCC  I_36_107 (.P(CIN));
+   GND  I_36_109 (.G(XLXN_46));
+   NOR4  I_36_110 (.I0(I0), 
+                  .I1(I1), 
+                  .I2(I2), 
+                  .I3(I3), 
+                  .O(S0));
+   NOR4  I_36_127 (.I0(I4), 
+                  .I1(I5), 
+                  .I2(I6), 
+                  .I3(I7), 
+                  .O(S1));
+   (* RLOC = "X0Y0" *) 
+   MUXCY_L  I_36_129 (.CI(C0), 
+                     .DI(XLXN_46), 
+                     .S(S1), 
+                     .LO(C1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_142 (.I1(I8), 
+                  .I2(I9), 
+                  .I3(I10), 
+                  .I4(I11), 
+                  .O(S2));
+   (* RLOC = "X0Y1" *) 
+   MUXCY_L  I_36_147 (.CI(C1), 
+                     .DI(XLXN_46), 
+                     .S(S2), 
+                     .LO(C2));
+   NOR4  I_36_151 (.I0(I8), 
+                  .I1(I9), 
+                  .I2(I10), 
+                  .I3(I11), 
+                  .O(S2));
+   NOR4  I_36_161 (.I0(I12), 
+                  .I1(I13), 
+                  .I2(I14), 
+                  .I3(I15), 
+                  .O(S3));
+   (* RLOC = "X0Y1" *) 
+   MUXCY  I_36_165 (.CI(C2), 
+                   .DI(XLXN_46), 
+                   .S(S3), 
+                   .O(O));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_170 (.I1(I12), 
+                  .I2(I13), 
+                  .I3(I14), 
+                  .I4(I15), 
+                  .O(S3));
+endmodule
+`timescale 1ns / 1ps
+
+module bin_to_7seghex_sch_MUSER_alu4bit_board_sch(a0, 
+                                                  a1, 
+                                                  a2, 
+                                                  a3, 
+                                                  L0, 
+                                                  L1, 
+                                                  L2, 
+                                                  L3, 
+                                                  L4, 
+                                                  L5, 
+                                                  L6);
+
+    input a0;
+    input a1;
+    input a2;
+    input a3;
+   output L0;
+   output L1;
+   output L2;
+   output L3;
+   output L4;
+   output L5;
+   output L6;
+   
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_27;
+   wire XLXN_29;
+   wire XLXN_31;
+   wire XLXN_34;
+   wire XLXN_74;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_78;
+   wire XLXN_80;
+   wire XLXN_85;
+   wire XLXN_163;
+   wire XLXN_184;
+   wire XLXN_197;
+   wire XLXN_237;
+   wire XLXN_289;
+   wire XLXN_290;
+   wire XLXN_291;
+   wire XLXN_292;
+   
+   INV  XLXI_1 (.I(a0), 
+               .O(XLXN_292));
+   INV  XLXI_2 (.I(a1), 
+               .O(XLXN_291));
+   INV  XLXI_5 (.I(a2), 
+               .O(XLXN_290));
+   INV  XLXI_6 (.I(a3), 
+               .O(XLXN_289));
+   AND4  XLXI_7 (.I0(XLXN_289), 
+                .I1(XLXN_290), 
+                .I2(XLXN_291), 
+                .I3(XLXN_292), 
+                .O(XLXN_85));
+   AND4  XLXI_8 (.I0(XLXN_289), 
+                .I1(XLXN_290), 
+                .I2(XLXN_291), 
+                .I3(a0), 
+                .O(XLXN_31));
+   AND4  XLXI_10 (.I0(XLXN_289), 
+                 .I1(XLXN_290), 
+                 .I2(a1), 
+                 .I3(XLXN_292), 
+                 .O(XLXN_80));
+   AND4  XLXI_11 (.I0(XLXN_289), 
+                 .I1(XLXN_289), 
+                 .I2(a1), 
+                 .I3(a0), 
+                 .O(XLXN_74));
+   AND4  XLXI_12 (.I0(XLXN_289), 
+                 .I1(a2), 
+                 .I2(XLXN_291), 
+                 .I3(XLXN_292), 
+                 .O(XLXN_25));
+   AND4  XLXI_13 (.I0(XLXN_289), 
+                 .I1(a2), 
+                 .I2(XLXN_291), 
+                 .I3(a0), 
+                 .O(XLXN_163));
+   AND4  XLXI_14 (.I0(XLXN_289), 
+                 .I1(a2), 
+                 .I2(a1), 
+                 .I3(XLXN_292), 
+                 .O(XLXN_75));
+   AND4  XLXI_15 (.I0(XLXN_289), 
+                 .I1(a2), 
+                 .I2(a1), 
+                 .I3(a0), 
+                 .O(XLXN_184));
+   AND4  XLXI_16 (.I0(a3), 
+                 .I1(XLXN_290), 
+                 .I2(XLXN_291), 
+                 .I3(XLXN_292), 
+                 .O(XLXN_76));
+   AND4  XLXI_20 (.I0(a3), 
+                 .I1(XLXN_290), 
+                 .I2(XLXN_291), 
+                 .I3(a0), 
+                 .O(XLXN_197));
+   AND4  XLXI_21 (.I0(a3), 
+                 .I1(XLXN_290), 
+                 .I2(a1), 
+                 .I3(XLXN_292), 
+                 .O(XLXN_27));
+   AND4  XLXI_22 (.I0(a3), 
+                 .I1(XLXN_290), 
+                 .I2(a1), 
+                 .I3(a0), 
+                 .O(XLXN_34));
+   AND4  XLXI_43 (.I0(a3), 
+                 .I1(a3), 
+                 .I2(XLXN_291), 
+                 .I3(XLXN_292), 
+                 .O(XLXN_24));
+   AND4  XLXI_44 (.I0(a3), 
+                 .I1(a2), 
+                 .I2(XLXN_291), 
+                 .I3(a0), 
+                 .O(XLXN_29));
+   AND4  XLXI_45 (.I0(a3), 
+                 .I1(a2), 
+                 .I2(a1), 
+                 .I3(XLXN_292), 
+                 .O(XLXN_78));
+   AND4  XLXI_46 (.I0(a3), 
+                 .I1(a2), 
+                 .I2(a1), 
+                 .I3(a0), 
+                 .O(XLXN_237));
+   (* HU_SET = "XLXI_397_150" *) 
+   NOR16_MXILINX_alu4bit_board_sch  XLXI_397 (.I0(XLXN_237), 
+                                             .I1(XLXN_78), 
+                                             .I2(XLXN_24), 
+                                             .I3(XLXN_24), 
+                                             .I4(XLXN_27), 
+                                             .I5(XLXN_27), 
+                                             .I6(XLXN_197), 
+                                             .I7(XLXN_76), 
+                                             .I8(XLXN_184), 
+                                             .I9(XLXN_75), 
+                                             .I10(XLXN_163), 
+                                             .I11(XLXN_74), 
+                                             .I12(XLXN_74), 
+                                             .I13(XLXN_80), 
+                                             .I14(XLXN_85), 
+                                             .I15(XLXN_85), 
+                                             .O(L0));
+   (* HU_SET = "XLXI_398_149" *) 
+   NOR16_MXILINX_alu4bit_board_sch  XLXI_398 (.I0(XLXN_29), 
+                                             .I1(XLXN_29), 
+                                             .I2(XLXN_29), 
+                                             .I3(XLXN_27), 
+                                             .I4(XLXN_27), 
+                                             .I5(XLXN_27), 
+                                             .I6(XLXN_197), 
+                                             .I7(XLXN_76), 
+                                             .I8(XLXN_184), 
+                                             .I9(XLXN_25), 
+                                             .I10(XLXN_25), 
+                                             .I11(XLXN_25), 
+                                             .I12(XLXN_74), 
+                                             .I13(XLXN_80), 
+                                             .I14(XLXN_31), 
+                                             .I15(XLXN_85), 
+                                             .O(L1));
+   (* HU_SET = "XLXI_399_148" *) 
+   NOR16_MXILINX_alu4bit_board_sch  XLXI_399 (.I0(XLXN_29), 
+                                             .I1(XLXN_29), 
+                                             .I2(XLXN_29), 
+                                             .I3(XLXN_34), 
+                                             .I4(XLXN_34), 
+                                             .I5(XLXN_27), 
+                                             .I6(XLXN_197), 
+                                             .I7(XLXN_76), 
+                                             .I8(XLXN_184), 
+                                             .I9(XLXN_75), 
+                                             .I10(XLXN_163), 
+                                             .I11(XLXN_25), 
+                                             .I12(XLXN_74), 
+                                             .I13(XLXN_31), 
+                                             .I14(XLXN_31), 
+                                             .I15(XLXN_85), 
+                                             .O(L2));
+   (* HU_SET = "XLXI_400_147" *) 
+   NOR16_MXILINX_alu4bit_board_sch  XLXI_400 (.I0(XLXN_78), 
+                                             .I1(XLXN_78), 
+                                             .I2(XLXN_29), 
+                                             .I3(XLXN_24), 
+                                             .I4(XLXN_34), 
+                                             .I5(XLXN_76), 
+                                             .I6(XLXN_76), 
+                                             .I7(XLXN_76), 
+                                             .I8(XLXN_75), 
+                                             .I9(XLXN_75), 
+                                             .I10(XLXN_163), 
+                                             .I11(XLXN_74), 
+                                             .I12(XLXN_74), 
+                                             .I13(XLXN_80), 
+                                             .I14(XLXN_85), 
+                                             .I15(XLXN_85), 
+                                             .O(L3));
+   (* HU_SET = "XLXI_401_146" *) 
+   NOR16_MXILINX_alu4bit_board_sch  XLXI_401 (.I0(XLXN_237), 
+                                             .I1(XLXN_78), 
+                                             .I2(XLXN_29), 
+                                             .I3(XLXN_24), 
+                                             .I4(XLXN_34), 
+                                             .I5(XLXN_27), 
+                                             .I6(XLXN_76), 
+                                             .I7(XLXN_76), 
+                                             .I8(XLXN_75), 
+                                             .I9(XLXN_75), 
+                                             .I10(XLXN_80), 
+                                             .I11(XLXN_80), 
+                                             .I12(XLXN_80), 
+                                             .I13(XLXN_80), 
+                                             .I14(XLXN_85), 
+                                             .I15(XLXN_85), 
+                                             .O(L4));
+   (* HU_SET = "XLXI_403_145" *) 
+   NOR16_MXILINX_alu4bit_board_sch  XLXI_403 (.I0(XLXN_237), 
+                                             .I1(XLXN_78), 
+                                             .I2(XLXN_24), 
+                                             .I3(XLXN_24), 
+                                             .I4(XLXN_34), 
+                                             .I5(XLXN_27), 
+                                             .I6(XLXN_197), 
+                                             .I7(XLXN_76), 
+                                             .I8(XLXN_75), 
+                                             .I9(XLXN_75), 
+                                             .I10(XLXN_163), 
+                                             .I11(XLXN_25), 
+                                             .I12(XLXN_85), 
+                                             .I13(XLXN_85), 
+                                             .I14(XLXN_85), 
+                                             .I15(XLXN_85), 
+                                             .O(L5));
+   (* HU_SET = "XLXI_404_144" *) 
+   NOR16_MXILINX_alu4bit_board_sch  XLXI_404 (.I0(XLXN_237), 
+                                             .I1(XLXN_78), 
+                                             .I2(XLXN_29), 
+                                             .I3(XLXN_34), 
+                                             .I4(XLXN_34), 
+                                             .I5(XLXN_27), 
+                                             .I6(XLXN_197), 
+                                             .I7(XLXN_76), 
+                                             .I8(XLXN_75), 
+                                             .I9(XLXN_75), 
+                                             .I10(XLXN_163), 
+                                             .I11(XLXN_25), 
+                                             .I12(XLXN_74), 
+                                             .I13(XLXN_80), 
+                                             .I14(XLXN_80), 
+                                             .I15(XLXN_80), 
+                                             .O(L6));
+endmodule
 `timescale 1ns / 1ps
 
 module logic_ext_MUSER_alu4bit_board_sch(ai, 
@@ -358,97 +735,97 @@ module CB16CE_MXILINX_alu4bit_board_sch(C,
    
    assign Q[15:0] = Q_DUMMY[15:0];
    assign TC = TC_DUMMY;
-   (* HU_SET = "I_Q0_1" *) 
+   (* HU_SET = "I_Q0_152" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q0 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(XLXN_1), 
                                         .Q(Q_DUMMY[0]));
-   (* HU_SET = "I_Q1_0" *) 
+   (* HU_SET = "I_Q1_151" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q1 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(Q_DUMMY[0]), 
                                         .Q(Q_DUMMY[1]));
-   (* HU_SET = "I_Q2_3" *) 
+   (* HU_SET = "I_Q2_154" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q2 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T2), 
                                         .Q(Q_DUMMY[2]));
-   (* HU_SET = "I_Q3_2" *) 
+   (* HU_SET = "I_Q3_153" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q3 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T3), 
                                         .Q(Q_DUMMY[3]));
-   (* HU_SET = "I_Q4_7" *) 
+   (* HU_SET = "I_Q4_158" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q4 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T4), 
                                         .Q(Q_DUMMY[4]));
-   (* HU_SET = "I_Q5_6" *) 
+   (* HU_SET = "I_Q5_157" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q5 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T5), 
                                         .Q(Q_DUMMY[5]));
-   (* HU_SET = "I_Q6_5" *) 
+   (* HU_SET = "I_Q6_156" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q6 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T6), 
                                         .Q(Q_DUMMY[6]));
-   (* HU_SET = "I_Q7_4" *) 
+   (* HU_SET = "I_Q7_155" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q7 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T7), 
                                         .Q(Q_DUMMY[7]));
-   (* HU_SET = "I_Q8_8" *) 
+   (* HU_SET = "I_Q8_159" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q8 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T8), 
                                         .Q(Q_DUMMY[8]));
-   (* HU_SET = "I_Q9_9" *) 
+   (* HU_SET = "I_Q9_160" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q9 (.C(C), 
                                         .CE(CE), 
                                         .CLR(CLR), 
                                         .T(T9), 
                                         .Q(Q_DUMMY[9]));
-   (* HU_SET = "I_Q10_10" *) 
+   (* HU_SET = "I_Q10_161" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q10 (.C(C), 
                                          .CE(CE), 
                                          .CLR(CLR), 
                                          .T(T10), 
                                          .Q(Q_DUMMY[10]));
-   (* HU_SET = "I_Q11_11" *) 
+   (* HU_SET = "I_Q11_162" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q11 (.C(C), 
                                          .CE(CE), 
                                          .CLR(CLR), 
                                          .T(T11), 
                                          .Q(Q_DUMMY[11]));
-   (* HU_SET = "I_Q12_12" *) 
+   (* HU_SET = "I_Q12_163" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q12 (.C(C), 
                                          .CE(CE), 
                                          .CLR(CLR), 
                                          .T(T12), 
                                          .Q(Q_DUMMY[12]));
-   (* HU_SET = "I_Q13_13" *) 
+   (* HU_SET = "I_Q13_164" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q13 (.C(C), 
                                          .CE(CE), 
                                          .CLR(CLR), 
                                          .T(T13), 
                                          .Q(Q_DUMMY[13]));
-   (* HU_SET = "I_Q14_14" *) 
+   (* HU_SET = "I_Q14_165" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q14 (.C(C), 
                                          .CE(CE), 
                                          .CLR(CLR), 
                                          .T(T14), 
                                          .Q(Q_DUMMY[14]));
-   (* HU_SET = "I_Q15_15" *) 
+   (* HU_SET = "I_Q15_166" *) 
    FTCE_MXILINX_alu4bit_board_sch #( .INIT(1'b0) ) I_Q15 (.C(C), 
                                          .CE(CE), 
                                          .CLR(CLR), 
@@ -527,16 +904,12 @@ module CB16CE_MXILINX_alu4bit_board_sch(C,
 endmodule
 `timescale 1ns / 1ps
 
-module mux4_sch_MUSER_alu4bit_board_sch(c0, 
-                                        c1, 
-                                        in0, 
+module mux4_sch_MUSER_alu4bit_board_sch(in0, 
                                         in1, 
                                         in2, 
                                         in3, 
                                         mux_out);
 
-    input c0;
-    input c1;
     input in0;
     input in1;
     input in2;
@@ -549,21 +922,23 @@ module mux4_sch_MUSER_alu4bit_board_sch(c0,
    wire XLXN_5;
    wire XLXN_6;
    wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
    
    AND3  XLXI_1 (.I0(XLXN_6), 
                 .I1(XLXN_7), 
                 .I2(in0), 
                 .O(XLXN_1));
-   AND3  XLXI_2 (.I0(c0), 
+   AND3  XLXI_2 (.I0(XLXN_8), 
                 .I1(XLXN_7), 
                 .I2(in1), 
                 .O(XLXN_2));
    AND3  XLXI_3 (.I0(XLXN_6), 
-                .I1(c1), 
+                .I1(XLXN_9), 
                 .I2(in2), 
                 .O(XLXN_4));
-   AND3  XLXI_4 (.I0(c0), 
-                .I1(c1), 
+   AND3  XLXI_4 (.I0(XLXN_8), 
+                .I1(XLXN_9), 
                 .I2(in3), 
                 .O(XLXN_5));
    OR4  XLXI_5 (.I0(XLXN_5), 
@@ -571,9 +946,9 @@ module mux4_sch_MUSER_alu4bit_board_sch(c0,
                .I2(XLXN_2), 
                .I3(XLXN_1), 
                .O(mux_out));
-   INV  XLXI_6 (.I(c0), 
+   INV  XLXI_6 (.I(), 
                .O(XLXN_6));
-   INV  XLXI_7 (.I(c1), 
+   INV  XLXI_7 (.I(), 
                .O(XLXN_7));
 endmodule
 `timescale 1ns / 1ps
@@ -685,14 +1060,14 @@ module seven_seg_control_sch_MUSER_alu4bit_board_sch(CLK,
                                                  .in2(MR[6:0]), 
                                                  .in3(R[6:0]), 
                                                  .mux_out(seven_seg_out[6:0]));
-   (* HU_SET = "XLXI_2_16" *) 
+   (* HU_SET = "XLXI_2_167" *) 
    CB16CE_MXILINX_alu4bit_board_sch  XLXI_2 (.C(CLK), 
                                             .CE(XLXN_24), 
                                             .CLR(XLXN_22), 
                                             .CEO(), 
                                             .Q(Qout[15:0]), 
                                             .TC(XLXN_22));
-   (* HU_SET = "XLXI_3_17" *) 
+   (* HU_SET = "XLXI_3_168" *) 
    D2_4E_MXILINX_alu4bit_board_sch  XLXI_3 (.A0(Qout[14]), 
                                            .A1(Qout[15]), 
                                            .E(XLXN_26), 
@@ -751,7 +1126,7 @@ module alu4bit_board_sch(A,
    wire [6:0] ML;
    wire [6:0] MR;
    wire [6:0] R;
-   wire XLXN_27;
+   wire XLXN_33;
    wire F0_DUMMY;
    wire F1_DUMMY;
    wire F2_DUMMY;
@@ -772,17 +1147,6 @@ module alu4bit_board_sch(A,
                                                          .EN_R(EN_R), 
                                                          
          .seven_seg_out(SS[6:0]));
-   Seven_Segment_Display  XLXI_4 (.In0(A[0]), 
-                                 .In1(A[1]), 
-                                 .In2(A[2]), 
-                                 .In3(A[3]), 
-                                 .A(L[0]), 
-                                 .B(L[1]), 
-                                 .C(L[2]), 
-                                 .D(L[3]), 
-                                 .E(L[4]), 
-                                 .F(L[5]), 
-                                 .G(L[6]));
    alu4bit_sch_MUSER_alu4bit_board_sch  XLXI_5 (.A(A[3:0]), 
                                                .B(B[3:0]), 
                                                .M(M), 
@@ -793,38 +1157,49 @@ module alu4bit_board_sch(A,
                                                .F1(F1_DUMMY), 
                                                .F2(F2_DUMMY), 
                                                .F3(F3_DUMMY));
-   Seven_Segment_Display  XLXI_6 (.In0(M), 
-                                 .In1(S1), 
-                                 .In2(S0), 
-                                 .In3(XLXN_27), 
-                                 .A(ML[0]), 
-                                 .B(ML[1]), 
-                                 .C(ML[2]), 
-                                 .D(ML[3]), 
-                                 .E(ML[4]), 
-                                 .F(ML[5]), 
-                                 .G(ML[6]));
-   Seven_Segment_Display  XLXI_7 (.In0(B[0]), 
-                                 .In1(B[1]), 
-                                 .In2(B[2]), 
-                                 .In3(B[3]), 
-                                 .A(MR[0]), 
-                                 .B(MR[1]), 
-                                 .C(MR[2]), 
-                                 .D(MR[3]), 
-                                 .E(MR[4]), 
-                                 .F(MR[5]), 
-                                 .G(MR[6]));
-   Seven_Segment_Display  XLXI_8 (.In0(F0_DUMMY), 
-                                 .In1(F1_DUMMY), 
-                                 .In2(F2_DUMMY), 
-                                 .In3(F3_DUMMY), 
-                                 .A(R[0]), 
-                                 .B(R[1]), 
-                                 .C(R[2]), 
-                                 .D(R[3]), 
-                                 .E(R[4]), 
-                                 .F(R[5]), 
-                                 .G(R[6]));
-   GND  XLXI_9 (.G(XLXN_27));
+   GND  XLXI_9 (.G(XLXN_33));
+   bin_to_7seghex_sch_MUSER_alu4bit_board_sch  XLXI_11 (.a0(A[0]), 
+                                                       .a1(A[1]), 
+                                                       .a2(A[2]), 
+                                                       .a3(A[3]), 
+                                                       .SegA(L[0]), 
+                                                       .SegB(L[1]), 
+                                                       .SegC(L[2]), 
+                                                       .SegD(L[3]), 
+                                                       .SegE(L[4]), 
+                                                       .SegF(L[5]), 
+                                                       .SegG(L[6]));
+   bin_to_7seghex_sch_MUSER_alu4bit_board_sch  XLXI_12 (.a0(M), 
+                                                       .a1(S1), 
+                                                       .a2(S0), 
+                                                       .a3(XLXN_33), 
+                                                       .SegA(ML[0]), 
+                                                       .SegB(ML[1]), 
+                                                       .SegC(ML[2]), 
+                                                       .SegD(ML[3]), 
+                                                       .SegE(ML[4]), 
+                                                       .SegF(ML[5]), 
+                                                       .SegG(ML[6]));
+   bin_to_7seghex_sch_MUSER_alu4bit_board_sch  XLXI_13 (.a0(B[0]), 
+                                                       .a1(B[1]), 
+                                                       .a2(B[2]), 
+                                                       .a3(B[3]), 
+                                                       .SegA(MR[0]), 
+                                                       .SegB(MR[1]), 
+                                                       .SegC(MR[2]), 
+                                                       .SegD(MR[3]), 
+                                                       .SegE(MR[4]), 
+                                                       .SegF(MR[5]), 
+                                                       .SegG(MR[6]));
+   bin_to_7seghex_sch_MUSER_alu4bit_board_sch  XLXI_14 (.a0(F0_DUMMY), 
+                                                       .a1(F1_DUMMY), 
+                                                       .a2(F2_DUMMY), 
+                                                       .a3(F3_DUMMY), 
+                                                       .SegA(R[0]), 
+                                                       .SegB(R[1]), 
+                                                       .SegC(R[2]), 
+                                                       .SegD(R[3]), 
+                                                       .SegE(R[4]), 
+                                                       .SegF(R[5]), 
+                                                       .SegG(R[6]));
 endmodule
