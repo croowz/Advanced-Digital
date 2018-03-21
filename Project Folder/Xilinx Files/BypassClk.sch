@@ -10,12 +10,12 @@
         <signal name="XLXN_2" />
         <signal name="XLXN_3" />
         <signal name="Signalout" />
-        <signal name="XLXN_8" />
         <signal name="PUSH" />
         <signal name="XLXN_12" />
         <signal name="OVERFLOW" />
         <signal name="CLK" />
         <signal name="RESET" />
+        <signal name="XLXN_14" />
         <port polarity="Output" name="Signalout" />
         <port polarity="Input" name="PUSH" />
         <port polarity="Input" name="OVERFLOW" />
@@ -87,13 +87,13 @@
         </block>
         <block symbolname="or2" name="XLXI_3">
             <blockpin signalname="XLXN_3" name="I0" />
-            <blockpin signalname="XLXN_8" name="I1" />
+            <blockpin signalname="XLXN_14" name="I1" />
             <blockpin signalname="Signalout" name="O" />
         </block>
         <block symbolname="clk_signal_sch" name="XLXI_1">
             <blockpin signalname="PUSH" name="PUSH" />
             <blockpin signalname="CLK" name="CLK" />
-            <blockpin name="SIG" />
+            <blockpin signalname="XLXN_14" name="SIG" />
         </block>
         <block symbolname="or2" name="XLXI_2">
             <blockpin signalname="OVERFLOW" name="I0" />
@@ -116,21 +116,14 @@
             <wire x2="1616" y1="880" y2="880" x1="1584" />
         </branch>
         <instance x="1616" y="944" name="XLXI_4" orien="R0" />
-        <instance x="1888" y="752" name="XLXI_3" orien="R0" />
-        <branch name="XLXN_3">
-            <wire x2="1888" y1="848" y2="848" x1="1872" />
-            <wire x2="1888" y1="688" y2="848" x1="1888" />
-        </branch>
         <branch name="Signalout">
-            <wire x2="2400" y1="656" y2="656" x1="2144" />
+            <wire x2="2400" y1="656" y2="656" x1="2208" />
         </branch>
         <instance x="1472" y="720" name="XLXI_1" orien="R0">
         </instance>
-        <branch name="XLXN_8">
-            <wire x2="1888" y1="624" y2="624" x1="1856" />
-        </branch>
         <branch name="PUSH">
-            <wire x2="1472" y1="624" y2="624" x1="416" />
+            <wire x2="432" y1="624" y2="624" x1="416" />
+            <wire x2="1472" y1="624" y2="624" x1="432" />
         </branch>
         <branch name="XLXN_12">
             <wire x2="864" y1="880" y2="880" x1="832" />
@@ -158,5 +151,14 @@
         <iomarker fontsize="28" x="416" y="688" name="CLK" orien="R180" />
         <iomarker fontsize="28" x="416" y="992" name="RESET" orien="R180" />
         <iomarker fontsize="28" x="2400" y="656" name="Signalout" orien="R0" />
+        <instance x="1952" y="752" name="XLXI_3" orien="R0" />
+        <branch name="XLXN_3">
+            <wire x2="1888" y1="848" y2="848" x1="1872" />
+            <wire x2="1952" y1="688" y2="688" x1="1888" />
+            <wire x2="1888" y1="688" y2="848" x1="1888" />
+        </branch>
+        <branch name="XLXN_14">
+            <wire x2="1952" y1="624" y2="624" x1="1856" />
+        </branch>
     </sheet>
 </drawing>
