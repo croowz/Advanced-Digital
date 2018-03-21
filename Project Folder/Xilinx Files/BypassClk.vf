@@ -7,11 +7,11 @@
 // \   \   \/     Version : 14.2
 //  \   \         Application : sch2hdl
 //  /   /         Filename : BypassClk.vf
-// /___/   /\     Timestamp : 03/02/2018 15:36:44
+// /___/   /\     Timestamp : 03/21/2018 16:53:48
 // \   \  /  \ 
 //  \___\/\___\ 
 //
-//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/BypassClk.vf" -w C:/Users/rac71636/Desktop/BypassClk.sch
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/BypassClk.vf" -w "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/BypassClk.sch"
 //Design Name: BypassClk
 //Device: spartan3e
 //Purpose:
@@ -22,25 +22,25 @@
 
 module clk_signal_sch_MUSER_BypassClk(CLK, 
                                       PUSH, 
-                                      SIG);
+                                      SIGNAL);
 
     input CLK;
     input PUSH;
-   output SIG;
+   output SIGNAL;
    
    wire XLXN_3;
    wire XLXN_4;
    wire XLXN_5;
    wire XLXN_6;
-   wire SIG_DUMMY;
+   wire SIGNAL_DUMMY;
    
-   assign SIG = SIG_DUMMY;
+   assign SIGNAL = SIGNAL_DUMMY;
    FD #( .INIT(1'b0) ) XLXI_1 (.C(CLK), 
               .D(PUSH), 
               .Q(XLXN_3));
    INV  XLXI_2 (.I(XLXN_3), 
                .O(XLXN_4));
-   AND2  XLXI_3 (.I0(SIG_DUMMY), 
+   AND2  XLXI_3 (.I0(SIGNAL_DUMMY), 
                 .I1(CLK), 
                 .O(XLXN_6));
    AND2  XLXI_4 (.I0(XLXN_4), 
@@ -48,7 +48,7 @@ module clk_signal_sch_MUSER_BypassClk(CLK,
                 .O(XLXN_5));
    OR2  XLXI_5 (.I0(XLXN_6), 
                .I1(XLXN_5), 
-               .O(SIG_DUMMY));
+               .O(SIGNAL_DUMMY));
 endmodule
 `timescale 1ns / 1ps
 
@@ -72,7 +72,7 @@ module BypassClk(CLK,
    
    clk_signal_sch_MUSER_BypassClk  XLXI_1 (.CLK(CLK), 
                                           .PUSH(PUSH), 
-                                          .SIG(XLXN_8));
+                                          .SIG());
    OR2  XLXI_2 (.I0(OVERFLOW), 
                .I1(XLXN_1), 
                .O(XLXN_12));

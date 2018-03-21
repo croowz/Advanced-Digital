@@ -168,6 +168,10 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1521665624" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1521665624">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
     <transform xil_pn:end_ts="1520022491" xil_pn:in_ck="-4262860231749479731" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1520022491">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -195,24 +199,22 @@
       <outfile xil_pn:name="toyProcessor_overall_tb.v"/>
       <outfile xil_pn:name="toy_tbw.v"/>
     </transform>
-    <transform xil_pn:end_ts="1520022491" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3121741840774697128" xil_pn:start_ts="1520022491">
+    <transform xil_pn:end_ts="1521665624" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1062029113666015048" xil_pn:start_ts="1521665624">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1520022894" xil_pn:in_ck="-9001047708365882321" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="8135233946278335210" xil_pn:start_ts="1520022892">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1521665630" xil_pn:in_ck="-1179309327858991473" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="1980230773910001402" xil_pn:start_ts="1521665624">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="BypassClk.vf"/>
+      <outfile xil_pn:name="clk_signal_sch.vf"/>
+      <outfile xil_pn:name="toyProcessor_overall.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1520022493" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4313723603328963480" xil_pn:start_ts="1520022493">
+    <transform xil_pn:end_ts="1521665630" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="8612584333573669889" xil_pn:start_ts="1521665630">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1520022914" xil_pn:in_ck="5399793813673390767" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1520022914">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -227,8 +229,9 @@
     </transform>
     <transform xil_pn:end_ts="1520022917" xil_pn:in_ck="5399793813673390767" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="326367875165996017" xil_pn:start_ts="1520022914">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
@@ -237,14 +240,13 @@
       <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1520022918" xil_pn:in_ck="-5250471960829500032" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3254874584659303978" xil_pn:start_ts="1520022917">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutOfDateForced"/>
       <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1520023008" xil_pn:in_ck="-9001047708365882321" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="7520259278060370345" xil_pn:start_ts="1520022997">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -252,6 +254,7 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
@@ -289,6 +292,7 @@
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>
@@ -303,7 +307,7 @@
     <transform xil_pn:end_ts="1520023022" xil_pn:in_ck="-4453744817100316352" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3378858892966787813" xil_pn:start_ts="1520023016">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -314,7 +318,7 @@
     </transform>
     <transform xil_pn:end_ts="1520023054" xil_pn:in_ck="-8576598049041900607" xil_pn:name="TRAN_createTimingConstraints" xil_pn:start_ts="1520023054">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
