@@ -1,2 +1,0 @@
-sch2sym -intstyle ise -family spartan3e -refsym mux F:/Digital2/ToyProcessor/mux.sch F:/Digital2/ToyProcessor/mux.sym 
-sch2sym -intstyle ise -family spartan3e -w -refsym mux {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/mux.sym} 

@@ -1,2 +1,0 @@
-vhdtdtfi -lib work F:/Digital2/ToyProcessor2/bin_to_7seghex_sch.v -lang verilog -prj ToyProcessor -o Seven_Segment_Display.spl -module Seven_Segment_Display -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w Seven_Segment_Display.spl F:/Digital2/ToyProcessor2/Seven_Segment_Display.sym 

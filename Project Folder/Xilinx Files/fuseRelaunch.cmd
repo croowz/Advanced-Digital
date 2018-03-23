@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/BypassClk_tb_isim_beh.exe" -prj "C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/BypassClk_tb_beh.prj" "work.BypassClk_tb" "work.glbl" 

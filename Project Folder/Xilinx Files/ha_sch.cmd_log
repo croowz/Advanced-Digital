@@ -1,2 +1,0 @@
-sch2sym -intstyle ise -family spartan3e -w -refsym ha_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha_sch.sym} 
-sch2sym -intstyle ise -family spartan3e -w -refsym ha_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/ha_sch.sym} 

@@ -1,2 +1,0 @@
-sch2sym -intstyle ise -family spartan3e -w -refsym toZERO_sch {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/toZERO_sch.sch} {C:/Users/zad65674/Downloads/Advanced-Digital-master/Lab02/Xilinx Files/toZERO_sch.sym} 
-sch2sym -intstyle ise -family spartan3e -w -refsym toZERO_sch {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toZERO_sch.sch} {C:/Users/zad65674/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/toZERO_sch.sym} 

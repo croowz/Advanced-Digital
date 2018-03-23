@@ -1,2 +1,0 @@
-sch2sym -intstyle ise -family spartan3e -w -refsym clk_signal_sch C:/Users/rac71636/Desktop/clk_signal_sch.sch {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/clk_signal_sch.sym} 
-sch2sym -intstyle ise -family spartan3e -w -refsym clk_signal_sch C:/Users/rac71636/Desktop/clk_signal_sch.sch {C:/Users/rac71636/Documents/GitHub/Advanced-Digital/Project Folder/Xilinx Files/clk_signal_sch.sym} 
