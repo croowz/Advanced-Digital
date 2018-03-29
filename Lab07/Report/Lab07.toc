@@ -3,8 +3,12 @@
 \contentsline {section}{\numberline {2}Implementation Details}{3}
 \contentsline {subsection}{\numberline {2.1}Part 1 - Clock and Bypass Circuits}{3}
 \contentsline {subsection}{\numberline {2.2}Part 2 - Programming the Basys2 Board}{7}
-\contentsline {section}{\numberline {3}Experimental Results}{10}
-\contentsline {section}{\numberline {4}Significance}{11}
-\contentsline {paragraph}{}{11}
-\contentsline {section}{\numberline {5}Comments/Suggestions}{11}
-\contentsline {paragraph}{}{11}
+\contentsline {subsection}{\numberline {2.3}UCF File}{9}
+\contentsline {section}{\numberline {3}Experimental Results}{12}
+\contentsline {subsection}{\numberline {3.1}Clock Signal Testbench}{12}
+\contentsline {subsection}{\numberline {3.2}Bypass Clock Signal Testbench}{12}
+\contentsline {subsection}{\numberline {3.3}Running the Toy Processor on the BASys Board}{12}
+\contentsline {section}{\numberline {4}Significance}{13}
+\contentsline {paragraph}{}{13}
+\contentsline {section}{\numberline {5}Comments/Suggestions}{13}
+\contentsline {paragraph}{}{13}
