@@ -38,198 +38,232 @@ Lab Report Writing 				  & 50 & 50\\
 		With the design of the toy processor complete, we can now implement it physically. With some tweaks to make it compatible, we can put it on the Basys2 board and load some simple programs onto it. 
 		
 \section{Implementation Details} \vspace{-.7cm} \line(1,0){470}
-		\subsection{Prelab}
-			\hfill
-
-		% \begin{figure}[h]
-		% \centering
-		% 	\includegraphics[scale=.7]{Prelab.pdf}
-		% 	\caption{Memory Bootstrapping circuit to copy the entire contents of the ROM array into the RAM array.}
-		% \end{figure}
-			
-		% \begin{figure}[h]
-		% 	\includegraphics[scale=.175]{Prelab2}
-		% 	\caption{Modification of the controller so that we do not transition from S0 to S1 before the memory bootstrapping is complete.}
-		% \end{figure}
 		
-		\newpage
-	\subsection{Part 1 - Include ROM}
-	The ROM array was given to us as a schematic of ROM32X1 modules. Below is a testbench to make sure it is operating correctly. We also initialized the first row of modules with the following values:
+		
+	\subsection{Part 1 - Clock and Bypass Circuits}
 
-\begin{flushleft}
-\begin{tabular}{|l|}
-\hline
-00000912 \\
-00000910 \\
-00000912 \\
-00000990 \\
-00000D12 \\
-00000B14 \\
-00000932 \\
-00000149 \\
-\hline
-\end{tabular}
-\end{flushleft}
+	\textbf{Clock}\\
+	The clock for the processor, when implemented on the board, will be provided by the board. 
+	This clock is too fast for human reading, so we will generate a push button clock and step through each operation.
+
+		 \begin{figure}[h]
+		 	\includegraphics[scale=.55]{clk_signal_sch.PNG}
+		 	\caption{Design of the clock signal created in Xilinx. (Designed on paper but just turned in a print out of this for prelab)}
+		 \end{figure}
 
 		
 		\begin{Verbatim}[frame=single, fontsize= \small]
-//ROM Testbench
-`timescale 1ns / 1ps
-
-module ROM_array_ROM_array_sch_tb();
-
-// Inputs
-   reg [7:0] ADDR = 8'b00000000;
-
-// Output
-   wire [7:0] DATA_OUT;
-
-// Bidirs
-
-// Instantiate the UUT
-   ROM_array UUT (
-		.ADDR(ADDR), 
-		.DATA_OUT(DATA_OUT)
-   );
-// Initialize Inputs
-       initial begin
-			#400;
-			ADDR = 8'b00100000;
-			#100;
-			ADDR = 8'b00000001;
-			end
-endmodule
-		\end{Verbatim}
-		The test bench simply executes one address change to show that it is working properly. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
-		\begin{center}
-			%\includegraphics[scale=.5]{ROM.PNG}
-		\end{center}
-
-		\newpage
-		\subsection{Part 2 - RAM}
-		The ROM array was given to us as a schematic as well. Below is a testbench to make sure it is operating correctly.
-
-		\begin{Verbatim}[frame=single, fontsize= \small]
-//RAM_array_tb.v
+//Clock Testbench
 `timescale 1ns/1ps
-module RAM_array_tb;
 
-reg [7:0] ADDR = 8'b00000000;
-reg CLK = 1'b0;
-reg [7:0] DATA_IN = 8'b00000000;
-reg WE = 1'b0;
-wire [0:7] DATA_OUT1;
+module clk_signal_tb;
 
-initial // Clock process for CLK
-begin
-	forever 
+	reg CLK = 1'b0;
+	reg PUSH = 1'b0;
+
+	wire SIG;
+
+	initial // Clock process for CLK
 		begin
-			CLK = 1'b0;
-			#100;
-			CLK = 1'b1; 
-			#100;
-		end
-	end
-RAM_array UUT (
-.ADDR(ADDR),CLK(CLK),.DATA_IN(DATA_IN),.WE(WE),.DATA_OUT1(DATA_OUT1));
-
-initial begin
-#85;
-DATA_IN = 8'b11111111;
-#200;
-WE = 1'b1;
-ADDR = 8'b00010000;
-#600;
-WE = 1'b0;
-#200;
-ADDR = 8'b00100000;
-#600;
-ADDR = 8'b00010000;
-
-end
-endmodule
-		\end{Verbatim}
-		This test bench is similar to the ROM one in purpose, simply executing a write to make sure it works. Refer to the Expiremental Results section to view the wavefrom results of this testbench.
-		% \begin{center}
- 	% 	\includegraphics[scale=0.4]{RAM.png}\\
- 	% \end{center}
-
-		% \subsection{Part 3 - Memory Bootstrapping}
-		% The design was shown in the prelab, and below is the final schematic we made.
-
-		% \begin{figure}[h]
-		% 	\includegraphics[scale=.5]{mem.png}
-		% 	\caption{Memory Bootstrapping Schematic.}
-		% \end{figure}
-
-
-
-		% \subsection{Part 4 - Integration}
-
-		% \begin{figure}[h]
-		% 	\includegraphics[scale=.4]{toy.png}
-		% 	\caption{Toy Processor Overall Schematic.}
-		% \end{figure}
-
-		\begin{Verbatim}[frame=single, fontsize= \small]
-`timescale 1ns / 1ps
-
-module toyProcessor_overall_toyProcessor_overall_sch_tb();
-
-// Inputs
-   reg CLK;
-   reg RESET;
-
-// Output
-	wire [7:0] D_IN;
-   wire [7:0] D_OUT;
-   wire [7:0] ADDR;
-   wire RW;
-	wire S0;
-   wire S1;
-   wire S2;
-   wire S3;
-   wire S4;
-   wire S5;
-   wire MEM_EN;
-   wire OVERFLOW;
-
-// Instantiate the UUT
-   toyProcessor_overall UUT (
-		.D_OUT(D_OUT), 
-		.CLK(CLK), 
-		.RESET(RESET), 
-		.ADDR(ADDR), 
-		.RW(RW), 
-		.S1(S1), 
-		.S2(S2), 
-		.S3(S3), 
-		.S4(S4), 
-		.S5(S5), 
-		.MEM_EN(MEM_EN), 
-		.D_IN(D_IN), 
-		.S0(S0), 
-		.OVERFLOW(OVERFLOW)
-   );
-// Initialize Inputs
-	initial
-		begin forever
+			forever
 			begin
 				CLK = 1'b0;
-				#50;
+				#100; 
+				CLK = 1'b1;
+				#100;
+			end
+		end
+	
+	clk_signal_sch UUT (
+		.CLK(CLK),
+		.PUSH(PUSH),
+		.SIG(SIG));
+
+	initial 
+		begin
+
+			#285;
+			PUSH = 1'b1;
+			#200;
+			PUSH = 1'b0;
+			#400;
+			PUSH = 1'b1;
+			#600;
+			PUSH = 1'b0;
+
+		end
+endmodule
+
+		\end{Verbatim}
+		The test bench simply simulates button presses, and covers the test case of a holding the button as well. Results of the waveform are shown in the Expirimental Results section.\\\newline\textbf{Bypass}\\
+		To avoid having to press the button 256 times to transition states, we designed a bypass so that the clock is automatic. 
+		 \begin{figure}[h]
+		 	\includegraphics[scale=.45]{BypassClk.PNG}
+		 	\caption{Design of the bypass clock signal created in Xilinx. (Designed on paper but just turned in a print out of this for prelab)}
+		 \end{figure}
+\begin{Verbatim}[frame=single, fontsize= \small]
+`timescale 1ns/1ps
+
+module BypassClk_tb;
+
+	reg CLK = 1'b0;
+	reg OVERFLOW = 1'b0;
+	reg PUSH = 1'b0;
+	reg RESET = 1'b0;
+	
+	wire Signalout;
+
+	initial // Clock process for CLK
+		begin
+			forever
+			begin
+				CLK = 1'b0;
+				#50; 
 				CLK = 1'b1;
 				#50;
 			end
 		end
-		
-	initial
+
+	BypassClk UUT (
+		.CLK(CLK),
+		.OVERFLOW(OVERFLOW),
+		.PUSH(PUSH),
+		.RESET(RESET),
+		.Signalout(Signalout));
+
+	initial 
 		begin
-			RESET = 1;
-			#300
-			RESET = 0;
+			// ------------- Current Time: 140ns
+			#140;
+			RESET = 1'b1;
+			// -------------------------------------
+
+			// ------------- Current Time: 340ns
+			#200;
+			RESET = 1'b0;
+			// -------------------------------------
+			
+			// ------------- Current Time: 440ns
+			#100;
+			PUSH = 1'b1;
+			// -------------------------------------
+
+			// ------------- Current Time: 640ns
+			#200;
+			PUSH = 1'b0;
+			// -------------------------------------
+
+			// ------------- Current Time: 740ns
+			#100;
+			PUSH = 1'b1;
+			// -------------------------------------
+
+			// ------------- Current Time: 840ns
+			#100;
+			PUSH = 1'b0;
+			// -------------------------------------
+
+			// ------------- Current Time: 940ns
+			#100;
+			OVERFLOW = 1'b1;
+			// -------------------------------------
+
+			// ------------- Current Time: 1040ns
+			#100;
+			OVERFLOW = 1'b0;
+			// -------------------------------------
+
+			// ------------- Current Time: 2140ns
+			#200;
+			PUSH = 1'b1;
+			// -------------------------------------
+
+			// ------------- Current Time: 2340ns
+			#200;
+			PUSH = 1'b0;
+			#100;
+			PUSH = 1'b1;
+			#100;
+			PUSH = 1'b0;
+			// -------------------------------------
 		end
 endmodule
-		\end{Verbatim}
+\end{Verbatim}
+
+
+		\newpage
+		\subsection{Part 2 - Programming the Basys2 Board}
+		To make the processor compatible with the board and for it to be testable, we must program the seven segment display, similar to how we have done in previous labs. It will display the instructions, as well as the accumulator.
+
+		 \begin{figure}[h]
+		 	\includegraphics[scale=.5]{toyProcessor_Overall.PNG}
+		 	\caption{Modifications to the ToyProcessorOverall schematic to add the seven segment displays.}
+		 \end{figure}
+\newpage
+
+With the board ready for programs, we can now enter machinecode into ROM and actually see its output on the seven segment display. We will design two programs, with the 2nd testing all of the capabilities of our ToyProcessor.\\
+
+The first program that we will load onto the board simply sums the numbers from 1-9 using the ADD instruction and then stores that sum. This program is not self-modifying, does not loop, and is linear -- it ends after the first run.
+\begin{center}
+\textbf{First Serial Addition Program}\\
+\begin{tabular}{|l|l|l|}
+\hline
+Address & Instruction & Description\\
+\hline
+0       & 100	&CLR    \\
+1       & 1		&ADD    \\
+2       & 1		&1      \\
+3       & 1		&ADD    \\
+4       & 10	&2      \\
+5       & 1		&ADD    \\
+6       & 11	&3      \\
+7       & 1		&ADD    \\
+8       & 100	&4      \\
+9       & 1		&ADD    \\
+10      & 101	&5      \\
+11      & 1		&ADD    \\
+12      & 110	&6      \\
+13      & 1		&ADD    \\
+14      & 111	&7      \\
+15      & 1		&ADD    \\
+16      & 1000	&8      \\
+17      & 1		&ADD    \\
+18      & 1001	&9      \\
+19      & 10000	&STORE 	\\
+20      & 45	&45		\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\newpage
+\textbf{Second Serial Addition Program}\\
+
+\begin{tabular}{|l|l|l|}
+\hline
+Address & Instruction & Description \\
+\hline
+0       & 100	&CLR       \\
+1       & 1		&ADD           \\
+2       & 1010	&10        \\
+3       & 10	&SUB         \\
+4       & 1		&1          \\
+5       & 10000	&STORE       \\
+6       & 10	&2          \\
+7       & 1000	&BNZ        \\
+8       & 10010	&18       \\
+9       & 1 	&ADD          \\
+10      & 0		&0           \\
+11      & 10000	&STORE       \\
+12      & 1010	&10        \\
+13      & 10000	&STORE       \\
+14      & 1100100	&100     \\
+15      & 100	&CLR         \\
+16      & 1000	&BNZ        \\
+17      & 1   	&1        \\
+\hline
+\end{tabular}
+\end{center}
 
 
 \newpage			
@@ -245,7 +279,7 @@ endmodule
 	% \includegraphics[scale=.4]{tb2.png}
 	% \includegraphics[scale=.4]{tb3.png}
 	% \includegraphics[scale=.4]{tb4.png}\\
-	This is the testbench of out Toy\_Overall\_Processor. We wrote the original program from Lab 5 into ROM and you can see that being written to RAM and that the program does not begin running until all of ROM is written to RAM. After that you can see the state changes occuring as they did in the last lab and the program runs as it did in the last lab as well now it is just coming from RAM.
+	
 \end{center}
 
 	\newpage
