@@ -23,3 +23,5 @@ Built by creating the following components in order:
 - Assembly
   - Seven segment display
   - Basys2 FPGA synthesization
+
+Full project code and all reports can be found in this repository
