@@ -7,7 +7,6 @@ Simple processor built with Verilog in the Xilinx Design Suite.
 Can perform each instruction listed below by programming the ROM.
 
 | ADD | 1  | 00000001 |
-|-----|----|----------|
 | SUB | 2  | 00000010 |
 | CLR | 4  | 00000100 |
 | BNZ | 8  | 00001000 |
